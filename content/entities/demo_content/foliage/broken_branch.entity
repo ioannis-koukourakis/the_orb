@@ -1,0 +1,50 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "gpu_instancing_active": true,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_bark.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/foliage/broken_branch.glb",
+            "requires_translucent_sorting": [
+                false
+            ],
+            "translucent_render_priorities": [
+                -1
+            ],
+            "type": "Mesh",
+            "visible": true
+        }
+    ]
+}

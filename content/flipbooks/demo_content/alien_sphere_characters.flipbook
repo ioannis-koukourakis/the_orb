@@ -1,0 +1,18 @@
+[grid]
+columns = 10
+rows = 10
+total_frames = 100
+
+[playback]
+animated = true
+frame_rate = 30.0
+loop = true
+start_frame = 0
+random_start_frame = true
+default_clip = flicker
+
+[clip.flicker]
+start_frame = 0
+frame_count = 100
+frame_rate = 30.0
+loop = true

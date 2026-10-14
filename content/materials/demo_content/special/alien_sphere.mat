@@ -1,0 +1,127 @@
+[general]
+
+type = translucent
+
+cull_face = back
+
+blend_mode = alpha
+
+casts_shadows = false
+
+is_masked = false
+
+affected_by_ssao = false
+
+ssr_excluded = false
+
+use_ssr = false
+
+ssr_strength = 1.000000
+
+ssao_strength = 1.000000
+
+reflection_fallback_strength = 1.000000
+
+use_anisotropic_filtering = true
+
+distance_cull_distance = 0.000000
+
+
+
+
+
+[textures]
+
+u_normal_map = ../content/textures/demo_content/tileable/details/normal/detail_rock_01_normal.dds
+
+
+
+
+
+[uniforms]
+
+u_use_reflection = false
+
+u_albedo_color = 1.000000,0.896391,0.613821
+
+u_sprite_offset_next = 0.000000,0.000000
+
+u_fresnel_intensity = 1.000000
+
+u_albedo_brightness = 1.000000
+
+u_normal_map_strength = 0.690000
+
+u_map_tiling = 2.000000,2.000000
+
+u_use_lighting = true
+u_emissive_multiplier = 1.000000
+u_emissive_match_sky_fill = false
+
+u_far_fade = 0.000000
+
+u_use_albedo_map = false
+
+u_sprite_scale = 1.000000,1.000000
+
+u_uv_scroll_speed = -0.025000,-0.025000
+
+u_sprite_offset = 0.000000,0.000000
+
+u_use_specular = true
+
+u_sprite_blend = 0.000000
+
+
+u_opacity = 1.000000
+
+u_translucent_bias = 0.000000
+
+u_fresnel_power = 2.000000
+
+u_near_fade = 0.000000
+
+u_reflection_strength = 1.000000
+
+u_use_fresnel = false
+
+u_ior = 1.500000
+
+u_use_refraction = true
+
+u_micro_surface_scale = 500.000000
+
+u_refraction_strength = 0.200000
+
+u_use_back_face_refraction = false
+
+u_roughness = 0.000000
+
+u_rim_power = 16.000000
+
+u_thickness = 0.280000
+
+u_absorption_color = 1.000000,1.000000,1.000000
+
+u_absorption_strength = 2.770000
+
+u_use_micro_surface = false
+
+u_micro_surface_intensity = 0.710000
+
+u_use_rim_lighting = true
+
+u_rim_intensity = 1.000000
+
+u_rim_color = 1.000000,1.000000,1.000000
+
+u_lighting_intensity = 1.000000
+
+u_specular_intensity = 0.500000
+
+u_use_ssr = false
+
+u_ssr_strength = 1.000000
+
+u_use_normal_map = true
+

@@ -1,0 +1,77 @@
+{
+    "active": true,
+    "components": [
+        {
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "angular_damping": 0.0,
+            "angular_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "auto_create_from_mesh": false,
+            "auto_disable": true,
+            "body_type": 0,
+            "collision_shapes": [
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.0,
+                        -0.02500000037252903,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.5,
+                        0.02500000037252903,
+                        0.5
+                    ],
+                    "shape_type": 0
+                }
+            ],
+            "force_awake": false,
+            "friction": 0.5,
+            "linear_damping": 0.0,
+            "linear_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mass": 1.0,
+            "restitution": 0.0,
+            "rolling_friction": 0.0,
+            "type": "PhysicsBody"
+        },
+        {
+            "active": true,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/primitive/primitive_grey.mat"
+            ],
+            "mesh_file": "../content/meshes/primitive/plane.glb",
+            "type": "Mesh"
+        }
+    ],
+    "name": "plane"
+}

@@ -1,0 +1,38 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "editor_only": false,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/rocks/rock_small.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+            "type": "Mesh",
+            "visible": true
+        },
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ]
+}

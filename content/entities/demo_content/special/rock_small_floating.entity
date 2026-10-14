@@ -1,0 +1,147 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": true,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "gpu_instancing_active": true,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/rocks/rock_small.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+            "requires_translucent_sorting": [
+                false
+            ],
+            "translucent_render_priorities": [
+                -1
+            ],
+            "type": "Mesh",
+            "visible": true
+        },
+        {
+            "active": true,
+            "script_file_path": "../content/scripts/components/floating_prop.lua",
+            "script_parameters": {
+                "amplitude_x": {
+                    "default_value": "0.08",
+                    "description": "Horizontal drift along world X in meters.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.08"
+                },
+                "amplitude_y": {
+                    "default_value": "0.14",
+                    "description": "Vertical float in meters.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.14"
+                },
+                "amplitude_z": {
+                    "default_value": "0.08",
+                    "description": "Horizontal drift along world Z in meters.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.08"
+                },
+                "frequency_x": {
+                    "default_value": "0.35",
+                    "description": "Sine speed on X in radians per second.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.35"
+                },
+                "frequency_y": {
+                    "default_value": "0.53",
+                    "description": "Sine speed on Y in radians per second.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.53"
+                },
+                "frequency_z": {
+                    "default_value": "0.71",
+                    "description": "Sine speed on Z in radians per second.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.71"
+                },
+                "phase_x": {
+                    "default_value": "0.0",
+                    "description": "Manual phase on X in radians when random is off.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.0"
+                },
+                "phase_y": {
+                    "default_value": "0.0",
+                    "description": "Manual phase on Y in radians when random is off.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.0"
+                },
+                "phase_z": {
+                    "default_value": "0.0",
+                    "description": "Manual phase on Z in radians when random is off.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.0"
+                },
+                "random_phase_offset": {
+                    "default_value": "true",
+                    "description": "Pick phase offsets from entity id on ready.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                }
+            },
+            "type": "Script"
+        }
+    ]
+}

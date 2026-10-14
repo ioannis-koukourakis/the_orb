@@ -1,0 +1,39 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/foliage/grass/grass_patch.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
+            "type": "Mesh",
+            "visible": true
+        }
+    ],
+    "name": "grass_patch_01"
+}

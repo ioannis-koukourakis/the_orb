@@ -1,0 +1,135 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/tileable/paper/paper_old.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/props/note.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "name": "paper"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        -1.811981201171875e-05,
+                        0.00614619255065918,
+                        -0.020895004272460938
+                    ],
+                    "rotation_euler": [
+                        -90.00003051757813,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        -0.7071065902709961,
+                        0.7071069478988647,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0000001192092896
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "billboard": false,
+                    "editor_only": false,
+                    "font_id": "indie_flower_32",
+                    "font_pixel_size": 0.0,
+                    "material_file": "",
+                    "opaque": true,
+                    "screen_space_size": false,
+                    "text": "Placeholder",
+                    "text_color": [
+                        0.04699578881263733,
+                        0.0,
+                        0.642276406288147
+                    ],
+                    "type": "TextMesh",
+                    "use_mask": true,
+                    "world_height": 0.04399999976158142
+                }
+            ],
+            "name": "font"
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ]
+}

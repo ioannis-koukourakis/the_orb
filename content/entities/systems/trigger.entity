@@ -1,0 +1,78 @@
+{
+    "active": true,
+    "components": [
+        {
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "angular_damping": 0.0,
+            "angular_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "auto_disable": true,
+            "body_type": 4,
+            "collision_callback_filter_character": true,
+            "collision_callback_filter_dynamic": true,
+            "collision_callback_filter_kinematic": true,
+            "collision_callback_filter_static": false,
+            "collision_callbacks_enabled": false,
+            "collision_layer": 128,
+            "collision_mask": 65535,
+            "collision_shapes": [
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "shape_type": 0
+                }
+            ],
+            "force_awake": false,
+            "friction": 0.5,
+            "linear_damping": 0.0,
+            "linear_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mass": 1.0,
+            "physics_body_enabled": true,
+            "restitution": 0.0,
+            "rolling_friction": 0.0,
+            "trigger_callbacks_enabled": true,
+            "type": "PhysicsBody",
+            "use_ccd": false
+        }
+    ],
+    "name": "trigger"
+}

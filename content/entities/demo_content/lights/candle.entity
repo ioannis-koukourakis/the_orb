@@ -1,0 +1,315 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "billboard_type": 1,
+                    "constant_screen_size": false,
+                    "editor_only": false,
+                    "flipbook_file": "../content/flipbooks/demo_content/billboards/candle_flame.flipbook",
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_file": "../content/materials/demo_content/billboards/candle_flame.mat",
+                    "type": "Billboard"
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        1.1920928955078125e-07,
+                        0.27068912982940674,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "candle_flame",
+            "prefab_source": "../content/entities/demo_content/billboards/candle_flame.entity"
+        },
+        {
+            "active": true,
+            "children": [
+                {
+                    "active": true,
+                    "components": [
+                        {
+                            "active": true,
+                            "angle": 0.7853981852531433,
+                            "cast_shadows": true,
+                            "cast_specular": true,
+                            "color": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "ignore_distance_culling": false,
+                            "light_type": 0,
+                            "lumens": 10.0,
+                            "range": 2.5,
+                            "shadow_bias": 0.10000000149011612,
+                            "shadow_blur": 1.0,
+                            "shadow_normal_bias": 1.0,
+                            "temperature_k": 3320.0,
+                            "type": "Light",
+                            "volumetric_fog_source_active": false,
+                            "volumetric_fog_strength": 1.0
+                        },
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": "Transform"
+                        }
+                    ],
+                    "name": "light"
+                },
+                {
+                    "active": true,
+                    "components": [
+                        {
+                            "active": true,
+                            "angle": 0.7853981852531433,
+                            "cast_shadows": false,
+                            "cast_specular": false,
+                            "color": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "ignore_distance_culling": false,
+                            "light_type": 0,
+                            "lumens": 17.0,
+                            "range": 11.100000381469727,
+                            "shadow_bias": 0.10000000149011612,
+                            "shadow_blur": 1.0,
+                            "shadow_normal_bias": 1.0,
+                            "temperature_k": 1900.0,
+                            "type": "Light",
+                            "volumetric_fog_source_active": false,
+                            "volumetric_fog_strength": 1.0
+                        },
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.11429345607757568,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": "Transform"
+                        }
+                    ],
+                    "name": "light_amb_1"
+                }
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.2839888334274292,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "lights"
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "script_file_path": "../content/scripts/components/lamp.lua",
+            "script_parameters": {
+                "can_interact": {
+                    "default_value": "true",
+                    "description": "Can player interact with this lamp.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "false"
+                },
+                "fade_duration": {
+                    "default_value": "0.3",
+                    "description": "Seconds to fade lights/emissive on/off when toggling. 0 for instant.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.3"
+                },
+                "flicker": {
+                    "default_value": "false",
+                    "description": "Enable light flickering effect.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                },
+                "flicker_custom_pattern": {
+                    "default_value": "detisengineisawesome",
+                    "description": "Custom flicker pattern (a=dim, m=normal, z=bright). Only used when preset is Custom.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 3,
+                    "value": "detisengineisawesome"
+                },
+                "flicker_preset": {
+                    "default_value": "flicker_1",
+                    "description": "Flicker pattern preset.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 3,
+                    "value": "flicker_1"
+                },
+                "flicker_random_offset": {
+                    "default_value": "true",
+                    "description": "Randomize starting position in pattern.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                },
+                "flicker_smoothness": {
+                    "default_value": "0.5",
+                    "description": "Smoothness of transitions (0=instant, 1=very smooth)",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.5"
+                },
+                "flicker_speed": {
+                    "default_value": "10.0",
+                    "description": "Pattern playback speed in Hz.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "10.0"
+                },
+                "interaction_distance": {
+                    "default_value": "2.0",
+                    "description": "Distance at which player can interact.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "1.000000"
+                },
+                "lights_entity": {
+                    "default_value": "",
+                    "description": "Child or descendant Light/Mesh container. Drop this entity for self. Empty is none.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 10,
+                    "value": "lights"
+                },
+                "lit": {
+                    "default_value": "true",
+                    "description": "Initial lamp state (lit or unlit).",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                }
+            },
+            "type": "Script"
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/lights/candle_wax.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/lights/candle.glb",
+            "type": "Mesh",
+            "visible": true
+        },
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ],
+    "tags": [
+        "interactable"
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "fade_duration": 0.3499999940395355,
+            "internal_gain_multiplier": 1.0,
+            "internal_low_pass_cutoff_hz": 20000.0,
+            "internal_reverb_level": 0.0,
+            "reverb_high_pass_cutoff_hz": 120.0,
+            "reverb_low_pass_cutoff_hz": 12000.0,
+            "reverb_room_size": 0.125,
+            "external_gain_multiplier": 0.75,
+            "external_low_pass_cutoff_hz": 1200.0,
+            "external_reverb_level": 0.0,
+            "priority": 0,
+            "type": "SoundZone"
+        }
+    ],
+    "name": "sound_zone"
+}

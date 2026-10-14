@@ -1,0 +1,94 @@
+{
+    "active": true,
+    "components": [
+        {
+            "angular_damping": 0.0,
+            "angular_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "auto_disable": true,
+            "body_type": 0,
+            "collision_callback_filter_character": true,
+            "collision_callback_filter_dynamic": true,
+            "collision_callback_filter_kinematic": true,
+            "collision_callback_filter_static": true,
+            "collision_callbacks_enabled": false,
+            "collision_layer": 1,
+            "collision_mask": 65534,
+            "collision_shapes": [
+                {
+                    "mesh_file_path": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                    "offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.6000000238418579,
+                        0.5,
+                        0.6000000238418579
+                    ],
+                    "shape_type": 2
+                }
+            ],
+            "force_awake": false,
+            "friction": 0.5,
+            "inherit_surface_motion": true,
+            "linear_damping": 0.0,
+            "linear_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mass": 1.0,
+            "physics_body_enabled": true,
+            "restitution": 0.0,
+            "rolling_friction": 0.0,
+            "standing_mass_multiplier": 20.0,
+            "trigger_callbacks_enabled": false,
+            "type": "PhysicsBody",
+            "use_ccd": false
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/rocks/rock_small.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+            "type": "Mesh",
+            "visible": true
+        },
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ],
+    "name": "rock_small_01_01_copy_210"
+}

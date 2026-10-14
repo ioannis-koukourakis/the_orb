@@ -1,0 +1,83 @@
+{
+    "active": true,
+    "components": [
+        {
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/rocks/rock_big.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/rocks/rock_big_02.glb",
+            "type": "Mesh"
+        },
+        {
+            "angular_damping": 0.0,
+            "angular_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "auto_disable": true,
+            "body_type": 0,
+            "collision_callback_filter_dynamic": true,
+            "collision_callback_filter_kinematic": true,
+            "collision_callback_filter_static": true,
+            "collision_callbacks_enabled": false,
+            "collision_group": -1,
+            "collision_shapes": [
+                {
+                    "mesh_file_path": "../content/meshes/demo_content/rocks/rock_big_02.glb",
+                    "offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "shape_type": 4
+                }
+            ],
+            "force_awake": false,
+            "friction": 0.5,
+            "is_trigger": false,
+            "linear_damping": 0.0,
+            "linear_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mass": 1.0,
+            "restitution": 0.0,
+            "rolling_friction": 0.0,
+            "trigger_callbacks_enabled": false,
+            "type": "PhysicsBody"
+        }
+    ],
+    "name": "rock_big_02"
+}

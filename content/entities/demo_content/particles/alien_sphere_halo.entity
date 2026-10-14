@@ -1,0 +1,259 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "culling_distance": 100.0,
+            "emission": {
+                "burst_count": 0,
+                "rate": 3.0
+            },
+            "is_unique_material": true,
+            "lod_far_distance": 50.0,
+            "lod_far_frame_skip": 3,
+            "lod_mid_distance": 20.0,
+            "lod_mid_frame_skip": 1,
+            "lod_update_throttling": true,
+            "loop": true,
+            "material_file": "../content/materials/demo_content/particles/emitter_default.mat",
+            "play_on_start": true,
+            "requires_translucent_sorting": false,
+            "settings": {
+                "duration_max": 1.0,
+                "duration_min": 1.0,
+                "loop": true,
+                "max_particles": 120,
+                "start_delay": 0.0
+            },
+            "spawn": {
+                "color": [
+                    1.0,
+                    0.6200000047683716,
+                    0.07999999821186066,
+                    0.0
+                ],
+                "lifetime_max": 2.0,
+                "lifetime_min": 2.0,
+                "rotation_max": 0.0,
+                "rotation_min": 0.0,
+                "rotation_velocity_max": 0.0,
+                "rotation_velocity_min": 0.0,
+                "shape": "box",
+                "shape_size": [
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.20000000298023224
+                ],
+                "size": [
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "size_scale_max": 12.0,
+                "size_scale_min": 12.0,
+                "velocity_max": [
+                    0.0,
+                    1.0,
+                    0.07999999821186066
+                ],
+                "velocity_min": [
+                    0.0,
+                    1.0,
+                    0.0
+                ]
+            },
+            "sprite": {
+                "frame_columns": 1,
+                "frame_count": 1,
+                "frame_rate": 10.0,
+                "frame_rows": 1,
+                "loop": true,
+                "mode": "none",
+                "random_start_frame": true,
+                "start_frame": 0
+            },
+            "translucent_render_priority": 1,
+            "type": "ParticleSystem",
+            "unique_material_uniforms": {
+                "u_absorption_color": [
+                    0.7073171138763428,
+                    0.5175490975379944,
+                    0.0
+                ],
+                "u_absorption_strength": 1.0,
+                "u_albedo_brightness": 1.0,
+                "u_albedo_color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "u_albedo_uses_vertex_color": true,
+                "u_depth_bias": 0.0,
+                "u_emissive_match_sky_fill": false,
+                "u_emissive_multiplier": 1.0,
+                "u_far_fade": 0.0,
+                "u_fresnel_intensity": 1.0,
+                "u_fresnel_power": 2.0,
+                "u_ior": 1.5,
+                "u_lighting_intensity": 6.079999923706055,
+                "u_map_tiling": [
+                    1.0,
+                    1.0
+                ],
+                "u_micro_surface_intensity": 8.0,
+                "u_micro_surface_scale": 2.0,
+                "u_near_fade": 0.0,
+                "u_normal_map_strength": 1.0,
+                "u_opacity": 1.0,
+                "u_reflection_fallback_strength": 1.0,
+                "u_reflection_strength": 1.0,
+                "u_refraction_strength": 1.0,
+                "u_rim_color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "u_rim_intensity": 0.09000000357627869,
+                "u_rim_power": 28.899999618530273,
+                "u_roughness": 0.0,
+                "u_specular_intensity": 1.8300000429153442,
+                "u_sprite_blend": 0.0,
+                "u_sprite_offset": [
+                    0.0,
+                    0.0
+                ],
+                "u_sprite_offset_next": [
+                    0.0,
+                    0.0
+                ],
+                "u_sprite_scale": [
+                    1.0,
+                    1.0
+                ],
+                "u_ssr_strength": 1.0,
+                "u_thickness": 1.0,
+                "u_translucent_bias": 0.10000000149011612,
+                "u_use_albedo_map": true,
+                "u_use_back_face_refraction": false,
+                "u_use_fresnel": false,
+                "u_use_lighting": false,
+                "u_use_micro_surface": true,
+                "u_use_normal_map": false,
+                "u_use_reflection": false,
+                "u_use_refraction": true,
+                "u_use_rim_lighting": false,
+                "u_use_specular": true,
+                "u_use_ssr": false,
+                "u_uv_scroll_speed": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "update": {
+                "billboard_mode": "cylindrical",
+                "color_over_lifetime": {
+                    "time_mid": 0.17399999499320984,
+                    "value_end": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.0
+                    ],
+                    "value_mid": [
+                        1.0,
+                        0.7708349227905273,
+                        0.24884790182113647,
+                        0.25806450843811035
+                    ],
+                    "value_start": [
+                        1.0,
+                        0.7200000286102295,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "size_over_lifetime": {
+                    "enabled": true,
+                    "time_mid": 0.492000013589859,
+                    "value_end": [
+                        0.0833333283662796,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_mid": [
+                        0.1666666716337204,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_start": [
+                        0.5,
+                        1.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "velocity_over_lifetime": {
+                    "enabled": true,
+                    "time_mid": 0.5,
+                    "value_end_max": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_end_min": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_mid_max": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_mid_min": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "world_space": true
+            }
+        }
+    ]
+}

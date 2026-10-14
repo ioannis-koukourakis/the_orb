@@ -1,0 +1,2440 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "angle": 0.7853981852531433,
+                    "cast_shadows": false,
+                    "cast_specular": true,
+                    "color": [
+                        1.0,
+                        0.707317054271698,
+                        0.0
+                    ],
+                    "ignore_distance_culling": false,
+                    "light_type": 0,
+                    "lumens": 256.0,
+                    "range": 5.300000190734863,
+                    "shadow_bias": 0.10000000149011612,
+                    "shadow_blur": 1.0,
+                    "shadow_normal_bias": 1.0,
+                    "temperature_k": 6500.0,
+                    "type": "Light",
+                    "volumetric_fog_source_active": true,
+                    "volumetric_fog_strength": 52.70000076293945
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        1.1920928955078125e-07,
+                        -4.76837158203125e-07
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        0.6666666865348816,
+                        0.6666666865348816,
+                        0.6666666865348816
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/components/lamp.lua",
+                    "script_parameters": {
+                        "can_interact": {
+                            "default_value": "true",
+                            "description": "Can player interact with this lamp.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "false"
+                        },
+                        "fade_duration": {
+                            "default_value": "0.3",
+                            "description": "Seconds to fade lights/emissive on/off when toggling. 0 for instant.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.3"
+                        },
+                        "flicker": {
+                            "default_value": "false",
+                            "description": "Enable light flickering effect.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "flicker_custom_pattern": {
+                            "default_value": "detisengineisawesome",
+                            "description": "Custom flicker pattern (a=dim, m=normal, z=bright). Only used when preset is Custom.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 3,
+                            "value": "detisengineisawesome"
+                        },
+                        "flicker_preset": {
+                            "default_value": "flicker_1",
+                            "description": "Flicker pattern preset.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 3,
+                            "value": "oil_lamp"
+                        },
+                        "flicker_random_offset": {
+                            "default_value": "true",
+                            "description": "Randomize starting position in pattern.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "flicker_smoothness": {
+                            "default_value": "0.5",
+                            "description": "Smoothness of transitions (0=instant, 1=very smooth)",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.500000"
+                        },
+                        "flicker_speed": {
+                            "default_value": "10.0",
+                            "description": "Pattern playback speed in Hz.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "10.000000"
+                        },
+                        "interaction_distance": {
+                            "default_value": "2.0",
+                            "description": "Distance at which player can interact.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "2.0"
+                        },
+                        "lights_entity": {
+                            "default_value": "",
+                            "description": "Child or descendant Light/Mesh container. Drop this entity for self. Empty is none.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 10,
+                            "value": "."
+                        },
+                        "lit": {
+                            "default_value": "true",
+                            "description": "Initial lamp state (lit or unlit).",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        }
+                    },
+                    "type": "Script"
+                }
+            ],
+            "name": "light",
+            "tags": [
+                "interactable"
+            ]
+        },
+        {
+            "active": true,
+            "children": [
+                {
+                    "active": true,
+                    "components": [
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.0,
+                                2.384185791015625e-07
+                            ],
+                            "rotation_euler": [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": "Transform"
+                        },
+                        {
+                            "active": true,
+                            "culling_distance": 100.0,
+                            "emission": {
+                                "burst_count": 0,
+                                "rate": 2.0
+                            },
+                            "lod_far_distance": 50.0,
+                            "lod_far_frame_skip": 3,
+                            "lod_mid_distance": 20.0,
+                            "lod_mid_frame_skip": 1,
+                            "lod_update_throttling": true,
+                            "loop": true,
+                            "material_file": "../content/materials/demo_content/particles/emitter_default.mat",
+                            "play_on_start": true,
+                            "requires_translucent_sorting": false,
+                            "settings": {
+                                "duration_max": 1.0,
+                                "duration_min": 1.0,
+                                "loop": true,
+                                "max_particles": 120,
+                                "start_delay": 0.0
+                            },
+                            "spawn": {
+                                "color": [
+                                    1.0,
+                                    0.6200000047683716,
+                                    0.07999999821186066,
+                                    0.0
+                                ],
+                                "lifetime_max": 3.0,
+                                "lifetime_min": 1.0,
+                                "rotation_max": 0.0,
+                                "rotation_min": 0.0,
+                                "rotation_velocity_max": 0.0,
+                                "rotation_velocity_min": 0.0,
+                                "shape": "box",
+                                "shape_size": [
+                                    0.20000000298023224,
+                                    0.20000000298023224,
+                                    0.20000000298023224
+                                ],
+                                "size": [
+                                    0.10000000149011612,
+                                    0.10000000149011612
+                                ],
+                                "size_scale_max": 12.0,
+                                "size_scale_min": 12.0,
+                                "velocity_max": [
+                                    0.0,
+                                    -1.0,
+                                    0.07999999821186066
+                                ],
+                                "velocity_min": [
+                                    0.0,
+                                    -1.0,
+                                    0.0
+                                ]
+                            },
+                            "sprite": {
+                                "frame_columns": 1,
+                                "frame_count": 1,
+                                "frame_rate": 10.0,
+                                "frame_rows": 1,
+                                "loop": true,
+                                "mode": "none",
+                                "random_start_frame": true,
+                                "start_frame": 0
+                            },
+                            "translucent_render_priority": 0,
+                            "type": "ParticleSystem",
+                            "update": {
+                                "billboard_mode": "cylindrical",
+                                "color_over_lifetime": {
+                                    "time_mid": 0.17399999499320984,
+                                    "value_end": [
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        1.0,
+                                        0.7708349227905273,
+                                        0.24884790182113647,
+                                        0.0470588244497776
+                                    ],
+                                    "value_start": [
+                                        1.0,
+                                        0.7200000286102295,
+                                        0.0,
+                                        0.0
+                                    ]
+                                },
+                                "gravity": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "size_over_lifetime": {
+                                    "enabled": true,
+                                    "time_mid": 0.492000013589859,
+                                    "value_end": [
+                                        0.0833333283662796,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        0.1666666716337204,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_start": [
+                                        0.5,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ]
+                                },
+                                "velocity_over_lifetime": {
+                                    "enabled": true,
+                                    "time_mid": 0.5,
+                                    "value_end_max": [
+                                        0.0,
+                                        -1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_end_min": [
+                                        0.0,
+                                        -1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid_max": [
+                                        0.0,
+                                        -1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid_min": [
+                                        0.0,
+                                        -1.0,
+                                        0.0,
+                                        0.0
+                                    ]
+                                },
+                                "world_space": true
+                            }
+                        }
+                    ],
+                    "name": "ps_halo",
+                    "prefab_source": "../content/entities/demo_content/particles/alien_sphere_halo.entity"
+                },
+                {
+                    "active": true,
+                    "components": [
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation_euler": [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": "Transform"
+                        },
+                        {
+                            "active": true,
+                            "culling_distance": 100.0,
+                            "emission": {
+                                "burst_count": 0,
+                                "rate": 12.0
+                            },
+                            "lod_far_distance": 50.0,
+                            "lod_far_frame_skip": 3,
+                            "lod_mid_distance": 20.0,
+                            "lod_mid_frame_skip": 1,
+                            "lod_update_throttling": true,
+                            "loop": true,
+                            "material_file": "../content/materials/demo_content/particles/emitter_default.mat",
+                            "play_on_start": true,
+                            "requires_translucent_sorting": false,
+                            "settings": {
+                                "duration_max": 1.0,
+                                "duration_min": 1.0,
+                                "loop": true,
+                                "max_particles": 120,
+                                "start_delay": 0.0
+                            },
+                            "spawn": {
+                                "color": [
+                                    1.0,
+                                    0.6200000047683716,
+                                    0.07999999821186066,
+                                    0.0
+                                ],
+                                "lifetime_max": 3.0,
+                                "lifetime_min": 1.0,
+                                "rotation_max": 6.2831854820251465,
+                                "rotation_min": 0.0,
+                                "rotation_velocity_max": 0.0,
+                                "rotation_velocity_min": 0.0,
+                                "shape": "box",
+                                "shape_size": [
+                                    1.25,
+                                    1.25,
+                                    1.25
+                                ],
+                                "size": [
+                                    0.10000000149011612,
+                                    0.10000000149011612
+                                ],
+                                "size_scale_max": 12.0,
+                                "size_scale_min": 12.0,
+                                "velocity_max": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "velocity_min": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            },
+                            "sprite": {
+                                "frame_columns": 1,
+                                "frame_count": 1,
+                                "frame_rate": 10.0,
+                                "frame_rows": 1,
+                                "loop": true,
+                                "mode": "none",
+                                "random_start_frame": true,
+                                "start_frame": 0
+                            },
+                            "translucent_render_priority": 1,
+                            "type": "ParticleSystem",
+                            "update": {
+                                "billboard_mode": "cylindrical",
+                                "color_over_lifetime": {
+                                    "time_mid": 0.503000020980835,
+                                    "value_end": [
+                                        1.0,
+                                        0.38823530077934265,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        1.0,
+                                        0.772549033164978,
+                                        0.0,
+                                        0.07373273372650146
+                                    ],
+                                    "value_start": [
+                                        1.0,
+                                        0.4274509847164154,
+                                        0.019607843831181526,
+                                        0.0
+                                    ]
+                                },
+                                "gravity": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "size_over_lifetime": {
+                                    "enabled": true,
+                                    "time_mid": 0.3499999940395355,
+                                    "value_end": [
+                                        0.002083329949527979,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        0.002083329949527979,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_start": [
+                                        0.002083329949527979,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ]
+                                },
+                                "velocity_over_lifetime": {
+                                    "enabled": false,
+                                    "time_mid": 0.5,
+                                    "value_end_max": [
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_end_min": [
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid_max": [
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid_min": [
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ]
+                                },
+                                "world_space": true
+                            }
+                        }
+                    ],
+                    "name": "ps_lines",
+                    "prefab_source": "../content/entities/demo_content/particles/alien_sphere_geometric_lines.entity"
+                },
+                {
+                    "active": true,
+                    "components": [
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation_euler": [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.4000000953674316,
+                                1.0,
+                                1.3000000715255737
+                            ],
+                            "type": "Transform"
+                        },
+                        {
+                            "active": true,
+                            "culling_distance": 20.0,
+                            "emission": {
+                                "burst_count": 0,
+                                "rate": 8.0
+                            },
+                            "lod_far_distance": 50.0,
+                            "lod_far_frame_skip": 3,
+                            "lod_mid_distance": 20.0,
+                            "lod_mid_frame_skip": 1,
+                            "lod_update_throttling": false,
+                            "loop": true,
+                            "material_file": "../content/materials/demo_content/special/alien_sphere_characters.mat",
+                            "play_on_start": true,
+                            "requires_translucent_sorting": false,
+                            "settings": {
+                                "duration_max": 1.0,
+                                "duration_min": 1.0,
+                                "loop": true,
+                                "max_particles": 120,
+                                "start_delay": 0.0
+                            },
+                            "spawn": {
+                                "color": [
+                                    1.0,
+                                    0.6200000047683716,
+                                    0.07999999821186066,
+                                    0.0
+                                ],
+                                "lifetime_max": 3.0,
+                                "lifetime_min": 1.0,
+                                "rotation_max": 0.0,
+                                "rotation_min": 0.0,
+                                "rotation_velocity_max": 0.0,
+                                "rotation_velocity_min": 0.0,
+                                "shape": "box",
+                                "shape_size": [
+                                    2.0,
+                                    2.0,
+                                    2.0
+                                ],
+                                "size": [
+                                    0.10000000149011612,
+                                    0.10000000149011612
+                                ],
+                                "size_scale_max": 2.0,
+                                "size_scale_min": 2.0,
+                                "velocity_max": [
+                                    0.07999999821186066,
+                                    0.11999999731779099,
+                                    0.07999999821186066
+                                ],
+                                "velocity_min": [
+                                    -0.07999999821186066,
+                                    -0.11999999731779099,
+                                    -0.07999999821186066
+                                ]
+                            },
+                            "sprite": {
+                                "frame_columns": 10,
+                                "frame_count": 24,
+                                "frame_rate": 10.0,
+                                "frame_rows": 10,
+                                "loop": true,
+                                "mode": "animate",
+                                "random_start_frame": true,
+                                "start_frame": 0
+                            },
+                            "translucent_render_priority": 3,
+                            "type": "ParticleSystem",
+                            "update": {
+                                "billboard_mode": "spherical",
+                                "color_over_lifetime": {
+                                    "time_mid": 0.48899999260902405,
+                                    "value_end": [
+                                        1.0,
+                                        0.635944664478302,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        0.5
+                                    ],
+                                    "value_start": [
+                                        1.0,
+                                        0.6431372761726379,
+                                        0.019607843831181526,
+                                        0.5
+                                    ]
+                                },
+                                "gravity": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "size_over_lifetime": {
+                                    "enabled": true,
+                                    "time_mid": 0.1420000046491623,
+                                    "value_end": [
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        0.17499999701976776,
+                                        0.17499999701976776,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_start": [
+                                        0.009999999776482582,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ]
+                                },
+                                "velocity_over_lifetime": {
+                                    "enabled": true,
+                                    "time_mid": 0.5,
+                                    "value_end_max": [
+                                        0.03999999910593033,
+                                        0.07999999821186066,
+                                        0.03999999910593033,
+                                        0.0
+                                    ],
+                                    "value_end_min": [
+                                        -0.03999999910593033,
+                                        -0.11999999731779099,
+                                        -0.03999999910593033,
+                                        0.0
+                                    ],
+                                    "value_mid_max": [
+                                        0.07999999821186066,
+                                        0.11999999731779099,
+                                        0.07999999821186066,
+                                        0.0
+                                    ],
+                                    "value_mid_min": [
+                                        -0.07999999821186066,
+                                        -0.11999999731779099,
+                                        -0.07999999821186066,
+                                        0.0
+                                    ]
+                                },
+                                "world_space": true
+                            }
+                        }
+                    ],
+                    "name": "ps_characters",
+                    "prefab_source": "../content/entities/demo_content/particles/alien_sphere_characters.entity"
+                },
+                {
+                    "active": true,
+                    "components": [
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation_euler": [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.4000000953674316,
+                                1.0,
+                                1.3000000715255737
+                            ],
+                            "type": "Transform"
+                        },
+                        {
+                            "active": true,
+                            "culling_distance": 10.0,
+                            "emission": {
+                                "burst_count": 0,
+                                "rate": 8.0
+                            },
+                            "lod_far_distance": 50.0,
+                            "lod_far_frame_skip": 3,
+                            "lod_mid_distance": 20.0,
+                            "lod_mid_frame_skip": 1,
+                            "lod_update_throttling": false,
+                            "loop": true,
+                            "material_file": "../content/materials/demo_content/particles/emitter_default.mat",
+                            "play_on_start": true,
+                            "requires_translucent_sorting": false,
+                            "settings": {
+                                "duration_max": 1.0,
+                                "duration_min": 1.0,
+                                "loop": true,
+                                "max_particles": 120,
+                                "start_delay": 0.0
+                            },
+                            "spawn": {
+                                "color": [
+                                    1.0,
+                                    0.6200000047683716,
+                                    0.07999999821186066,
+                                    0.0
+                                ],
+                                "lifetime_max": 8.0,
+                                "lifetime_min": 5.0,
+                                "rotation_max": 6.2831854820251465,
+                                "rotation_min": 0.0,
+                                "rotation_velocity_max": 0.5,
+                                "rotation_velocity_min": -0.5,
+                                "shape": "box",
+                                "shape_size": [
+                                    2.0,
+                                    2.0,
+                                    2.0
+                                ],
+                                "size": [
+                                    0.10000000149011612,
+                                    0.10000000149011612
+                                ],
+                                "size_scale_max": 0.05000000074505806,
+                                "size_scale_min": 0.05000000074505806,
+                                "velocity_max": [
+                                    0.07999999821186066,
+                                    0.11999999731779099,
+                                    0.07999999821186066
+                                ],
+                                "velocity_min": [
+                                    -0.07999999821186066,
+                                    -0.11999999731779099,
+                                    -0.07999999821186066
+                                ]
+                            },
+                            "sprite": {
+                                "frame_columns": 1,
+                                "frame_count": 1,
+                                "frame_rate": 10.0,
+                                "frame_rows": 1,
+                                "loop": true,
+                                "mode": "none",
+                                "random_start_frame": true,
+                                "start_frame": 0
+                            },
+                            "translucent_render_priority": 4,
+                            "type": "ParticleSystem",
+                            "update": {
+                                "billboard_mode": "spherical",
+                                "color_over_lifetime": {
+                                    "time_mid": 0.503000020980835,
+                                    "value_end": [
+                                        1.0,
+                                        0.3870967626571655,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        1.0,
+                                        0.772549033164978,
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "value_start": [
+                                        1.0,
+                                        0.42645156383514404,
+                                        0.019999980926513672,
+                                        0.0
+                                    ]
+                                },
+                                "gravity": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "size_over_lifetime": {
+                                    "enabled": true,
+                                    "time_mid": 0.3499999940395355,
+                                    "value_end": [
+                                        0.5,
+                                        0.5,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_mid": [
+                                        1.0,
+                                        1.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "value_start": [
+                                        0.5,
+                                        0.5,
+                                        0.0,
+                                        0.0
+                                    ]
+                                },
+                                "velocity_over_lifetime": {
+                                    "enabled": true,
+                                    "time_mid": 0.5,
+                                    "value_end_max": [
+                                        0.03999999910593033,
+                                        0.07999999821186066,
+                                        0.03999999910593033,
+                                        0.0
+                                    ],
+                                    "value_end_min": [
+                                        -0.03999999910593033,
+                                        -0.11999999731779099,
+                                        -0.03999999910593033,
+                                        0.0
+                                    ],
+                                    "value_mid_max": [
+                                        0.07999999821186066,
+                                        0.11999999731779099,
+                                        0.07999999821186066,
+                                        0.0
+                                    ],
+                                    "value_mid_min": [
+                                        -0.07999999821186066,
+                                        -0.11999999731779099,
+                                        -0.07999999821186066,
+                                        0.0
+                                    ]
+                                },
+                                "world_space": true
+                            }
+                        }
+                    ],
+                    "name": "ps_spores",
+                    "prefab_source": "../content/entities/demo_content/particles/alien_sphere_spores.entity"
+                }
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "particles"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 1.0,
+                    "gain_randomization_enabled": false,
+                    "gain_randomization_max": 1.2000000476837158,
+                    "gain_randomization_min": 0.800000011920929,
+                    "inner_radius": 1.0,
+                    "looping": false,
+                    "outer_radius": 100.0,
+                    "pan": 0.0,
+                    "pitch": 1.0,
+                    "pitch_randomization_enabled": false,
+                    "pitch_randomization_max": 1.0499999523162842,
+                    "pitch_randomization_min": 0.949999988079071,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "position": [
+                        12.954075813293457,
+                        2.2670767307281494,
+                        -9.864148139953613
+                    ],
+                    "sound_category": 0,
+                    "sound_file_paths": [],
+                    "spatial": true,
+                    "type": "Sound",
+                    "velocity": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                }
+            ],
+            "name": "sound"
+        },
+        {
+            "active": true,
+            "children": [
+                {
+                    "active": true,
+                    "children": [
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.31070899963378906,
+                                        -1.0054118633270264,
+                                        -0.07235193252563477
+                                    ],
+                                    "rotation_euler": [
+                                        0.0,
+                                        -44.92154312133789,
+                                        0.0
+                                    ],
+                                    "rotation_quat": [
+                                        0.9241413474082947,
+                                        0.0,
+                                        -0.3820507824420929,
+                                        0.0
+                                    ],
+                                    "scale": [
+                                        0.20160001516342163,
+                                        0.20160001516342163,
+                                        0.20160001516342163
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.8478603363037109,
+                                        0.3977513313293457,
+                                        -1.349134922027588
+                                    ],
+                                    "rotation_euler": [
+                                        -148.91781616210938,
+                                        -44.92154312133789,
+                                        2.411536797808367e-06
+                                    ],
+                                    "rotation_quat": [
+                                        -0.24760468304157257,
+                                        0.8903533816337585,
+                                        0.10236267000436783,
+                                        0.3680824339389801
+                                    ],
+                                    "scale": [
+                                        0.07499520480632782,
+                                        0.07499521970748901,
+                                        0.07499520480632782
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_1",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.9754085540771484,
+                                        -0.5262083411216736,
+                                        -1.099902629852295
+                                    ],
+                                    "rotation_euler": [
+                                        2.3761839866638184,
+                                        -13.804595947265625,
+                                        179.6182861328125
+                                    ],
+                                    "rotation_quat": [
+                                        0.0008144808816723526,
+                                        0.12021871656179428,
+                                        0.020184004679322243,
+                                        0.9925419092178345
+                                    ],
+                                    "scale": [
+                                        0.11266115307807922,
+                                        0.1126612052321434,
+                                        0.11266117542982101
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_2",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.9297695159912109,
+                                        -0.012323856353759766,
+                                        -0.5449843406677246
+                                    ],
+                                    "rotation_euler": [
+                                        -48.85625076293945,
+                                        -39.75100326538086,
+                                        -42.07683181762695
+                                    ],
+                                    "rotation_quat": [
+                                        0.7486953735351563,
+                                        -0.47411641478538513,
+                                        -0.1492898017168045,
+                                        -0.4386131763458252
+                                    ],
+                                    "scale": [
+                                        0.08581957966089249,
+                                        0.08581962436437607,
+                                        0.08581957966089249
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_3",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.7002220153808594,
+                                        -0.391778826713562,
+                                        -0.7819762229919434
+                                    ],
+                                    "rotation_euler": [
+                                        -48.85625076293945,
+                                        -39.75100326538086,
+                                        -42.07683181762695
+                                    ],
+                                    "rotation_quat": [
+                                        0.7486953735351563,
+                                        -0.47411641478538513,
+                                        -0.1492898017168045,
+                                        -0.4386131763458252
+                                    ],
+                                    "scale": [
+                                        0.12623460590839386,
+                                        0.12623471021652222,
+                                        0.12623460590839386
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_4",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -1.0350189208984375,
+                                        -0.6804804801940918,
+                                        0.6378464698791504
+                                    ],
+                                    "rotation_euler": [
+                                        -81.38145446777344,
+                                        21.096149444580078,
+                                        -78.60961151123047
+                                    ],
+                                    "rotation_quat": [
+                                        0.6524040699005127,
+                                        -0.40804070234298706,
+                                        0.5134169459342957,
+                                        -0.3798352777957916
+                                    ],
+                                    "scale": [
+                                        0.2560481131076813,
+                                        0.25604817271232605,
+                                        0.25604814291000366
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_5",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.6010046005249023,
+                                        0.48566877841949463,
+                                        1.2377290725708008
+                                    ],
+                                    "rotation_euler": [
+                                        0.0,
+                                        -44.92154312133789,
+                                        0.0
+                                    ],
+                                    "rotation_quat": [
+                                        0.9241413474082947,
+                                        0.0,
+                                        -0.3820507824420929,
+                                        0.0
+                                    ],
+                                    "scale": [
+                                        0.20160001516342163,
+                                        0.20160001516342163,
+                                        0.20160001516342163
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_6",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.2889251708984375,
+                                        1.0832847356796265,
+                                        0.7929892539978027
+                                    ],
+                                    "rotation_euler": [
+                                        -48.85625076293945,
+                                        -39.75100326538086,
+                                        -42.07683181762695
+                                    ],
+                                    "rotation_quat": [
+                                        0.7486953735351563,
+                                        -0.47411641478538513,
+                                        -0.1492898017168045,
+                                        -0.4386131763458252
+                                    ],
+                                    "scale": [
+                                        0.11475872248411179,
+                                        0.11475882679224014,
+                                        0.11475872993469238
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_7",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.6152963638305664,
+                                        0.0608292818069458,
+                                        1.6294841766357422
+                                    ],
+                                    "rotation_euler": [
+                                        1.4420763818634441e-06,
+                                        75.21573638916016,
+                                        1.5079997410794022e-06
+                                    ],
+                                    "rotation_quat": [
+                                        0.792205810546875,
+                                        1.9386972027746197e-09,
+                                        0.6102539896965027,
+                                        2.745519589453238e-09
+                                    ],
+                                    "scale": [
+                                        0.0942278578877449,
+                                        0.0942278504371643,
+                                        0.0942278578877449
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_8",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.8650875091552734,
+                                        0.5099035501480103,
+                                        0.40993785858154297
+                                    ],
+                                    "rotation_euler": [
+                                        -148.9178009033203,
+                                        75.21575164794922,
+                                        2.342039988434408e-05
+                                    ],
+                                    "rotation_quat": [
+                                        -0.21225528419017792,
+                                        0.7632415294647217,
+                                        -0.16350500285625458,
+                                        -0.5879423022270203
+                                    ],
+                                    "scale": [
+                                        0.0991872176527977,
+                                        0.0991872251033783,
+                                        0.0991872027516365
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_9",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -1.4116239547729492,
+                                        0.1736541986465454,
+                                        0.5075497627258301
+                                    ],
+                                    "rotation_euler": [
+                                        4.112005233764648,
+                                        -58.79682540893555,
+                                        -83.97627258300781
+                                    ],
+                                    "rotation_quat": [
+                                        0.6589333415031433,
+                                        -0.3049432039260864,
+                                        -0.3855375647544861,
+                                        -0.5693657398223877
+                                    ],
+                                    "scale": [
+                                        0.209959477186203,
+                                        0.20995952188968658,
+                                        0.2099594622850418
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_10",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.22617721557617188,
+                                        0.1736588478088379,
+                                        -1.5877947807312012
+                                    ],
+                                    "rotation_euler": [
+                                        -96.45696258544922,
+                                        26.704692840576172,
+                                        -35.220947265625
+                                    ],
+                                    "rotation_quat": [
+                                        0.6698877215385437,
+                                        -0.6450954675674438,
+                                        0.3661729693412781,
+                                        -0.03193124383687973
+                                    ],
+                                    "scale": [
+                                        0.07377611845731735,
+                                        0.07377616316080093,
+                                        0.07377613335847855
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_11",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.6156558990478516,
+                                        -0.8708580136299133,
+                                        -0.2911105155944824
+                                    ],
+                                    "rotation_euler": [
+                                        -136.4391326904297,
+                                        54.545387268066406,
+                                        -62.64925003051758
+                                    ],
+                                    "rotation_quat": [
+                                        -0.5029487013816833,
+                                        0.6166786551475525,
+                                        -0.5743473768234253,
+                                        -0.19202929735183716
+                                    ],
+                                    "scale": [
+                                        0.1882043331861496,
+                                        0.18820449709892273,
+                                        0.18820436298847198
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_12",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -1.3777189254760742,
+                                        -0.3745976686477661,
+                                        -0.305692195892334
+                                    ],
+                                    "rotation_euler": [
+                                        -73.3938980102539,
+                                        -8.996074676513672,
+                                        -31.441680908203125
+                                    ],
+                                    "rotation_quat": [
+                                        0.7567391991615295,
+                                        -0.5904950499534607,
+                                        0.10088712722063065,
+                                        -0.26169338822364807
+                                    ],
+                                    "scale": [
+                                        0.12387610226869583,
+                                        0.12387612462043762,
+                                        0.12387610226869583
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_13",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.03191184997558594,
+                                        -0.6325119733810425,
+                                        -1.1088223457336426
+                                    ],
+                                    "rotation_euler": [
+                                        -99.24781036376953,
+                                        49.27791213989258,
+                                        -44.56937026977539
+                                    ],
+                                    "rotation_quat": [
+                                        0.6652788519859314,
+                                        -0.538317859172821,
+                                        0.5124793648719788,
+                                        0.07058979570865631
+                                    ],
+                                    "scale": [
+                                        0.08773108571767807,
+                                        0.08773108571767807,
+                                        0.08773108571767807
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_14",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.40595531463623047,
+                                        0.9468070268630981,
+                                        -0.6381034851074219
+                                    ],
+                                    "rotation_euler": [
+                                        -136.4391326904297,
+                                        54.545387268066406,
+                                        -62.64925003051758
+                                    ],
+                                    "rotation_quat": [
+                                        -0.5029487013816833,
+                                        0.6166786551475525,
+                                        -0.5743473768234253,
+                                        -0.19202929735183716
+                                    ],
+                                    "scale": [
+                                        0.14868143200874329,
+                                        0.14868156611919403,
+                                        0.14868147671222687
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_15",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.12345314025878906,
+                                        -1.5963057279586792,
+                                        -0.2539834976196289
+                                    ],
+                                    "rotation_euler": [
+                                        -148.91781616210938,
+                                        -44.92154312133789,
+                                        2.411536797808367e-06
+                                    ],
+                                    "rotation_quat": [
+                                        -0.24760468304157257,
+                                        0.8903533816337585,
+                                        0.10236267000436783,
+                                        0.3680824339389801
+                                    ],
+                                    "scale": [
+                                        0.07499520480632782,
+                                        0.07499521970748901,
+                                        0.07499520480632782
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_16",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.15889549255371094,
+                                        -1.005409836769104,
+                                        -0.2083430290222168
+                                    ],
+                                    "rotation_euler": [
+                                        163.53541564941406,
+                                        -80.36793518066406,
+                                        -1.5307879948522896e-05
+                                    ],
+                                    "rotation_quat": [
+                                        0.10939144343137741,
+                                        0.7561042904853821,
+                                        -0.0923905223608017,
+                                        0.6385951638221741
+                                    ],
+                                    "scale": [
+                                        0.11289600282907486,
+                                        0.11289602518081665,
+                                        0.11289600282907486
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_17",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.15889549255371094,
+                                        -1.7930586338043213,
+                                        -0.2083425521850586
+                                    ],
+                                    "rotation_euler": [
+                                        -66.95938873291016,
+                                        -5.317867755889893,
+                                        150.06170654296875
+                                    ],
+                                    "rotation_quat": [
+                                        0.23993290960788727,
+                                        -0.10495462268590927,
+                                        -0.5423422455787659,
+                                        0.798299252986908
+                                    ],
+                                    "scale": [
+                                        0.056448016315698624,
+                                        0.05644802376627922,
+                                        0.05644800513982773
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_18",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.0421905517578125,
+                                        -2.2385435104370117,
+                                        -0.09795379638671875
+                                    ],
+                                    "rotation_euler": [
+                                        155.6492156982422,
+                                        51.31974792480469,
+                                        52.665077209472656
+                                    ],
+                                    "rotation_quat": [
+                                        0.35814130306243896,
+                                        0.7491660714149475,
+                                        0.4726920425891876,
+                                        -0.2950379252433777
+                                    ],
+                                    "scale": [
+                                        0.08241412788629532,
+                                        0.08241412043571472,
+                                        0.08241409808397293
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_19",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        0.2179107666015625,
+                                        -1.3745293617248535,
+                                        0.362335205078125
+                                    ],
+                                    "rotation_euler": [
+                                        -99.24781036376953,
+                                        49.27791213989258,
+                                        -44.56937026977539
+                                    ],
+                                    "rotation_quat": [
+                                        0.6652788519859314,
+                                        -0.538317859172821,
+                                        0.5124793648719788,
+                                        0.07058979570865631
+                                    ],
+                                    "scale": [
+                                        0.08773108571767807,
+                                        0.08773108571767807,
+                                        0.08773108571767807
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_20",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        },
+                        {
+                            "active": true,
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": true,
+                                    "position": [
+                                        -0.12934494018554688,
+                                        -1.5945197343826294,
+                                        0.5979690551757813
+                                    ],
+                                    "rotation_euler": [
+                                        70.17876434326172,
+                                        -40.56121826171875,
+                                        -137.29917907714844
+                                    ],
+                                    "rotation_quat": [
+                                        -0.4650152325630188,
+                                        0.0678449496626854,
+                                        0.605469286441803,
+                                        0.6423121094703674
+                                    ],
+                                    "scale": [
+                                        0.15106840431690216,
+                                        0.15106843411922455,
+                                        0.15106840431690216
+                                    ],
+                                    "type": "Transform"
+                                },
+                                {
+                                    "active": true,
+                                    "editor_only": false,
+                                    "gpu_instancing_active": true,
+                                    "ignore_distance_culling": false,
+                                    "is_unique_material": false,
+                                    "material_files": [
+                                        "../content/materials/demo_content/rocks/rock_small.mat"
+                                    ],
+                                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                                    "requires_translucent_sorting": [
+                                        false
+                                    ],
+                                    "translucent_render_priorities": [
+                                        -1
+                                    ],
+                                    "type": "Mesh",
+                                    "visible": true
+                                }
+                            ],
+                            "name": "rock_small_kinematic_21",
+                            "prefab_source": "../content/entities/demo_content/special/rock_small_floating.entity"
+                        }
+                    ],
+                    "components": [
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation_euler": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": "Transform"
+                        }
+                    ],
+                    "name": "axis"
+                }
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/components/floating_prop_group.lua",
+                    "script_parameters": {
+                        "amplitude_x": {
+                            "default_value": "0.08",
+                            "description": "Shared horizontal drift along world X in meters.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.08"
+                        },
+                        "amplitude_y": {
+                            "default_value": "0.14",
+                            "description": "Shared vertical float in meters.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.14"
+                        },
+                        "amplitude_z": {
+                            "default_value": "0.08",
+                            "description": "Shared horizontal drift along world Z in meters.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.08"
+                        },
+                        "enable_orbit": {
+                            "default_value": "false",
+                            "description": "Orbit each child entity around the container pivot on world Y.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "enable_spin": {
+                            "default_value": "false",
+                            "description": "Spin each child entity around world Y at its own rate.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "frequency_x": {
+                            "default_value": "0.35",
+                            "description": "Shared float frequency on X in radians per second.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.35"
+                        },
+                        "frequency_y": {
+                            "default_value": "0.53",
+                            "description": "Shared float frequency on Y in radians per second.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.53"
+                        },
+                        "frequency_z": {
+                            "default_value": "0.71",
+                            "description": "Shared float frequency on Z in radians per second.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.71"
+                        },
+                        "orbit_speed_max": {
+                            "default_value": "8.0",
+                            "description": "Fastest orbit in degrees per second per child entity.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "12.000000"
+                        },
+                        "orbit_speed_min": {
+                            "default_value": "2.0",
+                            "description": "Slowest orbit in degrees per second per child entity.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "-12.000000"
+                        },
+                        "phase_x": {
+                            "default_value": "0.0",
+                            "description": "Manual phase on X in radians when random is off.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.0"
+                        },
+                        "phase_y": {
+                            "default_value": "0.0",
+                            "description": "Manual phase on Y in radians when random is off.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.0"
+                        },
+                        "phase_z": {
+                            "default_value": "0.0",
+                            "description": "Manual phase on Z in radians when random is off.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "0.0"
+                        },
+                        "random_phase_offset": {
+                            "default_value": "true",
+                            "description": "Pick phase offsets from each child entity id on ready.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "recursive": {
+                            "default_value": "false",
+                            "description": "Iterate descendants and drive every entity with a mesh.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "floating_children_container": {
+                            "default_value": "",
+                            "description": "Child path under this entity, or drop a folder. Non-recursive mode drives only its direct children.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 10,
+                            "value": "axis"
+                        },
+                        "spin_speed_max": {
+                            "default_value": "18.0",
+                            "description": "Fastest spin in degrees per second per child entity.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "32.000000"
+                        },
+                        "spin_speed_min": {
+                            "default_value": "4.0",
+                            "description": "Slowest spin in degrees per second per child entity.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "-32.000000"
+                        }
+                    },
+                    "type": "Script"
+                }
+            ],
+            "name": "floating_stones"
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "gpu_instancing_active": true,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/special/alien_sphere.mat"
+            ],
+            "mesh_file": "../content/meshes/primitive/sphere.glb",
+            "requires_translucent_sorting": [
+                false
+            ],
+            "translucent_render_priorities": [
+                2
+            ],
+            "type": "Mesh",
+            "visible": true
+        }
+    ]
+}

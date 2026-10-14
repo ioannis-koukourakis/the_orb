@@ -1,0 +1,37 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "light_type": 0,
+            "lumens": 800.0,
+            "range": 30.0,
+            "type": "Light"
+        },
+        {
+            "active": true,
+            "position": [
+                2.2765626907348633,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                -0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ],
+    "name": "light_point"
+}

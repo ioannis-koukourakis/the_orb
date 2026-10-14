@@ -1,0 +1,183 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "culling_distance": 5.0,
+            "emission": {
+                "burst_count": 0,
+                "rate": 5.0
+            },
+            "lod_far_distance": 50.0,
+            "lod_far_frame_skip": 3,
+            "lod_mid_distance": 20.0,
+            "lod_mid_frame_skip": 1,
+            "lod_update_throttling": false,
+            "loop": true,
+            "material_file": "../content/materials/demo_content/particles/emitter_translucent_default.mat",
+            "play_on_start": true,
+            "requires_translucent_sorting": false,
+            "settings": {
+                "duration_max": 1.0,
+                "duration_min": 1.0,
+                "loop": true,
+                "max_particles": 1000,
+                "start_delay": 0.0
+            },
+            "spawn": {
+                "color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "lifetime_max": 5.0,
+                "lifetime_min": 3.0,
+                "rotation_max": 0.0,
+                "rotation_min": 0.0,
+                "rotation_velocity_max": 0.0,
+                "rotation_velocity_min": 0.0,
+                "shape": "box",
+                "shape_size": [
+                    1.0,
+                    1.5,
+                    1.0
+                ],
+                "size": [
+                    1.0,
+                    1.0
+                ],
+                "size_scale_max": 0.019999999552965164,
+                "size_scale_min": 0.009999999776482582,
+                "velocity_max": [
+                    0.02500000037252903,
+                    0.02500000037252903,
+                    0.02500000037252903
+                ],
+                "velocity_min": [
+                    -0.02500000037252903,
+                    -0.02500000037252903,
+                    -0.02500000037252903
+                ]
+            },
+            "sprite": {
+                "frame_columns": 1,
+                "frame_count": 1,
+                "frame_rate": 10.0,
+                "frame_rows": 1,
+                "loop": true,
+                "mode": "none",
+                "random_start_frame": true,
+                "start_frame": 0
+            },
+            "translucent_render_priority": -1,
+            "type": "ParticleSystem",
+            "update": {
+                "billboard_mode": "spherical",
+                "color_over_lifetime": {
+                    "time_mid": 0.5,
+                    "value_end": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.0
+                    ],
+                    "value_mid": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.37254902720451355
+                    ],
+                    "value_start": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.0
+                    ]
+                },
+                "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "size_over_lifetime": {
+                    "enabled": true,
+                    "time_mid": 0.5,
+                    "value_end": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_mid": [
+                        1.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_start": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "velocity_over_lifetime": {
+                    "enabled": false,
+                    "time_mid": 0.5,
+                    "value_end_max": [
+                        0.02500000037252903,
+                        0.02500000037252903,
+                        0.02500000037252903,
+                        0.0
+                    ],
+                    "value_end_min": [
+                        -0.02500000037252903,
+                        -0.02500000037252903,
+                        -0.02500000037252903,
+                        0.0
+                    ],
+                    "value_mid_max": [
+                        0.02500000037252903,
+                        0.02500000037252903,
+                        0.02500000037252903,
+                        0.0
+                    ],
+                    "value_mid_min": [
+                        -0.02500000037252903,
+                        -0.02500000037252903,
+                        -0.02500000037252903,
+                        0.0
+                    ]
+                },
+                "world_space": true
+            }
+        }
+    ]
+}

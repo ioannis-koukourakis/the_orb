@@ -1,0 +1,167 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": true,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "angular_damping": 0.10000000149011612,
+            "angular_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "auto_disable": true,
+            "body_type": 2,
+            "collision_callback_filter_character": true,
+            "collision_callback_filter_dynamic": true,
+            "collision_callback_filter_kinematic": true,
+            "collision_callback_filter_static": true,
+            "collision_callbacks_enabled": false,
+            "collision_layer": 16,
+            "collision_mask": 65535,
+            "collision_shapes": [
+                {
+                    "mesh_file_path": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                    "offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.6000000238418579,
+                        0.5,
+                        0.6000000238418579
+                    ],
+                    "shape_type": 2
+                },
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        47.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.5,
+                        0.699999988079071,
+                        0.5
+                    ],
+                    "shape_type": 0
+                }
+            ],
+            "force_awake": false,
+            "friction": 0.5,
+            "inherit_surface_motion": true,
+            "linear_damping": 0.10000000149011612,
+            "linear_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mass": 20.0,
+            "physics_body_enabled": true,
+            "restitution": 0.0,
+            "rolling_friction": 0.20000000298023224,
+            "standing_mass_multiplier": 20.0,
+            "trigger_callbacks_enabled": false,
+            "type": "PhysicsBody",
+            "use_ccd": false
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "gpu_instancing_active": true,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/rocks/rock_small.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+            "requires_translucent_sorting": [
+                false
+            ],
+            "translucent_render_priorities": [
+                -1
+            ],
+            "type": "Mesh",
+            "visible": true
+        },
+        {
+            "active": true,
+            "script_file_path": "../content/scripts/components/push_impulse_interactable.lua",
+            "script_parameters": {
+                "can_interact": {
+                    "default_value": "true",
+                    "description": "Can the player interact with this entity.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                },
+                "impulse_strength": {
+                    "default_value": "40.0",
+                    "description": "Impulse magnitude along camera yaw forward.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "40.0"
+                },
+                "interact_label": {
+                    "default_value": "Push",
+                    "description": "HUD / interact label.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 3,
+                    "value": "Push"
+                },
+                "interaction_distance": {
+                    "default_value": "2.5",
+                    "description": "Max interact distance.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "2.5"
+                }
+            },
+            "type": "Script"
+        }
+    ]
+}

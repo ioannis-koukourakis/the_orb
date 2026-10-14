@@ -1,0 +1,46 @@
+Detis Engine Tech Demo — License Notice
+========================================
+
+Copyright (c) Ioannis Koukourakis, 2026 - present. All rights reserved.
+
+This notice applies to this demo package (the showcase worlds, scripts, and art under content/, together with the shipped bin and engine runtime folders in this download). It does not replace the Detis Engine End User License Agreement.
+
+
+Permitted use
+-------------
+
+You may download, install, and play this demo for personal, non-commercial use at no charge.
+
+You may modify scripts and other demo content on your own machine for personal experimentation with this demo.
+
+
+Not permitted
+-------------
+
+You may not sell, sublicense, or redistribute this demo package, or substantial parts of it, as a standalone download or product.
+
+You may not present this package, or engine runtime files taken from it, as a free or paid Detis Engine development kit or editor substitute.
+
+You may not remove or alter engine/license notices under engine/licenses/.
+
+
+Detis Engine
+------------
+
+Binaries, shaders, packaged engine data, and other materials under engine/ are Detis Engine "Software" as defined in engine/licenses/eula.txt.
+
+No license to use Detis Engine for development, or to redistribute the engine, is granted except as stated in that EULA or in a separate written agreement with the Licensor.
+
+Receiving or playing this demo does not make you a Detis Engine licensee for tool or engine development purposes.
+
+
+Third-party content
+-------------------
+
+Some assets include their own license files in content/ or engine/licenses/third_party/. Those terms apply to those materials.
+
+
+Disclaimer
+----------
+
+This demo is provided "as is" without warranty of any kind. See engine/licenses/eula.txt for engine-related disclaimers and limitations where applicable.

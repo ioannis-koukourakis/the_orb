@@ -1,0 +1,47 @@
+[general]
+type = foliage
+cull_face = none
+blend_mode = alpha
+casts_shadows = false
+is_masked = true
+affected_by_ssao = false
+ssr_excluded = false
+use_ssr = false
+ssr_strength = 1.000000
+ssao_strength = 0.350000
+reflection_fallback_strength = 1.000000
+use_anisotropic_filtering = true
+distance_cull_distance = 83.000000
+
+
+[textures]
+u_albedo_map = ../content/textures/demo_content/foliage/grass/grass_patch_albedo.dds
+
+
+[uniforms]
+u_wind_multiplier = 2.000000
+u_subsurface_color = 0.895522,0.895522,0.895522
+u_color_variation = 1.000000
+u_normal_map_strength = 0.000000
+u_reflection_fallback_strength = 1.000000
+u_ssr_strength = 1.000000
+u_use_normal_map = false
+u_use_ssr = false
+u_ssr_excluded = false
+u_ssao_strength = 0.350000
+u_use_ssao = false
+u_sprite_offset_next = 0.000000,0.000000
+u_masked = true
+u_rma_value = 1.000000,0.000000,1.000000,0.400000
+u_use_emission_map = false
+u_map_tiling = 1.000000,1.000000
+u_use_albedo_map = true
+u_albedo_color = 0.817164,0.737065,0.573235
+u_sprite_scale = 1.000000,1.000000
+u_emission_color = 0.000000,0.000000,0.000000
+u_use_rma_map = false
+u_albedo_brightness = 0.250000
+u_emissive_multiplier = 0.000000
+u_mask_threshold = 0.350000
+u_sprite_offset = 0.000000,0.000000
+u_sprite_blend = 0.000000

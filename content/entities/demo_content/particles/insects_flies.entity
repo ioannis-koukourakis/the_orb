@@ -1,0 +1,255 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "culling_distance": 100.0,
+            "emission": {
+                "burst_count": 0,
+                "rate": 10.0
+            },
+            "is_unique_material": true,
+            "lod_far_distance": 50.0,
+            "lod_far_frame_skip": 3,
+            "lod_mid_distance": 20.0,
+            "lod_mid_frame_skip": 1,
+            "lod_update_throttling": true,
+            "loop": true,
+            "material_file": "../content/materials/demo_content/billboards/flies.mat",
+            "play_on_start": true,
+            "requires_translucent_sorting": false,
+            "settings": {
+                "duration_max": 5.0,
+                "duration_min": 5.0,
+                "loop": true,
+                "max_particles": 20,
+                "start_delay": 0.0
+            },
+            "spawn": {
+                "color": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "lifetime_max": 2.0,
+                "lifetime_min": 1.0,
+                "rotation_max": 0.0,
+                "rotation_min": 0.0,
+                "rotation_velocity_max": 0.0,
+                "rotation_velocity_min": 0.0,
+                "shape": "box",
+                "shape_size": [
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "size": [
+                    1.0,
+                    1.0
+                ],
+                "size_scale_max": 0.05000000074505806,
+                "size_scale_min": 0.029999999329447746,
+                "velocity_max": [
+                    2.0,
+                    1.0,
+                    2.0
+                ],
+                "velocity_min": [
+                    -2.0,
+                    -1.0,
+                    -2.0
+                ]
+            },
+            "sprite": {
+                "frame_columns": 2,
+                "frame_count": 4,
+                "frame_rate": 10.0,
+                "frame_rows": 2,
+                "loop": true,
+                "mode": "animate",
+                "random_start_frame": true,
+                "start_frame": 0
+            },
+            "translucent_render_priority": -1,
+            "type": "ParticleSystem",
+            "unique_material_uniforms": {
+                "u_albedo_brightness": 1.0,
+                "u_albedo_color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "u_albedo_tints_reflection": true,
+                "u_albedo_uses_vertex_color": false,
+                "u_detail_normal_map_strength": 1.0,
+                "u_detail_normal_map_tiling": [
+                    8.0,
+                    8.0
+                ],
+                "u_emission_color": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "u_emissive_multiplier": 0.0,
+                "u_height_scale": 0.0,
+                "u_map_tiling": [
+                    1.0,
+                    1.0
+                ],
+                "u_mask_threshold": 0.3499999940395355,
+                "u_masked": true,
+                "u_normal_map_strength": 1.0,
+                "u_parallax_lod_end": 50.0,
+                "u_reflection_fallback_strength": 0.0,
+                "u_rma_value": [
+                    1.0,
+                    0.0,
+                    1.0,
+                    0.5
+                ],
+                "u_sprite_blend": 0.0,
+                "u_sprite_offset": [
+                    0.0,
+                    0.0
+                ],
+                "u_sprite_offset_next": [
+                    0.0,
+                    0.0
+                ],
+                "u_sprite_scale": [
+                    1.0,
+                    1.0
+                ],
+                "u_ssao_strength": 1.0,
+                "u_ssgi_emissive_contribute": false,
+                "u_ssgi_receive": false,
+                "u_ssr_excluded": true,
+                "u_ssr_strength": 1.0,
+                "u_subsurface_color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "u_use_albedo_map": true,
+                "u_use_detail_normal_map": false,
+                "u_use_emission_map": false,
+                "u_use_normal_map": false,
+                "u_use_rma_map": false,
+                "u_use_ssao": false,
+                "u_use_ssr": false,
+                "u_uv_scroll_speed": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "update": {
+                "billboard_mode": "cylindrical",
+                "color_over_lifetime": {
+                    "time_mid": 0.5,
+                    "value_end": [
+                        0.49803921580314636,
+                        0.49803921580314636,
+                        0.49803921580314636,
+                        0.0
+                    ],
+                    "value_mid": [
+                        0.49803921580314636,
+                        0.49803921580314636,
+                        0.49803921580314636,
+                        1.0
+                    ],
+                    "value_start": [
+                        0.4976958632469177,
+                        0.4976958632469177,
+                        0.4976958632469177,
+                        0.0
+                    ]
+                },
+                "gravity": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "size_over_lifetime": {
+                    "enabled": false,
+                    "time_mid": 0.5,
+                    "value_end": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_mid": [
+                        1.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "value_start": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "velocity_over_lifetime": {
+                    "enabled": true,
+                    "time_mid": 0.5,
+                    "value_end_max": [
+                        2.0,
+                        1.0,
+                        2.0,
+                        0.0
+                    ],
+                    "value_end_min": [
+                        -2.0,
+                        -1.0,
+                        -2.0,
+                        0.0
+                    ],
+                    "value_mid_max": [
+                        2.0,
+                        1.0,
+                        2.0,
+                        0.0
+                    ],
+                    "value_mid_min": [
+                        -2.0,
+                        -1.0,
+                        -2.0,
+                        0.0
+                    ]
+                },
+                "world_space": true
+            }
+        }
+    ]
+}

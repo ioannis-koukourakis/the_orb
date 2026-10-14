@@ -1,0 +1,165 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "angular_damping": 0.0,
+            "angular_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "auto_disable": true,
+            "body_type": 0,
+            "collision_callback_filter_character": true,
+            "collision_callback_filter_dynamic": true,
+            "collision_callback_filter_kinematic": true,
+            "collision_callback_filter_static": true,
+            "collision_callbacks_enabled": false,
+            "collision_layer": 1,
+            "collision_mask": 65534,
+            "collision_shapes": [
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.05000000074505806,
+                        0.25,
+                        0.0
+                    ],
+                    "rotation": [
+                        -3.5,
+                        0.0,
+                        -14.5
+                    ],
+                    "shape_size": [
+                        0.20000000298023224,
+                        0.3499999940395355,
+                        0.20000000298023224
+                    ],
+                    "shape_type": 2
+                },
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.17000000178813934,
+                        0.75,
+                        0.019999999552965164
+                    ],
+                    "rotation": [
+                        9.0,
+                        0.0,
+                        -14.5
+                    ],
+                    "shape_size": [
+                        0.16500000655651093,
+                        0.3499999940395355,
+                        0.16500000655651093
+                    ],
+                    "shape_type": 2
+                },
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.2199999988079071,
+                        1.350000023841858,
+                        0.11999999731779099
+                    ],
+                    "rotation": [
+                        10.5,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.15000000596046448,
+                        0.44999998807907104,
+                        0.15000000596046448
+                    ],
+                    "shape_type": 2
+                },
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.20000000298023224,
+                        2.3499999046325684,
+                        0.20000000298023224
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "shape_type": 1
+                }
+            ],
+            "force_awake": false,
+            "friction": 0.5,
+            "inherit_surface_motion": true,
+            "linear_damping": 0.0,
+            "linear_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mass": 1.0,
+            "physics_body_enabled": true,
+            "restitution": 0.0,
+            "rolling_friction": 0.0,
+            "standing_mass_multiplier": 20.0,
+            "trigger_callbacks_enabled": false,
+            "type": "PhysicsBody",
+            "use_ccd": false
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "gpu_instancing_active": true,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat",
+                "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_bark.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_tree_01.glb",
+            "requires_translucent_sorting": [
+                false,
+                false
+            ],
+            "translucent_render_priorities": [
+                -1,
+                -1
+            ],
+            "type": "Mesh",
+            "visible": true
+        }
+    ]
+}

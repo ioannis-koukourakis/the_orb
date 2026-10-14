@@ -1,0 +1,61 @@
+Third-party licenses for the shipped game
+=========================================
+
+This folder ships with the game package (next to the executable under game/).
+It exists so binary redistribution of third-party code remains compliant when
+only the game .exe/.bin is distributed — not the engine source tree.
+
+Keep this folder with any public or commercial game build.
+
+Libraries that require notice preservation in redistributions
+-------------------------------------------------------------
+MIT:
+  jolt_mit.txt
+  lua_mit.txt
+  imgui_mit.txt
+  imguizmo_mit.txt
+  imgui_file_dialog_mit.txt
+  dirent_mit.txt
+  glm_mit.txt
+  glad_mit_apache.txt          (also includes Khronos Apache-2.0 notes)
+  nlohmann_json_mit.txt
+  simple_ini_mit.txt
+  miniz_mit.txt
+  libsquish_mit.txt
+  fast_gltf_mit.txt
+
+BSD-2-Clause:
+  dds_ktx_bsd2.txt
+
+Apache-2.0:
+  simdjson_apache20.txt        (via fast_gltf)
+
+zlib (notice kept; end-user credit appreciated, not required):
+  sdl2_zlib.txt
+  mikktspace_zlib.txt
+
+SIL OFL 1.1 + CC BY 4.0 (Font Awesome Free webfont):
+  font_awesome_ofl_ccby.txt
+
+SIL OFL 1.1 (Inter):
+  shipped with the font at game/engine/fonts/inter/OFL.txt
+
+Public domain / Unlicense (no notice file required to ship)
+-----------------------------------------------------------
+  miniaudio
+  verblib (Freeverb port; not GPL Freeverb3)
+  stb_image (PD election)
+
+Not included here
+-----------------
+  Steamworks SDK — not linked in the current game binary. If Steam is enabled
+  later, follow Valve's Steamworks partner / redistributable rules separately.
+  Bullet — present under third_party/ but not linked by the current build.
+
+Notes
+-----
+- The current main executable may still link editor/tooling code in development
+  builds; ImGui / ImGuizmo / ImGuiFileDialog notices are included for that reason.
+- If a future "game-only" binary drops editor UI, you can remove those three MIT
+  files after confirming they are no longer linked.
+- This is not legal advice. When in doubt, keep the notices with the build.

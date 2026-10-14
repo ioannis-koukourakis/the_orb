@@ -1,0 +1,593 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "editor_only": true,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": true,
+                    "material_files": [
+                        "../engine/materials/lighting_reference.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/sphere.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "unique_material_uniforms": [
+                        {
+                            "submesh_index": 0,
+                            "uniforms": {
+                                "u_albedo_brightness": 1.0,
+                                "u_albedo_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_tints_reflection": true,
+                                "u_albedo_uv_mode": 0.0,
+                                "u_detail_normal_map_strength": 1.0,
+                                "u_detail_normal_map_tiling": [
+                                    8.0,
+                                    8.0
+                                ],
+                                "u_detail_normal_uv_mode": 0.0,
+                                "u_emission_color": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_emission_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_emission_uv_mode": 0.0,
+                                "u_emissive_multiplier": 0.0,
+                                "u_height_scale": 0.0,
+                                "u_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_mask_threshold": 0.3499999940395355,
+                                "u_masked": false,
+                                "u_normal_map_strength": 1.0,
+                                "u_normal_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_normal_uv_mode": 0.0,
+                                "u_parallax_lod_end": 50.0,
+                                "u_reflection_fallback_strength": 1.0,
+                                "u_rma_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_rma_uv_mode": 0.0,
+                                "u_rma_value": [
+                                    1.0,
+                                    0.0,
+                                    1.0,
+                                    0.0
+                                ],
+                                "u_sprite_blend": 0.0,
+                                "u_sprite_offset": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_offset_next": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_scale": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_ssao_strength": 1.0,
+                                "u_ssr_excluded": false,
+                                "u_ssr_strength": 1.0,
+                                "u_subsurface_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_use_albedo_map": false,
+                                "u_use_detail_normal_map": false,
+                                "u_use_emission_map": false,
+                                "u_use_normal_map": false,
+                                "u_use_rma_map": false,
+                                "u_use_ssao": true,
+                                "u_use_ssr": false,
+                                "u_use_world_planar_uvs": false,
+                                "u_uv_scroll_speed": [
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "white"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "editor_only": true,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": true,
+                    "material_files": [
+                        "../engine/materials/lighting_reference.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/sphere.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "unique_material_uniforms": [
+                        {
+                            "submesh_index": 0,
+                            "uniforms": {
+                                "u_albedo_brightness": 0.18000000715255737,
+                                "u_albedo_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_tints_reflection": true,
+                                "u_albedo_uv_mode": 0.0,
+                                "u_detail_normal_map_strength": 1.0,
+                                "u_detail_normal_map_tiling": [
+                                    8.0,
+                                    8.0
+                                ],
+                                "u_detail_normal_uv_mode": 0.0,
+                                "u_emission_color": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_emission_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_emission_uv_mode": 0.0,
+                                "u_emissive_multiplier": 0.0,
+                                "u_height_scale": 0.0,
+                                "u_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_mask_threshold": 0.3499999940395355,
+                                "u_masked": false,
+                                "u_normal_map_strength": 1.0,
+                                "u_normal_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_normal_uv_mode": 0.0,
+                                "u_parallax_lod_end": 50.0,
+                                "u_reflection_fallback_strength": 1.0,
+                                "u_rma_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_rma_uv_mode": 0.0,
+                                "u_rma_value": [
+                                    1.0,
+                                    0.0,
+                                    1.0,
+                                    0.0
+                                ],
+                                "u_sprite_blend": 0.0,
+                                "u_sprite_offset": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_offset_next": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_scale": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_ssao_strength": 1.0,
+                                "u_ssr_excluded": false,
+                                "u_ssr_strength": 1.0,
+                                "u_subsurface_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_use_albedo_map": false,
+                                "u_use_detail_normal_map": false,
+                                "u_use_emission_map": false,
+                                "u_use_normal_map": false,
+                                "u_use_rma_map": false,
+                                "u_use_ssao": true,
+                                "u_use_ssr": false,
+                                "u_use_world_planar_uvs": false,
+                                "u_uv_scroll_speed": [
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        1.1999998092651367,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "gray"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "editor_only": true,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": true,
+                    "material_files": [
+                        "../engine/materials/lighting_reference.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/sphere.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "unique_material_uniforms": [
+                        {
+                            "submesh_index": 0,
+                            "uniforms": {
+                                "u_albedo_brightness": 0.0,
+                                "u_albedo_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_tints_reflection": true,
+                                "u_albedo_uv_mode": 0.0,
+                                "u_detail_normal_map_strength": 1.0,
+                                "u_detail_normal_map_tiling": [
+                                    8.0,
+                                    8.0
+                                ],
+                                "u_detail_normal_uv_mode": 0.0,
+                                "u_emission_color": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_emission_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_emission_uv_mode": 0.0,
+                                "u_emissive_multiplier": 0.0,
+                                "u_height_scale": 0.0,
+                                "u_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_mask_threshold": 0.3499999940395355,
+                                "u_masked": false,
+                                "u_normal_map_strength": 1.0,
+                                "u_normal_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_normal_uv_mode": 0.0,
+                                "u_parallax_lod_end": 50.0,
+                                "u_reflection_fallback_strength": 1.0,
+                                "u_rma_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_rma_uv_mode": 0.0,
+                                "u_rma_value": [
+                                    1.0,
+                                    0.0,
+                                    1.0,
+                                    0.0
+                                ],
+                                "u_sprite_blend": 0.0,
+                                "u_sprite_offset": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_offset_next": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_scale": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_ssao_strength": 1.0,
+                                "u_ssr_excluded": false,
+                                "u_ssr_strength": 1.0,
+                                "u_subsurface_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_use_albedo_map": false,
+                                "u_use_detail_normal_map": false,
+                                "u_use_emission_map": false,
+                                "u_use_normal_map": false,
+                                "u_use_rma_map": false,
+                                "u_use_ssao": true,
+                                "u_use_ssr": false,
+                                "u_use_world_planar_uvs": false,
+                                "u_uv_scroll_speed": [
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        2.40000057220459,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "black"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "editor_only": true,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": true,
+                    "material_files": [
+                        "../engine/materials/lighting_reference.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/sphere.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "unique_material_uniforms": [
+                        {
+                            "submesh_index": 0,
+                            "uniforms": {
+                                "u_albedo_brightness": 1.0,
+                                "u_albedo_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_albedo_tints_reflection": true,
+                                "u_albedo_uv_mode": 0.0,
+                                "u_detail_normal_map_strength": 1.0,
+                                "u_detail_normal_map_tiling": [
+                                    8.0,
+                                    8.0
+                                ],
+                                "u_detail_normal_uv_mode": 0.0,
+                                "u_emission_color": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_emission_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_emission_uv_mode": 0.0,
+                                "u_emissive_multiplier": 0.0,
+                                "u_height_scale": 0.0,
+                                "u_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_mask_threshold": 0.3499999940395355,
+                                "u_masked": false,
+                                "u_normal_map_strength": 1.0,
+                                "u_normal_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_normal_uv_mode": 0.0,
+                                "u_parallax_lod_end": 50.0,
+                                "u_reflection_fallback_strength": 1.0,
+                                "u_rma_map_tiling": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_rma_uv_mode": 0.0,
+                                "u_rma_value": [
+                                    0.0,
+                                    1.0,
+                                    1.0,
+                                    0.0
+                                ],
+                                "u_sprite_blend": 0.0,
+                                "u_sprite_offset": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_offset_next": [
+                                    0.0,
+                                    0.0
+                                ],
+                                "u_sprite_scale": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_ssao_strength": 1.0,
+                                "u_ssr_excluded": false,
+                                "u_ssr_strength": 1.0,
+                                "u_subsurface_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "u_use_albedo_map": false,
+                                "u_use_detail_normal_map": false,
+                                "u_use_emission_map": false,
+                                "u_use_normal_map": false,
+                                "u_use_rma_map": false,
+                                "u_use_ssao": true,
+                                "u_use_ssr": true,
+                                "u_use_world_planar_uvs": false,
+                                "u_uv_scroll_speed": [
+                                    0.0,
+                                    0.0
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        3.6000003814697266,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "chrome",
+            "prefab_source": "../engine/entities/lighting_reference.entity"
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ]
+}

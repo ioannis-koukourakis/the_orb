@@ -1,0 +1,133 @@
+[general]
+
+type = water
+
+cull_face = back
+
+blend_mode = alpha
+
+casts_shadows = false
+
+is_masked = false
+
+affected_by_ssao = false
+
+ssr_excluded = false
+
+use_ssr = true
+
+ssr_strength = 1.000000
+
+ssao_strength = 1.000000
+
+reflection_fallback_strength = 1.000000
+
+use_anisotropic_filtering = true
+
+distance_cull_distance = 0.000000
+
+
+
+
+
+[textures]
+
+u_normal_map = ../content/textures/demo_content/tileable/details/normal/detail_rock_01_normal.dds
+
+
+
+
+
+[uniforms]
+u_emissive_multiplier = 0.000000
+
+u_water_color = 0.500694,0.609756,0.593796
+
+u_albedo_color = 1.000000,1.000000,1.000000
+
+u_albedo_brightness = 1.000000
+
+u_ssr_lod_end = 50.000000
+
+u_map_tiling = 1.000000,1.000000
+
+u_use_albedo_map = false
+
+u_wave_height_1 = 0.100000
+
+u_water_opacity = 1.000000
+
+u_uv_scroll_speed = 0.000000,0.000000
+
+u_deep_water_color = 0.398374,0.398374,0.398374
+
+u_refraction_strength = 8.000000
+
+u_reflection_strength = 1.000000
+
+u_absorption_color = 0.532520,0.532520,0.532520
+
+u_water_fog_density = 0.200000
+
+u_absorption_strength = 1.000000
+
+u_use_ssr = true
+
+u_wave_scroll_2 = 0.080000,0.040000
+
+u_ssr_strength = 1.000000
+
+u_use_normal_map = true
+
+u_gerstner_strength = 0.000000
+
+u_gerstner_speed_scale = 1.000000
+
+u_gerstner_normal_blend = 0.150000
+
+u_wave_chaos = 0.000000
+
+u_wave_random_seed = 42.000000
+
+u_caustics_strength = 0.000000
+
+u_foam_map_tiling = 0.640000,0.640000
+
+u_caustics_scale = 0.750000
+
+u_use_specular = true
+
+u_crest_foam_strength = 0.000000
+
+u_shore_foam_range = 0.650000
+
+u_foam_color = 0.709924,0.768657,0.487581
+
+u_water_fog_depth_scale = 1.000000
+
+u_foam_blend = 0.000000
+
+u_gerstner_wave_0_direction = 1.000000,0.300000
+
+u_gerstner_wave_0_steepness = 0.150000
+
+u_gerstner_wave_0_wavelength = 12.000000
+
+u_gerstner_wave_1_direction = -0.400000,1.000000
+
+u_gerstner_wave_1_steepness = 0.100000
+
+u_gerstner_wave_1_wavelength = 8.000000
+
+u_wave_scroll_1 = 0.080000,0.040000
+
+u_wave_height_2 = 0.100000
+
+u_specular_intensity = 1.000000
+
+u_opacity_bias = 0.250000
+
+u_specular_shininess = 128.000000
+
+u_wave_tiling = 0.150000,-0.150000
+

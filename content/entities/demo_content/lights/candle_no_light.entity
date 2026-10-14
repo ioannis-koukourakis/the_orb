@@ -1,0 +1,82 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "billboard_type": 1,
+                    "constant_screen_size": false,
+                    "editor_only": false,
+                    "flipbook_file": "../content/flipbooks/demo_content/billboards/candle_flame.flipbook",
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_file": "../content/materials/demo_content/billboards/candle_flame.mat",
+                    "type": "Billboard"
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        1.1920928955078125e-07,
+                        0.2692684233188629,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "candle_flame",
+            "prefab_source": "../content/entities/demo_content/billboards/candle_flame.entity"
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "editor_only": false,
+            "ignore_distance_culling": false,
+            "is_unique_material": false,
+            "material_files": [
+                "../content/materials/demo_content/lights/candle_wax.mat"
+            ],
+            "mesh_file": "../content/meshes/demo_content/lights/candle.glb",
+            "type": "Mesh",
+            "visible": true
+        },
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ],
+    "tags": [
+        "interactable"
+    ]
+}

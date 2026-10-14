@@ -1,0 +1,9 @@
+Detis Engine
+
+Copyright (c) Ioannis Koukourakis, 2025 - present. All rights reserved.
+
+Use of the Detis Engine editor, runtime binaries, and associated content is governed by the End User License Agreement (EULA), unless a separate written license agreement with Licensor applies, in which case that agreement governs to the extent of any conflict.
+
+No rights to use, copy, modify, redistribute, or otherwise exploit the Software are granted except as expressly provided by the EULA or such separate agreement.
+
+By installing, launching, clicking Accept, or otherwise using the Software, you agree to be bound by the terms of the EULA, except that clicking Accept or using the Software does not modify, replace, or limit a separate written license agreement with Licensor that already covers that use.

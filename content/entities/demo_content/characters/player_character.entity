@@ -1,0 +1,1017 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "children": [
+                {
+                    "active": true,
+                    "children": [
+                        {
+                            "active": true,
+                            "children": [
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.3499999940395355,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.1996870040893555,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "default"
+                                },
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.5,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.1996870040893555,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "grass"
+                                },
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.44999998807907104,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.1996870040893555,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "gravel"
+                                },
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.3499999940395355,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.1996870040893555,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "stone"
+                                },
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.6000000238418579,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.1996870040893555,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "water"
+                                },
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.44999998807907104,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.1996870040893555,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "water_shallow"
+                                },
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.550000011920929,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.1996870040893555,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_dirt.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_dirt_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_dirt_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_dirt_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "dirt"
+                                }
+                            ],
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": false,
+                                    "position": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "rotation_euler": [
+                                        0.0,
+                                        -0.0,
+                                        0.0
+                                    ],
+                                    "rotation_quat": [
+                                        1.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "scale": [
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ],
+                                    "type": "Transform"
+                                }
+                            ],
+                            "name": "footsteps"
+                        },
+                        {
+                            "active": true,
+                            "children": [
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.3499999940395355,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.0,
+                                            "pitch": 1.07375168800354,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "default"
+                                }
+                            ],
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": false,
+                                    "position": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "rotation_euler": [
+                                        0.0,
+                                        -0.0,
+                                        0.0
+                                    ],
+                                    "rotation_quat": [
+                                        1.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "scale": [
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ],
+                                    "type": "Transform"
+                                }
+                            ],
+                            "name": "jump"
+                        },
+                        {
+                            "active": true,
+                            "children": [
+                                {
+                                    "active": true,
+                                    "components": [
+                                        {
+                                            "active": true,
+                                            "affected_by_listener_sound_zones": true,
+                                            "air_absorption_cutoff_hz": 1200.0,
+                                            "air_absorption_enabled": false,
+                                            "air_absorption_filter_type": 0,
+                                            "air_absorption_inner_radius": 1.0,
+                                            "air_absorption_outer_radius": 50.0,
+                                            "full_spatialization_at": 1.0,
+                                            "gain": 0.75,
+                                            "gain_randomization_enabled": true,
+                                            "gain_randomization_max": 1.25,
+                                            "gain_randomization_min": 0.75,
+                                            "inner_radius": 0.0,
+                                            "looping": false,
+                                            "outer_radius": 0.0,
+                                            "pan": 0.03500000014901161,
+                                            "pitch": 1.0847324132919312,
+                                            "pitch_randomization_enabled": true,
+                                            "pitch_randomization_max": 1.25,
+                                            "pitch_randomization_min": 1.0,
+                                            "play_mode": 0,
+                                            "play_on_start": false,
+                                            "sound_category": 0,
+                                            "sound_file_paths": [
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                                                "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav"
+                                            ],
+                                            "spatial": false,
+                                            "type": "Sound"
+                                        },
+                                        {
+                                            "active": true,
+                                            "interpolation_enabled": false,
+                                            "position": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "rotation_euler": [
+                                                0.0,
+                                                -0.0,
+                                                0.0
+                                            ],
+                                            "rotation_quat": [
+                                                1.0,
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ],
+                                            "scale": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ],
+                                            "type": "Transform"
+                                        }
+                                    ],
+                                    "name": "default"
+                                }
+                            ],
+                            "components": [
+                                {
+                                    "active": true,
+                                    "interpolation_enabled": false,
+                                    "position": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "rotation_euler": [
+                                        0.0,
+                                        -0.0,
+                                        0.0
+                                    ],
+                                    "rotation_quat": [
+                                        1.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "scale": [
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ],
+                                    "type": "Transform"
+                                }
+                            ],
+                            "name": "land"
+                        }
+                    ],
+                    "components": [
+                        {
+                            "active": true,
+                            "interpolation_enabled": false,
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation_euler": [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            "rotation_quat": [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "type": "Transform"
+                        }
+                    ],
+                    "name": "sound"
+                }
+            ],
+            "components": [
+                {
+                    "angular_damping": 0.0,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 3,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": false,
+                    "collision_callbacks_enabled": true,
+                    "collision_layer": 4,
+                    "collision_mask": 65535,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.8999999761581421,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.20000000298023224,
+                                1.399999976158142,
+                                0.20000000298023224
+                            ],
+                            "shape_type": 2
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.5,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.0,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.0,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": true,
+                    "type": "PhysicsBody",
+                    "use_ccd": true
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": true,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "body",
+            "tags": [
+                "player"
+            ]
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/player/player_interaction.lua",
+                    "type": "Script"
+                }
+            ],
+            "name": "interaction"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/player/player_hud.lua",
+                    "type": "Script"
+                }
+            ],
+            "name": "hud"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "default_fov": 65.0,
+                    "fov": 65.0,
+                    "type": "Camera"
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        1.7000000476837158,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        2.0648623436092528e-11,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        1.8019323554975542e-13,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0000001192092896
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "camera"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "editor_only": true,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../engine/materials/default.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cylinder.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.9000000357627869,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        0.4000000059604645,
+                        1.7999999523162842,
+                        0.4000000059604645
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "debug_mesh"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "billboard": true,
+                    "editor_only": true,
+                    "font_id": "",
+                    "font_pixel_size": 45.0,
+                    "material_file": "",
+                    "opaque": false,
+                    "screen_space_size": true,
+                    "text": "Player",
+                    "text_color": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "TextMesh",
+                    "use_mask": true,
+                    "world_height": 0.25
+                },
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        2.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        -1.001791224553017e-05,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        -8.742277657347586e-08,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        0.25,
+                        0.25,
+                        2.5
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "name": "debug_label"
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "script_file_path": "../content/scripts/player/player_controller.lua",
+            "type": "Script"
+        },
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ]
+}

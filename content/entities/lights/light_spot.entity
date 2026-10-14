@@ -1,0 +1,38 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "angle": 0.5235987901687622,
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "light_type": 1,
+            "lumens": 1100.0,
+            "range": 30.0,
+            "type": "Light"
+        },
+        {
+            "active": true,
+            "position": [
+                2.2765626907348633,
+                3.0,
+                0.0
+            ],
+            "rotation_euler": [
+                90.00000762939453,
+                -0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ],
+    "name": "light_spot"
+}

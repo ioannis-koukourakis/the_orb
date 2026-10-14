@@ -1,0 +1,125 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        },
+        {
+            "active": true,
+            "animated_override": false,
+            "billboard_type": 1,
+            "constant_screen_size": false,
+            "current_clip": "",
+            "editor_only": false,
+            "flipbook_file": "../content/flipbooks/demo_content/candle_flame.flipbook",
+            "frame_rate_override": 10.0,
+            "ignore_distance_culling": false,
+            "is_unique_material": true,
+            "material_file": "../content/materials/demo_content/billboards/candle_flame.mat",
+            "playback_mode": 0,
+            "random_start_frame": true,
+            "requires_translucent_sorting": false,
+            "start_frame": 0,
+            "translucent_render_priority": -1,
+            "type": "Billboard",
+            "unique_uniforms": {
+                "u_absorption_color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "u_absorption_strength": 1.0,
+                "u_albedo_brightness": 1.0,
+                "u_albedo_color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "u_albedo_uses_vertex_color": false,
+                "u_depth_bias": 0.0,
+                "u_emissive_match_sky_fill": false,
+                "u_emissive_multiplier": 5.0,
+                "u_far_fade": 0.0,
+                "u_fresnel_intensity": 1.0,
+                "u_fresnel_power": 2.0,
+                "u_ior": 1.5,
+                "u_lighting_intensity": 1.0,
+                "u_map_tiling": [
+                    1.0,
+                    1.0
+                ],
+                "u_micro_surface_intensity": 0.10000000149011612,
+                "u_micro_surface_scale": 50.0,
+                "u_near_fade": 0.0,
+                "u_opacity": 1.0,
+                "u_reflection_fallback_strength": 1.0,
+                "u_reflection_strength": 1.0,
+                "u_refraction_strength": 1.0,
+                "u_rim_color": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "u_rim_intensity": 1.0,
+                "u_rim_power": 1.0,
+                "u_roughness": 1.0,
+                "u_specular_intensity": 1.0,
+                "u_sprite_blend": 0.0,
+                "u_sprite_offset": [
+                    0.75,
+                    0.25
+                ],
+                "u_sprite_offset_next": [
+                    0.0,
+                    0.0
+                ],
+                "u_sprite_scale": [
+                    0.25,
+                    0.25
+                ],
+                "u_ssr_strength": 1.0,
+                "u_thickness": 1.0,
+                "u_translucent_bias": 0.0,
+                "u_use_albedo_map": true,
+                "u_use_back_face_refraction": false,
+                "u_use_fresnel": false,
+                "u_use_lighting": false,
+                "u_use_micro_surface": false,
+                "u_use_reflection": false,
+                "u_use_refraction": false,
+                "u_use_rim_lighting": false,
+                "u_use_specular": false,
+                "u_use_ssr": false,
+                "u_uv_scroll_speed": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "use_animated_override": false,
+            "use_frame_rate_override": false
+        }
+    ]
+}

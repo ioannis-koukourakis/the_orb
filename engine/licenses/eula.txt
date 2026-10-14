@@ -1,0 +1,198 @@
+--------------------------------------------------------------------------------
+                    DETIS ENGINE - END USER LICENSE AGREEMENT (EULA)
+                              Individual license
+--------------------------------------------------------------------------------
+
+Copyright (c) Ioannis Koukourakis, 2025 - present. All rights reserved.
+
+Effective Date: For each Licensee, this EULA takes effect on the date of that Licensee's purchase, authorized grant, or first acceptance of this Agreement in the editor, whichever is earlier.
+Notices to Licensor: Ioannis Koukourakis, using the contact details published with the Software or on Licensor's official distribution channel.
+
+IMPORTANT - READ CAREFULLY: This End User License Agreement ("EULA") is the default individual license. It is a legal agreement between you, an individual natural person ("Licensee" or "User"), and the Licensor defined below.
+This EULA grants rights only to the individual Licensee. It does not grant any license or usage rights to a company, studio, employer, organization, or other legal entity.
+This EULA applies to individual licenses. If your use of Detis Engine is covered by a separate written license agreement with Licensor, that agreement governs your use of the Software to the extent stated in that agreement.
+
+By installing, launching, executing, clicking "Accept", completing a store or platform checkout that includes these terms, or otherwise using the Detis Engine software, editor binaries, runtime, and associated assets (collectively, the "Software"), you acknowledge that you have read this Agreement and agree to be bound by its terms, except as stated next.
+If you have entered into a separate written license agreement with Licensor covering your use of the Software, or if you use the Software under such an agreement entered into by the organization on whose behalf you are using it, that agreement governs your use of the Software to the extent of any conflict with this EULA. Clicking "Accept" in the editor, or otherwise using the Software, does not modify, replace, or limit that separate agreement.
+
+IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, DO NOT INSTALL, LAUNCH, OR USE THE SOFTWARE.
+If you purchased the Software through a store or platform, refunds, withdrawals, and related procedures follow that store or platform's policies, subject to any mandatory consumer rights that cannot be waived.
+If you purchased the Software directly from Licensor, this Agreement does not limit any mandatory consumer refund, withdrawal, or other statutory right that cannot be waived. Where applicable, digital-content withdrawal consent and similar steps are handled in the purchase or checkout flow, not by expanding this EULA.
+
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+
+(a) "Licensor" means Ioannis Koukourakis, the author of Detis Engine, and any person or entity that subsequently succeeds to or receives the applicable rights and obligations under Section 3(e).
+
+(b) "Licensee" means the individual natural person who lawfully acquires and uses an individual license to the Software through an authorized distribution channel. Platform purchase records, a receipt, an account, or a similar order record may establish that license. If another person or organization pays, the Licensee is still the individual who uses that license. The payer does not receive a license.
+
+(c) An "Authorized Copy" is a copy of the Software that you obtained through a legitimate purchase or other authorized grant from the Licensor, or from a store, platform, or distributor that the Licensor has actually authorized to provide the Software. Licensor is not required to publish a list of such stores or platforms.
+    Pre-release access requires a legitimate paid purchase or individual authorization for closed beta. A paid beta, including open paid beta offered to the general public through Licensor's store or an authorized platform, is an Authorized Copy when you complete a legitimate purchase or checkout that includes this Agreement. A closed beta is an authorized grant only when Licensor authorizes you individually for that program (for example by invite, waitlist acceptance, access credentials, or a personal grant) and provides the Software together with this EULA or a clear reference to it, whether or not Licensor charged a fee for that closed beta. Licensor does not offer free public beta access where anyone may download or use the Software without that purchase or individual authorization.
+    A copy that was found, leaked, borrowed, shared as files, downloaded from an unofficial source, obtained from a public post not intended for you, or received from someone who is not authorized to distribute the Software is not an Authorized Copy. Possession of such a copy does not make you a Licensee and grants no rights under this Agreement.
+    Licensor may request reasonable proof of lawful acquisition of an Authorized Copy.
+
+(d) "User Product" refers to any video game, application, or digital media created, built, or distributed by the Licensee using the Software.
+
+(e) "Mod" means user-generated content created for a specific User Product that requires a lawful copy of that User Product in order to be used or played. A Mod must remain dependent on that User Product. A Mod is not an independent game, application, or other product that can be used or sold on a standalone basis.
+
+(f) "Major Generation" means a numbered major version of the Software, identified by its leading version number. Detis Engine 1.x is one Major Generation. Detis Engine 2.x is a later Major Generation. This first Major Generation includes the current pre-release Software and, if Licensor actually releases it, a 1.0 of that generation.
+
+(g) "Software" means the Detis Engine editor, runtime, tools, and associated materials that Licensor distributes for use with them, including compiled binaries, default and engine-shipped configuration, fonts, stubs, license notices, packaged or encrypted engine data (including shader packs), shader and compute programs in any form provided by Licensor, and demo or template content folders shipped with the distribution. It does not include Detis Engine C++ source unless Licensor grants that separately in writing.
+
+--------------------------------------------------------------------------------
+2. GRANT OF LICENSE & COMMERCIAL USE
+--------------------------------------------------------------------------------
+
+(a) Authorized Copy Required: The license granted in this Agreement applies only to an Authorized Copy. No license is granted for any other copy. This Agreement does not grant any license or right to use an unauthorized copy of the Software. All rights not expressly granted in this Agreement are reserved by Licensor. No rights are granted by implication, estoppel, or otherwise.
+
+(b) Binary Code License: Provided that you have an Authorized Copy, Licensor grants you a non-exclusive, non-transferable, perpetual license (unless terminated under this Agreement) to keep and run the compiled binary builds of the Detis Engine editor and runtime that you lawfully downloaded while you had authorized access. "Perpetual" means the right to continue using those locally retained builds. It is not a promise of ongoing online delivery, account validation, re-downloads, or server availability.
+    This is a binary license of the engine. It does not include Detis Engine C++ source. Engine source is not game source. Debug symbols, header files, or similar files that may ship with the editor do not grant engine source. Shipped engine shaders, shader packs, and other engine-kit assets under the engine folder are Licensor materials licensed only as part of the Software. They may not be redistributed on a standalone basis except as this Agreement already allows for User Products. Lua scripts, custom shaders, materials, and other User Product or Mod content may be included and remain usable. If Licensor later provides engine source under a separate grant, that source may not be copied into or distributed with a User Product unless that grant says otherwise.
+    This is an individual license for one natural person. Another person who installs, launches, or operates the Software, including the editor, pipeline tools, or standalone utilities, needs their own individual license. The Licensee may use the Software on more than one machine that they personally use. The Licensee may also run automated, non-interactive build nodes, including cloud servers and CI systems such as GitHub Actions, solely to compile or package the Licensee's own User Products. Those nodes do not authorize another person to use the editor interactively, and they do not create a shared, floating, or concurrent license. The license may not be shared, lent, pooled, or used as a floating or concurrent license. Work made with tools that are not the Software does not require a Detis license. Launching or operating the Software does.
+    A team, studio, company, or other organization may purchase a separate individual license for each natural person who uses the Software. Each person must have their own valid license. Each such person is a separate Licensee and may use the Software under their own individual license. No separate team or company agreement is required solely because multiple individual licenses are purchased. A separate written agreement may be used where an organization requires different licensing terms or other rights beyond those granted by individual licenses.
+    This license cannot be transferred, assigned, sublicensed, or passed to another person by selling, gifting, or shipping a User Product, or by including the editor or runtime with that User Product. Buying a User Product, at any price, does not buy a Detis Engine license.
+
+(c) User Products & Commercial Rights: Provided that you have an Authorized Copy, you are granted a fully paid-up, royalty-free license to use the Software to create, build, market, distribute, and commercially sell your own video games, applications, or digital media ("User Products"), including User Products made together with a team.
+    Operation of the engine and editor remains limited as described in Section 2(b). "Your team" in this section refers to people who contribute to a User Product. It does not give those people a right to install, launch, or operate the Software. A teammate who will operate the Software buys their own individual license. No special team agreement is required for that.
+    Licensor claims no ownership, intellectual property rights, or revenue share over your User Products. For clarity, Licensee's original code, scripts, shaders, materials, levels, artwork, audio, writing, and other content created by Licensee or Licensee's team for a User Product remain the property of their respective creators or owners and are not transferred to Licensor by this Agreement. That does not change ownership of Licensor-original included content under Section 2(d). Third-party content remains under its own licenses.
+
+(d) Included Assets & Runtime Usage: Licensor-original content. Provided that you have an Authorized Copy, you are granted a royalty-free right to use, modify, and bundle content that is original to the Licensor and provided in the content folders for use with the Software, as part of your User Products. You may not sell or redistribute that Licensor-original content on a standalone basis (for example, as an asset pack).
+    Third-party content. The Software may include third-party content, including CC0 and other public-domain or permissively licensed assets, some of which Licensor may have modified. That content remains subject to its own license, as documented by license or notice files in the relevant folders. This Agreement does not replace those licenses, does not take away rights those licenses already give you, including any right under CC0 to use or redistribute the original work, and cannot grant you any right in third-party content that Licensor does not itself have. If a third-party license conflicts with this Agreement with respect to that third-party content, the applicable third-party license controls solely with respect to that content. To the extent permitted by the applicable third-party license, Licensor's original modifications of that content are treated as Licensor-original content under this section, without limiting your rights in the unmodified original under its own license.
+    You may distribute the runtime with a finished User Product so that User Product can be played. You may also distribute the editor and related tools with that User Product solely so recipients can create Mods for that same User Product.
+    Distributing the editor with a User Product, including to many players, does not grant those recipients an individual Detis Engine license and does not make them Licensees. Bundled editor and tools may be used only to create Mods for that User Product. They may not be used as a general-purpose engine, as a substitute for an Authorized Copy, or to create an unrelated standalone product, unless that person has their own Authorized Copy.
+    You may not redistribute the Software as a standalone engine, editor, or development toolset, or as a substitute for an Authorized Copy. Reverse engineering is addressed in Section 3(c).
+    Engine source is not licensed by this Agreement and may not be distributed with a User Product. Engine source is not game source. Lua scripts, custom shaders, materials, and similar content that belong to the User Product or to Mods may be shipped and remain usable.
+    Except to the extent permitted by applicable law, you may not modify the engine binaries themselves. You may only use, configure, and extend the Software through the provided editor, scripting, and content tools.
+    You may not remove, obscure, or alter this EULA or other engine license notices shipped with the Software. Deleting those files does not terminate this Agreement or grant additional rights. Players of a User Product are not required to accept this EULA merely to play that User Product.
+
+(e) Modding Support: Licensee may allow players of their User Product to create, share, and distribute Mods for that User Product. Whether those Mods may be sold is decided by the Licensee. That permission sits under the recipient limits in Section 2(d). A Mod must remain dependent on that User Product. Permission to create or sell Mods is not a Detis Engine license.
+
+(f) Closed Beta, Open Paid Beta, Evaluation, Testing & Press: Licensor may offer pre-release Software through paid beta (purchase), including open paid beta where purchase is offered to the general public through authorized checkout, or through closed beta (individual authorization only). Licensor does not offer free public beta programs where anyone may download or use the Software without that purchase or individual authorization.
+    A paid beta is licensed under this Agreement on the same basis as any other Authorized Copy obtained by purchase, including commercial User Products under Section 2(c) unless the checkout or store terms say otherwise.
+    A closed beta copy is an Authorized Copy only for the Licensee Licensor authorized. Closed beta is Licensor's thanks for test feedback. For that Licensee, a closed beta grant carries the same license rights under this Agreement as a paid beta purchase, including Sections 2(b) and 2(c), the perpetual binary right, and commercial User Products. A closed beta license is not a lesser tier. It is non-transferable.
+    Copies provided only for evaluation, testing, press, or another stated non-development purpose remain limited to that purpose when Licensor says so in writing or on the program page. Closed beta under the previous paragraph is not limited that way unless Licensor says otherwise in writing for a specific person or program.
+
+(g) Updates, Support & Future Versions: Subject to Section 7(b), this license applies to the Software as provided at the time of purchase or authorized grant.
+    When you install an update, you may replace the engine binaries and the engine kit folder from Licensor's distribution. You are responsible for backing up and merging project content folders if you changed worlds, scripts, configuration, or art there. Licensor may replace default files in the engine kit on update. Licensor does not promise to preserve your edits inside the engine kit.
+    Licensor does not promise feature updates, new versions, improvements, a particular development roadmap, or a 1.0 release. That is different from any update or conformity obligation that cannot be excluded under applicable law, including Section 7(b). Except as required by applicable law, Licensor does not promise technical support, maintenance, or continued hosting, distributing, or making downloads of the Software available indefinitely. If Licensor later provides continued download access, that is voluntary and does not create an ongoing support or distribution obligation beyond what applicable law requires. Licensor may modify, suspend, discontinue, or permanently stop supporting or distributing the Software at any time, except as applicable law requires otherwise. The perpetual right in Section 2(b) is the right to keep running binaries already lawfully downloaded. It is not a right to demand re-downloads, account services, or server uptime.
+    If Licensor actually releases later updates, patches, or builds of this first Major Generation, including a 1.0 of that Major Generation if it is released, a Licensee who had an Authorized Copy before that 1.0 release through paid beta or closed beta (or another pre-1.0 purchase or authorized grant) is entitled to receive and use those builds at no additional license fee. That is only a right not to be charged again if those builds are actually released. It is not a duty to create, deliver, or keep hosting them.
+    Any later Major Generation (for example 2.0) or separately released version of the Software may be offered under separate pricing and licensing terms. A purchase of this first Major Generation does not create any entitlement to a later Major Generation unless Licensor expressly says otherwise.
+    Discontinuation of the Software, its support, or its download availability does not revoke license rights already granted under this Agreement, including the rights to User Products that were lawfully created under the license.
+
+(h) Price: The price you pay is the price charged at the time of your purchase. Licensor may change the price for new purchases at any time, including when the Software leaves pre-release or beta status, or for any other reason. Early-adopter, promotional, or pre-release pricing does not freeze the list price and does not entitle you to a later refund, credit, or price match if the price increases. A later change in list price does not by itself require an existing Licensee to pay any additional fee for the Software already purchased, and does not by itself expand or reduce the rights granted at the time of that purchase.
+
+--------------------------------------------------------------------------------
+3. OWNERSHIP & RESTRICTIONS
+--------------------------------------------------------------------------------
+
+(a) Ownership: Licensor owns the Software and the intellectual property rights in and to the Software, including its core code, editor binaries, rendering and engine techniques embodied in the Software, shipped shader and compute programs, packaged engine data, architecture, visual interfaces, branding, and logos, except for third-party components and materials subject to their respective licenses. This Agreement does not transfer ownership of the Software to the Licensee.
+
+(b) Restrictions on Engine Distribution: You MAY NOT claim ownership of the Detis Engine. You MAY NOT sub-license, re-brand, re-package, rent, lease, gift the files of, or re-sell the engine editor, tools, or binary files to third parties as a standalone engine, editor, or development toolset. Shipping a User Product that includes the editor does not sell, gift, or pass a Detis Engine license.
+
+(c) Reverse Engineering and Engine Extraction: Except to the extent permitted by applicable law, you agree not to decompile, reverse engineer, disassemble, decrypt, unpack, or otherwise circumvent technical measures that protect engine assets, or attempt to extract or reconstruct source code, shader source, or equivalent implementation detail of the Software, whether from binaries, packs, GPU programs, or runtime memory.
+    Except to the extent permitted by applicable law, you may not publish, redistribute, or use materials so extracted to develop, assist, or market a competing engine, editor, or general-purpose development tool, or outside the User Product and Mod rights expressly granted in this Agreement.
+    Nothing in this Agreement prohibits any act that applicable law expressly permits the Licensee to perform, including any mandatory rights relating to interoperability, observation, study, testing, error correction, or backup copies.
+
+(d) No Downstream Engine License: Receiving the Software as part of a User Product, or permission to create Mods under Section 2(e), does not grant a Detis Engine development license. Bundled tools may be used only as described in Section 2(d).
+
+(e) Transfer of Ownership: Licensor may assign, transfer, sell, or otherwise convey ownership of the Software, its associated intellectual property, and Licensor's rights and obligations under this Agreement to another person or entity, including a company or organization formed later by Ioannis Koukourakis. After such a transfer, that successor is the Licensor under this Agreement, and this Agreement continues between the Licensee and that successor. Any such transfer does not by itself terminate licenses previously granted under this Agreement.
+
+(f) Name and Credit: You are not required to credit Detis Engine. You may use the plain name "Detis Engine" in a factual credit (for example, "Made with Detis Engine") in a User Product or related marketing. You may not use Licensor's logos or stylized marks without prior written permission.
+    Use of the Detis Engine name does not imply that Licensor sponsors, endorses, certifies, or approves the User Product.
+    You may not use the Detis Engine name, logos, or marks in a way that is misleading as to endorsement or sponsorship, that falsely suggests Licensor made, certifies, or approves the User Product, that infringes Licensor's trademarks, or that is otherwise unlawful.
+    For a User Product that was lawfully shipped, a factual text credit is not revoked merely by later notice. Licensor may require you to stop using the name, logos, or marks in connection with a User Product if that use is misleading as to endorsement or sponsorship, falsely suggests certification or approval, infringes trademark rights, or is otherwise unlawful. After such a notice, you must stop new use of the name and any related marks in connection with that User Product as soon as reasonably practical. Already-shipped copies need not be recalled solely because of a credit notice, except where law or trademark infringement requires it.
+
+(g) High-Risk Activities: The Software is designed for creating video games and similar interactive media. It is not designed, intended, or licensed for use in hazardous environments requiring fail-safe performance, including nuclear facilities, aircraft navigation, life support systems, or weapons systems. You may not use the Software for those purposes.
+
+(h) Machine Learning, Agents, and Automated Use: Licensee may use the Software with artificial intelligence, machine learning, and automated systems. That includes training, fine-tuning, and evaluating AI or ML systems on Detis workflows, editor operation, and output produced through licensed use of the Software; AI agents operating the editor; AI generating projects, scenes, scripts, levels, assets, or other User Product content; and automated agents acting on behalf of the Licensee.
+    That use is part of the Licensee's individual license. It does not grant the AI system, model, agent, or any third party ownership of the Software or a Detis Engine license. It does not permit redistribution of the engine, editor, runtime, or other Software binaries except as this Agreement already allows for User Products. The Licensee remains responsible for use of the Software by agents acting on the Licensee's behalf. This permission does not override third-party licenses or applicable copyright law. Third-party content remains subject to its own license.
+
+(i) License Verification: Licensor may request reasonable proof of lawful acquisition of an Authorized Copy.
+
+(j) Export and Sanctions: You may not use, export, or provide the Software in violation of applicable export-control or sanctions laws, including EU law and any other law that applies to you.
+
+(k) Data and Telemetry: Local use of the Software does not currently require sending usage telemetry or license-activation data to Licensor. If Licensor later processes personal data in connection with the Software, that processing is governed by the applicable privacy notice, not by this EULA. A later telemetry or account feature does not convert the perpetual local-use right in Section 2(b) into a subscription.
+
+--------------------------------------------------------------------------------
+4. PRE-RELEASE STATUS, BREAKING CHANGES, & SUPPORT
+--------------------------------------------------------------------------------
+
+(a) Pre-Release Notice: The Software may be offered as a pre-release or beta product through paid beta (including open paid beta available for purchase by the general public) or closed beta (individual authorization only). It is not offered as a free public beta. It may contain incomplete features, bugs, compatibility problems, and other defects. Features may change or be removed during development. Store, checkout, or program pages may also describe this status.
+
+(b) No Guarantee of Backward Compatibility: Future updates, patches, or versions of the Software may alter core systems. Licensor does NOT guarantee that future versions will maintain backward compatibility with older project files, assets, or save data.
+
+(c) Developer Support: The Software is maintained and developed by a single independent developer. Except as required by applicable law, including Section 7(b), technical support, bug fixes, updates, and feature additions are provided at the Licensor's sole discretion without any guarantee of response times, resolutions, or ongoing support obligations.
+
+(d) The Licensor is not responsible for how third-party developers package, expose, or distribute the Software within their User Products.
+
+--------------------------------------------------------------------------------
+5. TERMINATION
+--------------------------------------------------------------------------------
+
+Subject to Section 7(b) and any other mandatory consumer rights that cannot be waived, the license granted under this Agreement is perpetual unless terminated under this Section 5.
+Licensor may terminate this Agreement only for a genuine material breach that materially affects Licensor's rights under this Agreement. For a material breach that can reasonably be cured, Licensor will give written notice and a reasonable period to cure before termination takes effect. Licensor may terminate immediately if the material breach is not reasonably capable of cure, including unauthorized redistribution of the Software, extraction or redistribution of engine shaders or packs in breach of Section 3(c), or deliberate circumvention of this license.
+After termination, the license in Section 2(b) ends.
+    You must stop new development with the Software. You must delete the Licensee's development and editor installations, including copies used to create or modify User Products.
+    User Products that were lawfully created and released before termination may continue to be sold, distributed, marketed, and played.
+    Runtime and other Software files already incorporated into those released User Products may continue to be distributed as part of those User Products.
+    You do not get to keep a development or editor installation because you still distribute a game.
+Termination does not require you to withdraw, recall, or destroy already-released User Products, and does not destroy those games, except to the extent those User Products themselves constitute or result from the breach giving rise to termination.
+Rights and obligations that by their nature are intended to survive termination, including ownership, intellectual property, disclaimers, limitations of liability, and rights relating to previously created and released User Products, shall survive termination of this Agreement.
+
+--------------------------------------------------------------------------------
+6. THIRD-PARTY COMPONENTS
+--------------------------------------------------------------------------------
+
+The Software may include or incorporate third-party software, fonts, or other components provided under their respective licenses. Such components remain subject to those licenses. Nothing in this Agreement transfers ownership of third-party components to the Licensor or the Licensee. This Agreement cannot grant any right in a third-party component that Licensor does not itself have the right to grant.
+If a third-party license conflicts with this Agreement with respect to that third-party component, the applicable third-party license controls solely with respect to that component.
+Third-party game content, including CC0 assets, is handled as described in Section 2(d). License or notice files in the relevant content folders are the source of those terms.
+Where required, applicable third-party license notices or attribution information may be provided with the Software.
+
+--------------------------------------------------------------------------------
+7. DISCLAIMER OF WARRANTY & LIMITATION OF LIABILITY
+--------------------------------------------------------------------------------
+
+(a) "AS IS" Provision: SUBJECT TO SECTION 7(b), THE SOFTWARE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+(b) Mandatory Law: Nothing in this Agreement excludes or limits any liability, refund, withdrawal, remedy, update, conformity, or other right that cannot be excluded or limited under applicable law, including liability for intent, gross negligence, death or personal injury caused by negligence, and any mandatory EU or national consumer rights. Sections 4, 5, and 7, and the update, support, discontinuation, refund, and price terms in this Agreement, are subject to this Section 7(b).
+
+(c) Limitation of Liability: SUBJECT TO SECTION 7(b), TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES (INCLUDING DATA LOSS, PROJECT CORRUPTION, LOSS OF PROFITS, OR BUSINESS INTERRUPTION) ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+    SUBJECT TO SECTION 7(b), LICENSOR'S TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE SOFTWARE OR THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT YOU PAID TO LICENSOR OR TO AN AUTHORIZED STORE OR PLATFORM FOR THE SOFTWARE (OR ZERO, IF YOU PAID NOTHING). This Section 7 does not exclude or limit liability that applicable law prohibits Licensor from excluding or limiting.
+
+--------------------------------------------------------------------------------
+8. GOVERNING LAW
+--------------------------------------------------------------------------------
+
+This Agreement shall be governed by and construed in accordance with the laws of Greece, without regard to its conflict of law principles. This choice of law does not take away any mandatory consumer protections that cannot be waived under the laws of the country where you reside, including as already acknowledged in Section 7(b).
+Subject to those mandatory protections, any disputes arising under this Agreement shall be subject to the jurisdiction of the courts of Greece. This section does not claim to override a court that has mandatory jurisdiction.
+Nothing in this section limits Licensor's right to seek emergency or other injunctive relief in any court of competent jurisdiction, or to submit copyright, trademark, platform, or other intellectual-property takedown notices, to protect Licensor's rights.
+
+--------------------------------------------------------------------------------
+9. SEVERABILITY
+--------------------------------------------------------------------------------
+
+If any provision of this Agreement is found to be invalid, unlawful, or unenforceable, that provision shall be enforced to the maximum extent permitted by applicable law, and the remaining provisions shall remain in full force and effect.
+
+--------------------------------------------------------------------------------
+10. SEPARATE LICENSE AGREEMENTS
+--------------------------------------------------------------------------------
+
+If Licensee or the organization on whose behalf the Software is being used has entered into a separate written license agreement with Licensor that expressly authorizes use of the Software, that separate agreement governs such use to the extent of any conflict with this EULA. This EULA does not limit, replace, or override rights expressly granted under such separate agreement.
+Displaying this EULA in the editor, and clicking "Accept" or "Close", does not create a new contract that modifies or replaces that separate agreement. Persons whose use is already covered by such an agreement are not required to accept this EULA as a second contract.
+
+--------------------------------------------------------------------------------
+11. ENTIRE AGREEMENT
+--------------------------------------------------------------------------------
+
+This Agreement constitutes the entire agreement between the individual Licensee and Licensor concerning an individual license of the Software. It supersedes any prior or contemporaneous agreements, understandings, or representations concerning that individual license, except for any separate written license agreement expressly entered into by the Licensor concerning the Software. This Agreement does not supersede, replace, or limit such a separate agreement. This entire-agreement clause does not exclude pre-contract information that applicable consumer law treats as part of the contract.
+
+--------------------------------------------------------------------------------
+12. CHANGES TO THIS AGREEMENT
+--------------------------------------------------------------------------------
+
+Licensor may update or modify this EULA from time to time to reflect changes to the Software, its licensing model, applicable legal requirements, or other legitimate business needs.
+The version of this EULA in effect at the time of a Licensee's purchase, authorized grant, or first acceptance in the editor governs that Licensee's license. Later versions apply to new purchases and licenses. An existing Licensee is not bound by a later version unless that Licensee agrees to it.
+Changes to this EULA will not retroactively remove or materially reduce rights that were expressly granted to an existing Licensee under the version of the EULA applicable at the time of that Licensee's purchase, authorized grant, or first acceptance, unless otherwise agreed by the Licensee.
+The current version of this EULA may be made available with the Software or through an official distribution channel.
+
+--------------------------------------------------------------------------------
