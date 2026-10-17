@@ -15,6 +15,7 @@ MainMenuSkin.COLOR_CREAM = vec4(0.94, 0.90, 0.82, 1.0)
 MainMenuSkin.COLOR_MUTED = vec4(0.66, 0.60, 0.52, 1.0)
 MainMenuSkin.COLOR_EMBER = vec4(0.78, 0.46, 0.24, 1.0)
 MainMenuSkin.COLOR_EMBER_BRIGHT = vec4(0.90, 0.58, 0.30, 1.0)
+MainMenuSkin.COLOR_WARNING = vec4(0.86, 0.22, 0.18, 1.0)
 MainMenuSkin.COLOR_NIGHT = vec4(0.07, 0.08, 0.10, 1.0)
 MainMenuSkin.COLOR_BUTTON = vec4(0.13, 0.12, 0.11, 1.0)
 MainMenuSkin.COLOR_BUTTON_HOVER = vec4(0.22, 0.16, 0.12, 1.0)
@@ -58,7 +59,7 @@ MainMenuSkin.MENU_FOOTER_BUTTON_GAP = 8.0
 MainMenuSkin.MENU_FOOTER_BUTTON_FONT_SIZE = 16.0
 
 MainMenuSkin.COMMUNITY_LINKS = {
-    { label = "Discord", url = "https://discord.gg/dmkJtA4Wf7" },
+    { label = "Discord", url = "https://discord.gg/WADC2rKp7A" },
     { label = "Website", url = "https://detissoftworks.com" },
 }
 

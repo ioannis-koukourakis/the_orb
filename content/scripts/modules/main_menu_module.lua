@@ -48,12 +48,18 @@ local CAMERA_EFFECTS_MODULE_NAME = "CameraEffectsModule"
 
 -- Graphics options.
 local WINDOW_MODE_OPTIONS = { "Windowed", "Fullscreen", "Borderless" }
-local VSYNC_OPTIONS = { "Disabled", "Enabled", "Adaptive" }
+-- Classic vsync is left out fr the demo as it waits a whole refresh when a frame is late, 
+-- so 60 drops to 30 and that sucks. 
+local VSYNC_MENU_OPTIONS = { "Disabled", "Adaptive" }
+local VSYNC_MENU_MODES = { VSyncMode.OFF, VSyncMode.ADAPTIVE }
 local ANISOTROPIC_OPTIONS = { "Off", "2x", "4x", "8x", "16x" }
 local QUALITY_OPTIONS = { "Off", "Low", "Medium", "High", "Ultra" }
+local SHADOW_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
+local SHADOW_QUALITY_MENU_MAX = 3
 local GTAO_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
 local SSR_OPTIONS = { "Off", "Low", "Medium", "High" }
-local RENDER_SCALE_PERCENTS = { 25, 50, 75, 100, 125, 150, 175, 200 }
+local RENDER_SCALE_PERCENTS = { 25, 50, 75, 100, 125, 150 }
+local RENDER_SCALE_WARNING_PERCENT = 100
 local WINDOW_MODE_WINDOWED = 0
 
 -- UI settings.
@@ -101,6 +107,7 @@ local m_checkbox_fps_overlay = nil
 
 -- Slider
 local m_slider_gamma = nil
+local m_slider_master_volume = nil
 local m_slider_mouse_look_sensitivity = nil
 local m_slider_gamepad_look_sensitivity = nil
 
@@ -115,6 +122,8 @@ local m_combo_shadows = nil
 local m_combo_ssao = nil
 local m_combo_ssgi = nil
 local m_combo_ssr = nil
+
+local m_vsync_enabled_brought_down = false
 
 -- Modal 
 local m_modal_shadow_restart = nil
@@ -424,6 +433,16 @@ end
 
 ----------------------------------------------------
 
+local function apply_vsync_menu_setting(t_zero_based_index)
+    local mode = VSYNC_MENU_MODES[t_zero_based_index + 1]
+    if mode == settings_get_vsync_mode() then
+        return
+    end
+    settings_set_vsync_mode(mode)
+end
+
+----------------------------------------------------
+
 local function apply_render_scale_combo_setting(t_zero_based_index)
     settings_set_render_scale(RENDER_SCALE_PERCENTS[t_zero_based_index + 1] / 100.0)
 end
@@ -444,6 +463,18 @@ end
 
 local function get_gamepad_look_sensitivity_setting()
     return settings_get_float(GAMEPLAY_SETTINGS_SECTION, GAMEPAD_LOOK_SENSITIVITY_KEY, DEFAULT_GAMEPAD_LOOK_SENSITIVITY)
+end
+
+----------------------------------------------------
+
+local function get_master_volume_percent()
+    return settings_get_master_volume() * 100.0
+end
+
+----------------------------------------------------
+
+local function set_master_volume_percent(t_value)
+    settings_set_master_volume(t_value / 100.0)
 end
 
 ----------------------------------------------------
@@ -748,9 +779,38 @@ local function draw_options_page()
     UiWidgets.label("Display", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
+    -- GPU used by the application.
+    -- Clip the name to the menu column so a long string stays inside the scroll.
+    local gpu_name = renderer_get_gpu_name()
+    UiWidgets.label_row("GPU", UiSkin.LABEL_WIDTH, UiSkin.ROW_HEIGHT, UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_MUTED, UiSkin.MENU_ROW_LABEL_FONT_ID)
+    gui_dummy(vec2(UiSkin.COMPO_WIDTH, UiSkin.ROW_HEIGHT))
+    local gpu_rect_min = gui_get_item_rect_min()
+    local gpu_text_y = gpu_rect_min.y + (UiSkin.ROW_HEIGHT - UiSkin.MENU_ROW_FONT_SIZE) * 0.5
+    gui_push_clip_rect(gpu_rect_min, gpu_rect_min + vec2(UiSkin.COMPO_WIDTH, UiSkin.ROW_HEIGHT), true)
+    gui_draw_text(gpu_name, vec2(gpu_rect_min.x, gpu_text_y), UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_CREAM, UiSkin.MENU_ROW_LABEL_FONT_ID)
+    gui_pop_clip_rect()
+    gui_dummy(vec2(1.0, 8.0))
+
     -- Display settings.
     draw_labeled_combo("Window Mode", m_combo_window_mode, settings_get_window_mode() + 1, apply_window_mode_setting)
-    draw_labeled_combo("VSync", m_combo_vsync, settings_get_vsync_mode() + 1, settings_set_vsync_mode)
+
+    local vsync_mode = settings_get_vsync_mode()
+    if vsync_mode == VSyncMode.ON and not m_vsync_enabled_brought_down then
+        m_vsync_enabled_brought_down = true
+        settings_set_vsync_mode(VSyncMode.ADAPTIVE)
+        vsync_mode = settings_get_vsync_mode()
+    end
+    local vsync_menu_index = 1
+    for mode_index = 1, #VSYNC_MENU_MODES do
+        if VSYNC_MENU_MODES[mode_index] == vsync_mode then
+            vsync_menu_index = mode_index
+        end
+    end
+    -- The driver can refuse Adaptive and stay on Enabled. Keep the menu on Adaptive.
+    if vsync_mode == VSyncMode.ON then
+        vsync_menu_index = 2
+    end
+    draw_labeled_combo("VSync", m_combo_vsync, vsync_menu_index, apply_vsync_menu_setting)
 
     -- Refresh the list of available monitors.
     -- Monitor index is the display id. 
@@ -827,8 +887,14 @@ local function draw_options_page()
 
     -- Render scale combo. 
     -- Need to convert the current render scale to the nearest available option.
+    -- Stops at 150 percent for the game. 
     local render_scale_selected_index = 1
     local current_render_percent = math.floor(settings_get_render_scale() * 100.0 + 0.5)
+    local menu_max_render_percent = RENDER_SCALE_PERCENTS[#RENDER_SCALE_PERCENTS]
+    if current_render_percent > menu_max_render_percent then
+        current_render_percent = menu_max_render_percent
+        settings_set_render_scale(menu_max_render_percent / 100.0)
+    end
     local nearest_distance = 999999 -- large initial value to find the nearest render scale.
     for i = 1, #RENDER_SCALE_PERCENTS do
         local distance = math.abs(RENDER_SCALE_PERCENTS[i] - current_render_percent)
@@ -839,12 +905,33 @@ local function draw_options_page()
     end
     draw_labeled_combo("Render Scale", m_combo_render_scale, render_scale_selected_index, apply_render_scale_combo_setting)
 
+    -- Print a warning for multisampling. 
+    if current_render_percent > RENDER_SCALE_WARNING_PERCENT then
+        UiWidgets.label("Can hurt framerate.", UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_WARNING, UiSkin.MENU_ROW_LABEL_FONT_ID)
+        gui_dummy(vec2(1.0, 8.0))
+    end
+
+    -- Shadows stop at High for the demo to keep it performant.
+    local shadow_quality = settings_get_shadow_map_quality()
+    if shadow_quality > SHADOW_QUALITY_MENU_MAX then
+        apply_shadow_map_quality_setting(SHADOW_QUALITY_MENU_MAX)
+        shadow_quality = SHADOW_QUALITY_MENU_MAX
+    end
     -- Other regular graphics settings.
     draw_labeled_combo("Anisotropic", m_combo_anisotropic, settings_get_anisotropic_filter_level() + 1, settings_set_anisotropic_filter_level)
-    draw_labeled_combo("Shadows", m_combo_shadows, settings_get_shadow_map_quality() + 1, apply_shadow_map_quality_setting)
+    draw_labeled_combo("Shadows", m_combo_shadows, shadow_quality + 1, apply_shadow_map_quality_setting)
     draw_labeled_combo("SSAO", m_combo_ssao, settings_get_ssao_quality() + 1, settings_set_ssao_quality)
     draw_labeled_combo("SSGI", m_combo_ssgi, settings_get_ssgi_quality() + 1, settings_set_ssgi_quality)
     draw_labeled_combo("Reflections", m_combo_ssr, settings_get_ssr_quality() + 1, settings_set_ssr_quality)
+    gui_dummy(vec2(1.0, 16.0))
+
+    -- Sound settings.
+    UiWidgets.label("Sound", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
+    gui_dummy(vec2(1.0, 8.0))
+    draw_slider_row("Master  %.0f%%",
+                    m_slider_master_volume,
+                    get_master_volume_percent,
+                    set_master_volume_percent)
 end
 
 ----------------------------------------------------
@@ -1133,20 +1220,21 @@ function MainMenuModule.on_initialize()
 
     -- Initialize graphics settings combos.
     m_combo_window_mode = new_menu_combo("main_menu_window_mode", WINDOW_MODE_OPTIONS)
-    m_combo_vsync = new_menu_combo("main_menu_vsync", VSYNC_OPTIONS)
+    m_combo_vsync = new_menu_combo("main_menu_vsync", VSYNC_MENU_OPTIONS)
     m_combo_monitor = new_menu_combo("main_menu_monitor", { "Monitor" })
     m_combo_monitor.on_before_open = refresh_monitor_combo
     m_combo_resolution = new_menu_combo("main_menu_resolution", { "Resolution" })
     m_combo_resolution.on_before_open = refresh_resolution_combo
     m_combo_render_scale = new_menu_combo("main_menu_render_scale", render_scale_labels)
     m_combo_anisotropic = new_menu_combo("main_menu_anisotropic", ANISOTROPIC_OPTIONS)
-    m_combo_shadows = new_menu_combo("main_menu_shadows", QUALITY_OPTIONS)
+    m_combo_shadows = new_menu_combo("main_menu_shadows", SHADOW_QUALITY_OPTIONS)
     m_combo_ssao = new_menu_combo("main_menu_ssao", GTAO_QUALITY_OPTIONS)
     m_combo_ssgi = new_menu_combo("main_menu_ssgi", QUALITY_OPTIONS)
     m_combo_ssr = new_menu_combo("main_menu_ssr", SSR_OPTIONS)
 
     -- Initialize graphics settings sliders.
     m_slider_gamma = new_menu_slider("main_menu_gamma", settings_get_gamma(), 0.01, 3.0)
+    m_slider_master_volume = new_menu_slider("main_menu_master_volume", get_master_volume_percent(), 0.0, 100.0)
     m_slider_mouse_look_sensitivity = new_menu_slider("main_menu_mouse_look_sensitivity",
                                                         get_mouse_look_sensitivity_setting(),
                                                         MOUSE_LOOK_SENSITIVITY_MIN,

@@ -2836,6 +2836,9 @@ function renderer_get_gamma() end
 ---@return number
 function renderer_get_global_wetness_intensity() end
 
+---@return string
+function renderer_get_gpu_name() end
+
 ---@return boolean
 function renderer_get_has_wind_noise_texture() end
 

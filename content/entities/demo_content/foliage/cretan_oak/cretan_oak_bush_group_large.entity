@@ -1,0 +1,345 @@
+{
+    "active": true,
+    "children": [
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        2.805732250213623,
+                        0.38998568058013916,
+                        -0.7520109415054321
+                    ],
+                    "rotation_euler": [
+                        -6.37168550491333,
+                        80.35235595703125,
+                        1.917183518409729
+                    ],
+                    "rotation_quat": [
+                        0.7621769309043884,
+                        -0.053233154118061066,
+                        0.6433424353599548,
+                        0.048611391335725784
+                    ],
+                    "scale": [
+                        1.8289235830307007,
+                        1.8289228677749634,
+                        1.8289239406585693
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_bush_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "name": "cretan_oak_bush_15",
+            "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_bush_01.entity"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        -0.18030759692192078,
+                        -0.029725564643740654,
+                        -0.21011577546596527
+                    ],
+                    "rotation_euler": [
+                        -6.37168550491333,
+                        80.35235595703125,
+                        1.917183518409729
+                    ],
+                    "rotation_quat": [
+                        0.7621769309043884,
+                        -0.053233154118061066,
+                        0.6433424353599548,
+                        0.048611391335725784
+                    ],
+                    "scale": [
+                        1.8289235830307007,
+                        1.8289228677749634,
+                        1.8289239406585693
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_bush_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "name": "cretan_oak_bush_14",
+            "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_bush_01.entity"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        1.6980962753295898,
+                        0.19759483635425568,
+                        -2.51409649848938
+                    ],
+                    "rotation_euler": [
+                        -6.371695041656494,
+                        80.35235595703125,
+                        1.9171745777130127
+                    ],
+                    "rotation_quat": [
+                        0.7621768712997437,
+                        -0.053233176469802856,
+                        0.6433424949645996,
+                        0.04861139506101608
+                    ],
+                    "scale": [
+                        2.362034797668457,
+                        2.362034797668457,
+                        2.3620352745056152
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_bush_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "name": "cretan_oak_bush_12",
+            "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_bush_01.entity"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        1.4299367666244507,
+                        0.23562999069690704,
+                        1.5437086820602417
+                    ],
+                    "rotation_euler": [
+                        -6.371642112731934,
+                        80.3523941040039,
+                        1.9172236919403076
+                    ],
+                    "rotation_quat": [
+                        0.7621768116950989,
+                        -0.053233079612255096,
+                        0.6433426141738892,
+                        0.048611413687467575
+                    ],
+                    "scale": [
+                        2.1279592514038086,
+                        2.1279592514038086,
+                        2.1279590129852295
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_bush_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "name": "cretan_oak_bush_13",
+            "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_bush_01.entity"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        4.657873153686523,
+                        0.632024347782135,
+                        -2.1069869995117188
+                    ],
+                    "rotation_euler": [
+                        -1.4823848009109497,
+                        44.033138275146484,
+                        7.16899299621582
+                    ],
+                    "rotation_quat": [
+                        0.9248812794685364,
+                        -0.03540445864200592,
+                        0.37336021661758423,
+                        0.06279619038105011
+                    ],
+                    "scale": [
+                        2.810821771621704,
+                        2.810821533203125,
+                        2.8108224868774414
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_bush_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "name": "cretan_oak_bush",
+            "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_bush_01.entity"
+        },
+        {
+            "active": true,
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        4.006269454956055,
+                        0.5845062732696533,
+                        0.3781418800354004
+                    ],
+                    "rotation_euler": [
+                        -178.90127563476563,
+                        -14.084514617919922,
+                        -172.06793212890625
+                    ],
+                    "rotation_quat": [
+                        -0.12164396047592163,
+                        -0.06981286406517029,
+                        0.9899525046348572,
+                        -0.017972219735383987
+                    ],
+                    "scale": [
+                        2.0800082683563232,
+                        2.080008029937744,
+                        2.0800087451934814
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_bush_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "name": "cretan_oak_bush_1",
+            "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_bush_01.entity"
+        }
+    ],
+    "components": [
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_euler": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ]
+}

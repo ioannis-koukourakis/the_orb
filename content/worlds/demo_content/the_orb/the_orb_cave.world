@@ -20,13 +20,13 @@
     "distant_world_darken_factor": 0.30000001192092896,
     "distant_world_darken_start": 0.3499999940395355,
     "editor_camera_position": [
-        -3.864701509475708,
-        1.3834521770477295,
-        -0.07360750436782837
+        -4.001124382019043,
+        0.5625008344650269,
+        -20.0671329498291
     ],
     "editor_camera_rotation": [
-        0.0006932243704795837,
-        1072.3514404296875,
+        1.0009782314300537,
+        586.5502319335938,
         0.0
     ],
     "entities": [
@@ -45,20 +45,20 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -2.065852642059326,
-                        -1.181577205657959,
-                        -16.728870391845703
+                        -4.260535717010498,
+                        0.605919361114502,
+                        2.592700719833374
                     ],
                     "rotation_euler": [
-                        180.0,
-                        -63.95401382446289,
-                        180.0
+                        -2.2002345758664887e-06,
+                        -1.582460641860962,
+                        9.569972462486476e-06
                     ],
                     "rotation_quat": [
-                        -0.5295788645744324,
-                        -6.022727916388249e-08,
-                        0.8482607007026672,
-                        -6.022727916388249e-08
+                        0.9999046325683594,
+                        -1.8045584582182528e-08,
+                        -0.013809135183691978,
+                        8.324064992848434e-08
                     ],
                     "scale": [
                         1.0,
@@ -2674,7 +2674,7 @@
                     "temperature_k": 6500.0,
                     "type": "Light",
                     "volumetric_fog_source_active": true,
-                    "volumetric_fog_strength": 6.599999904632568
+                    "volumetric_fog_strength": 8.0
                 }
             ],
             "id": 148,
@@ -7264,20 +7264,20 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -4.294319152832031,
-                        2.6576313972473145,
-                        16.285324096679688
+                        -4.250290393829346,
+                        1.509244441986084,
+                        16.313201904296875
                     ],
                     "rotation_euler": [
                         -180.0,
-                        -4.86299991607666,
-                        2.4259544026405955e-13
+                        0.5486775040626526,
+                        4.724226414509758e-07
                     ],
                     "rotation_quat": [
-                        -4.3672034877317856e-08,
-                        0.9990996718406677,
-                        1.8544553670452046e-09,
-                        0.042424943298101425
+                        -4.353580607130425e-08,
+                        0.9999885559082031,
+                        3.9140672924986575e-09,
+                        -0.004788096062839031
                     ],
                     "scale": [
                         1.0,
@@ -7288,7 +7288,7 @@
                 },
                 {
                     "active": true,
-                    "angle": 0.4136430323123932,
+                    "angle": 0.21991148591041565,
                     "cast_shadows": false,
                     "cast_specular": true,
                     "color": [
@@ -7298,15 +7298,15 @@
                     ],
                     "ignore_distance_culling": false,
                     "light_type": 1,
-                    "lumens": 8.0,
+                    "lumens": 6.0,
                     "range": 13.5,
                     "shadow_bias": 0.029999999329447746,
                     "shadow_blur": 1.2000000476837158,
                     "shadow_normal_bias": 1.0,
                     "temperature_k": 6500.0,
                     "type": "Light",
-                    "volumetric_fog_source_active": true,
-                    "volumetric_fog_strength": 2.0
+                    "volumetric_fog_source_active": false,
+                    "volumetric_fog_strength": 8.899999618530273
                 }
             ],
             "id": 207,
@@ -141334,9 +141334,9 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        0.30948132276535034,
-                        7.893762588500977,
-                        -16.525365829467773
+                        0.4092859923839569,
+                        7.887515068054199,
+                        -16.525371551513672
                     ],
                     "rotation_euler": [
                         93.9166488647461,
@@ -141376,7 +141376,7 @@
                     "temperature_k": 6500.0,
                     "type": "Light",
                     "volumetric_fog_source_active": true,
-                    "volumetric_fog_strength": 6.0
+                    "volumetric_fog_strength": 7.0
                 }
             ],
             "id": 299,
@@ -515713,7 +515713,7 @@
                     "temperature_k": 6500.0,
                     "type": "Light",
                     "volumetric_fog_source_active": true,
-                    "volumetric_fog_strength": 16.0
+                    "volumetric_fog_strength": 18.299999237060547
                 }
             ],
             "id": 410,
@@ -516109,7 +516109,7 @@
                     ],
                     "ignore_distance_culling": false,
                     "light_type": 0,
-                    "lumens": 15.0,
+                    "lumens": 8.0,
                     "range": 10.600000381469727,
                     "shadow_bias": 0.10000000149011612,
                     "shadow_blur": 1.0,
@@ -517864,12 +517864,12 @@
                     ],
                     "ignore_distance_culling": false,
                     "light_type": 0,
-                    "lumens": 65.0,
-                    "range": 6.199999809265137,
+                    "lumens": 76.0,
+                    "range": 5.0,
                     "shadow_bias": 0.10000000149011612,
                     "shadow_blur": 1.0,
                     "shadow_normal_bias": 1.0,
-                    "temperature_k": 6500.0,
+                    "temperature_k": 6530.0,
                     "type": "Light",
                     "volumetric_fog_source_active": false,
                     "volumetric_fog_strength": 1.0
@@ -520190,11 +520190,7 @@
                 940,
                 443,
                 3054,
-                3327,
-                3343,
-                3147,
-                3357,
-                3356
+                3327
             ],
             "id": 489,
             "name": "particles",
@@ -529186,7 +529182,7 @@
                     "interpolation_enabled": false,
                     "position": [
                         -3.098339557647705,
-                        -0.7535802721977234,
+                        -0.739525318145752,
                         -21.4421329498291
                     ],
                     "rotation_euler": [
@@ -529632,8 +529628,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.75
+                            0.25,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531021,7 +531017,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.5,
-                            0.75
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531307,8 +531303,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.25
+                            0.25,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531439,7 +531435,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
+                            0.0,
                             0.25
                         ],
                         "u_sprite_offset_next": [
@@ -531703,8 +531699,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.75
+                            0.5,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531836,7 +531832,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.5,
-                            0.25
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531967,8 +531963,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.0
+                            0.25,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532231,8 +532227,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.0
+                            0.25,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532363,8 +532359,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.5
+                            0.75,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532495,7 +532491,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
+                            0.0,
                             0.5
                         ],
                         "u_sprite_offset_next": [
@@ -532627,8 +532623,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.25
+                            0.0,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532759,8 +532755,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.75
+                            0.5,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532891,7 +532887,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
+                            0.5,
                             0.0
                         ],
                         "u_sprite_offset_next": [
@@ -533023,8 +533019,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.25
+                            0.5,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -533155,7 +533151,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
+                            0.75,
                             0.75
                         ],
                         "u_sprite_offset_next": [
@@ -533287,8 +533283,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.25
+                            0.25,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -533419,8 +533415,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.5
+                            0.25,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -533552,7 +533548,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.5,
-                            0.5
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -543181,7 +543177,7 @@
             ]
         },
         {
-            "active": true,
+            "active": false,
             "child_entity_ids": [],
             "components": [
                 {
@@ -546129,200 +546125,15 @@
         },
         {
             "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -3.42799711227417,
-                        -0.7421843409538269,
-                        -21.614892959594727
-                    ],
-                    "rotation_euler": [
-                        0.0,
-                        -0.0,
-                        0.0
-                    ],
-                    "rotation_quat": [
-                        1.0,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "scale": [
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "culling_distance": 100.0,
-                    "emission": {
-                        "burst_count": 0,
-                        "rate": 3.0
-                    },
-                    "is_unique_material": false,
-                    "lod_far_distance": 50.0,
-                    "lod_far_frame_skip": 3,
-                    "lod_mid_distance": 20.0,
-                    "lod_mid_frame_skip": 1,
-                    "lod_update_throttling": true,
-                    "loop": true,
-                    "material_file": "../content/materials/demo_content/particles/glitch.mat",
-                    "play_on_start": true,
-                    "requires_translucent_sorting": false,
-                    "settings": {
-                        "duration_max": 1.0,
-                        "duration_min": 1.0,
-                        "loop": true,
-                        "max_particles": 120,
-                        "start_delay": 0.0
-                    },
-                    "spawn": {
-                        "color": [
-                            1.0,
-                            0.6200000047683716,
-                            0.07999999821186066,
-                            0.0
-                        ],
-                        "lifetime_max": 2.0,
-                        "lifetime_min": 2.0,
-                        "rotation_max": 0.0,
-                        "rotation_min": 0.0,
-                        "rotation_velocity_max": 0.0,
-                        "rotation_velocity_min": 0.0,
-                        "shape": "box",
-                        "shape_size": [
-                            0.20000000298023224,
-                            0.20000000298023224,
-                            0.20000000298023224
-                        ],
-                        "size": [
-                            0.10000000149011612,
-                            0.10000000149011612
-                        ],
-                        "size_scale_max": 12.0,
-                        "size_scale_min": 12.0,
-                        "velocity_max": [
-                            0.0,
-                            1.0,
-                            0.07999999821186066
-                        ],
-                        "velocity_min": [
-                            0.0,
-                            1.0,
-                            0.0
-                        ]
-                    },
-                    "sprite": {
-                        "frame_columns": 1,
-                        "frame_count": 1,
-                        "frame_rate": 10.0,
-                        "frame_rows": 1,
-                        "loop": true,
-                        "mode": "none",
-                        "random_start_frame": true,
-                        "start_frame": 0
-                    },
-                    "translucent_render_priority": 1,
-                    "type": "ParticleSystem",
-                    "update": {
-                        "billboard_mode": "cylindrical",
-                        "color_over_lifetime": {
-                            "time_mid": 0.17399999499320984,
-                            "value_end": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.6129032373428345
-                            ],
-                            "value_start": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        },
-                        "gravity": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "size_over_lifetime": {
-                            "enabled": true,
-                            "time_mid": 0.492000013589859,
-                            "value_end": [
-                                0.0833333283662796,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                0.1666666716337204,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_start": [
-                                0.5,
-                                1.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "velocity_over_lifetime": {
-                            "enabled": true,
-                            "time_mid": 0.5,
-                            "value_end_max": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_end_min": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid_max": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid_min": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "world_space": true
-                    }
-                }
-            ],
-            "id": 3147,
-            "name": "glitch",
-            "parent_entity_id": 489,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/particles/glitch.entity"
-        },
-        {
-            "active": true,
             "child_entity_ids": [
                 3149,
-                3150
+                3150,
+                3358,
+                3359,
+                3360,
+                3361,
+                3362,
+                3363
             ],
             "components": [
                 {
@@ -546623,8 +546434,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.75
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -546817,7 +546628,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
+                            0.25,
                             0.5
                         ],
                         "u_sprite_offset_next": [
@@ -547011,7 +546822,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
+                            0.75,
                             0.25
                         ],
                         "u_sprite_offset_next": [
@@ -547205,8 +547016,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.5
+                            0.25,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547399,8 +547210,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.0
+                            0.5,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547593,8 +547404,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.0
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547787,8 +547598,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.5
+                            0.75,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547982,7 +547793,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.5,
-                            0.25
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -548175,8 +547986,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.75
+                            0.25,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -548369,8 +548180,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.5
+                            0.25,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -548563,8 +548374,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.0
+                            0.5,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -548757,7 +548568,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
+                            0.75,
                             0.5
                         ],
                         "u_sprite_offset_next": [
@@ -548951,8 +548762,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.0
+                            0.0,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -549145,8 +548956,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.0
+                            0.25,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -549340,7 +549151,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.0,
-                            0.0
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -549533,8 +549344,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.0
+                            0.75,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -549727,8 +549538,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.75
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -549921,8 +549732,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.0
+                            0.75,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550115,8 +549926,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.25
+                            0.25,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550310,7 +550121,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.25,
-                            0.0
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550504,7 +550315,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.0,
-                            0.0
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550697,8 +550508,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.25
+                            0.0,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550891,8 +550702,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.25
+                            0.5,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -551085,8 +550896,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.5
+                            0.25,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -551621,8 +551432,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.25
+                            0.25,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -551816,7 +551627,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.25,
-                            0.5
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -552009,8 +551820,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.25
+                            0.25,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -552204,7 +552015,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.0,
-                            0.5
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -552455,7 +552266,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.25,
-                            0.0
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -552648,8 +552459,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.25
+                            0.5,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -552842,8 +552653,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.0
+                            0.5,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -553036,8 +552847,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.0
+                            0.5,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -553288,7 +553099,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.25,
-                            0.5
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -553481,8 +553292,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.5
+                            0.5,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -553675,8 +553486,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.25
+                            0.75,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -553869,8 +553680,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.75
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -556387,256 +556198,25 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -3.9680020809173584,
-                        0.6201304197311401,
-                        -4.779201507568359
+                        -4.0717692375183105,
+                        0.9956852793693542,
+                        -5.278203010559082
                     ],
                     "rotation_euler": [
-                        0.0,
-                        -0.0,
-                        0.0
+                        -5.184722900390625,
+                        31.469749450683594,
+                        -0.7628775238990784
                     ],
                     "rotation_quat": [
-                        1.0,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "scale": [
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "culling_distance": 100.0,
-                    "emission": {
-                        "burst_count": 0,
-                        "rate": 3.0
-                    },
-                    "is_unique_material": false,
-                    "lod_far_distance": 50.0,
-                    "lod_far_frame_skip": 3,
-                    "lod_mid_distance": 20.0,
-                    "lod_mid_frame_skip": 1,
-                    "lod_update_throttling": true,
-                    "loop": true,
-                    "material_file": "../content/materials/demo_content/particles/glitch.mat",
-                    "play_on_start": true,
-                    "requires_translucent_sorting": false,
-                    "settings": {
-                        "duration_max": 1.0,
-                        "duration_min": 1.0,
-                        "loop": true,
-                        "max_particles": 120,
-                        "start_delay": 0.0
-                    },
-                    "spawn": {
-                        "color": [
-                            1.0,
-                            0.6200000047683716,
-                            0.07999999821186066,
-                            0.0
-                        ],
-                        "lifetime_max": 2.0,
-                        "lifetime_min": 2.0,
-                        "rotation_max": 0.0,
-                        "rotation_min": 0.0,
-                        "rotation_velocity_max": 0.0,
-                        "rotation_velocity_min": 0.0,
-                        "shape": "box",
-                        "shape_size": [
-                            0.20000000298023224,
-                            0.20000000298023224,
-                            0.20000000298023224
-                        ],
-                        "size": [
-                            0.10000000149011612,
-                            0.10000000149011612
-                        ],
-                        "size_scale_max": 12.0,
-                        "size_scale_min": 12.0,
-                        "velocity_max": [
-                            0.0,
-                            1.0,
-                            0.07999999821186066
-                        ],
-                        "velocity_min": [
-                            0.0,
-                            1.0,
-                            0.0
-                        ]
-                    },
-                    "sprite": {
-                        "frame_columns": 1,
-                        "frame_count": 1,
-                        "frame_rate": 10.0,
-                        "frame_rows": 1,
-                        "loop": true,
-                        "mode": "none",
-                        "random_start_frame": true,
-                        "start_frame": 0
-                    },
-                    "translucent_render_priority": 1,
-                    "type": "ParticleSystem",
-                    "update": {
-                        "billboard_mode": "cylindrical",
-                        "color_over_lifetime": {
-                            "time_mid": 0.17399999499320984,
-                            "value_end": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.695852518081665
-                            ],
-                            "value_start": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        },
-                        "gravity": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "size_over_lifetime": {
-                            "enabled": true,
-                            "time_mid": 0.492000013589859,
-                            "value_end": [
-                                0.0833333283662796,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                0.1666666716337204,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_start": [
-                                0.5,
-                                1.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "velocity_over_lifetime": {
-                            "enabled": true,
-                            "time_mid": 0.5,
-                            "value_end_max": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_end_min": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid_max": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid_min": [
-                                0.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "world_space": true
-                    }
-                }
-            ],
-            "id": 3343,
-            "name": "glitch_1",
-            "parent_entity_id": 489,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/particles/glitch.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [
-                3346
-            ],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -4.029165267944336,
-                        1.0530236959457397,
-                        -4.733216285705566
-                    ],
-                    "rotation_euler": [
-                        24.874177932739258,
-                        -4.005566596984863,
-                        -0.11461121588945389
-                    ],
-                    "rotation_quat": [
-                        0.9759435653686523,
-                        0.21520169079303741,
-                        -0.0343431755900383,
-                        0.006550564896315336
+                        0.9616021513938904,
+                        -0.04173041507601738,
+                        0.27119264006614685,
+                        0.0058641498908400536
                     ],
                     "scale": [
                         1.350000023841858,
                         1.3500001430511475,
-                        1.350000023841858
-                    ],
-                    "type": "Transform"
-                }
-            ],
-            "id": 3344,
-            "name": "note",
-            "parent_entity_id": 3347,
-            "prefab_locked": false,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/props/note.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -0.05959582328796387,
-                        -0.20705503225326538,
-                        -0.34546375274658203
-                    ],
-                    "rotation_euler": [
-                        -31.83957862854004,
-                        32.168792724609375,
-                        -15.858553886413574
-                    ],
-                    "rotation_quat": [
-                        0.9256516695022583,
-                        -0.22428052127361298,
-                        0.3002372682094574,
-                        -0.0522000826895237
-                    ],
-                    "scale": [
-                        1.0,
-                        1.0,
-                        1.0000001192092896
+                        1.3500001430511475
                     ],
                     "type": "Transform"
                 },
@@ -556645,7 +556225,7 @@
                     "billboard": false,
                     "editor_only": false,
                     "font_id": "indie_flower_32",
-                    "font_pixel_size": 0.0,
+                    "font_pixel_size": 24.0,
                     "material_file": "",
                     "opaque": true,
                     "screen_space_size": false,
@@ -556661,16 +556241,16 @@
                 }
             ],
             "id": 3346,
-            "name": "font",
-            "parent_entity_id": 3344
+            "name": "note_1",
+            "parent_entity_id": 3347
         },
         {
             "active": true,
             "child_entity_ids": [
                 3148,
-                3344,
                 3354,
-                3355
+                3355,
+                3346
             ],
             "components": [
                 {
@@ -556746,12 +556326,12 @@
                     ],
                     "ignore_distance_culling": false,
                     "light_type": 0,
-                    "lumens": 3.0,
+                    "lumens": 1.0,
                     "range": 1.5,
                     "shadow_bias": 0.10000000149011612,
                     "shadow_blur": 1.0,
                     "shadow_normal_bias": 1.0,
-                    "temperature_k": 3140.0,
+                    "temperature_k": 2840.0,
                     "type": "Light",
                     "volumetric_fog_source_active": false,
                     "volumetric_fog_strength": 1.0
@@ -557035,20 +556615,20 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -4.079348564147949,
-                        1.0467324256896973,
-                        -5.245895862579346
+                        0.2097492218017578,
+                        -0.1597127914428711,
+                        0.48437976837158203
                     ],
                     "rotation_euler": [
-                        0.0,
-                        29.200613021850586,
-                        0.0
+                        -23.261404037475586,
+                        0.6276487112045288,
+                        -1.6455917358398438
                     ],
                     "rotation_quat": [
-                        0.9677078127861023,
-                        0.0,
-                        0.25207453966140747,
-                        0.0
+                        0.9793675541877747,
+                        -0.2015019655227661,
+                        0.008259199559688568,
+                        -0.012960830703377724
                     ],
                     "scale": [
                         1.0,
@@ -557059,164 +556639,27 @@
                 },
                 {
                     "active": true,
-                    "culling_distance": 8.0,
-                    "emission": {
-                        "burst_count": 0,
-                        "rate": 3.0
-                    },
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
                     "is_unique_material": false,
-                    "lod_far_distance": 4.0,
-                    "lod_far_frame_skip": 3,
-                    "lod_mid_distance": 2.0,
-                    "lod_mid_frame_skip": 1,
-                    "lod_update_throttling": true,
-                    "loop": true,
-                    "material_file": "../content/materials/demo_content/particles/note_glitch.mat",
-                    "play_on_start": true,
-                    "requires_translucent_sorting": false,
-                    "settings": {
-                        "duration_max": 1.0,
-                        "duration_min": 1.0,
-                        "loop": true,
-                        "max_particles": 32,
-                        "start_delay": 0.0
-                    },
-                    "spawn": {
-                        "color": [
-                            1.0,
-                            0.6200000047683716,
-                            0.07999999821186066,
-                            0.0
-                        ],
-                        "lifetime_max": 2.0,
-                        "lifetime_min": 1.0,
-                        "rotation_max": 0.0,
-                        "rotation_min": 0.0,
-                        "rotation_velocity_max": 0.0,
-                        "rotation_velocity_min": 0.0,
-                        "shape": "box",
-                        "shape_size": [
-                            0.15000000596046448,
-                            0.10000000149011612,
-                            0.10000000149011612
-                        ],
-                        "size": [
-                            0.10000000149011612,
-                            0.10000000149011612
-                        ],
-                        "size_scale_max": 0.5,
-                        "size_scale_min": 0.5,
-                        "velocity_max": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "velocity_min": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ]
-                    },
-                    "sprite": {
-                        "frame_columns": 1,
-                        "frame_count": 1,
-                        "frame_rate": 10.0,
-                        "frame_rows": 1,
-                        "loop": true,
-                        "mode": "none",
-                        "random_start_frame": true,
-                        "start_frame": 0
-                    },
-                    "translucent_render_priority": 1,
-                    "type": "ParticleSystem",
-                    "update": {
-                        "billboard_mode": "spherical",
-                        "color_over_lifetime": {
-                            "time_mid": 0.3449999988079071,
-                            "value_end": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            "value_start": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        },
-                        "gravity": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "size_over_lifetime": {
-                            "enabled": false,
-                            "time_mid": 0.49799999594688416,
-                            "value_end": [
-                                1.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                1.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_start": [
-                                1.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "velocity_over_lifetime": {
-                            "enabled": true,
-                            "time_mid": 0.5,
-                            "value_end_max": [
-                                0.0,
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_end_min": [
-                                0.0,
-                                0.0,
-                                -0.009999999776482582,
-                                0.0
-                            ],
-                            "value_mid_max": [
-                                0.0,
-                                0.0,
-                                0.05000000074505806,
-                                0.0
-                            ],
-                            "value_mid_min": [
-                                0.0,
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "world_space": true
-                    }
+                    "material_files": [
+                        "../content/materials/demo_content/tileable/paper/paper_old.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/props/note.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
                 }
             ],
-            "id": 3356,
-            "name": "note_glitch",
-            "parent_entity_id": 489,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/particles/note_glitch.entity"
+            "id": 3358,
+            "name": "paper_1",
+            "parent_entity_id": 3148
         },
         {
             "active": true,
@@ -557226,20 +556669,20 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -3.434391975402832,
-                        -0.5722125172615051,
-                        -21.428354263305664
+                        -0.0953669548034668,
+                        0.07054901123046875,
+                        1.0571012496948242
                     ],
                     "rotation_euler": [
-                        0.0,
-                        86.61441802978516,
-                        0.0
+                        -59.14187240600586,
+                        65.2542495727539,
+                        -54.52675247192383
                     ],
                     "rotation_quat": [
-                        0.7276865243911743,
-                        0.0,
-                        0.6859099268913269,
-                        0.0
+                        0.773010790348053,
+                        -0.15464040637016296,
+                        0.607235848903656,
+                        -0.09902166575193405
                     ],
                     "scale": [
                         1.0,
@@ -557250,164 +556693,243 @@
                 },
                 {
                     "active": true,
-                    "culling_distance": 8.0,
-                    "emission": {
-                        "burst_count": 0,
-                        "rate": 3.0
-                    },
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
                     "is_unique_material": false,
-                    "lod_far_distance": 4.0,
-                    "lod_far_frame_skip": 3,
-                    "lod_mid_distance": 2.0,
-                    "lod_mid_frame_skip": 1,
-                    "lod_update_throttling": true,
-                    "loop": true,
-                    "material_file": "../content/materials/demo_content/particles/note_glitch.mat",
-                    "play_on_start": true,
-                    "requires_translucent_sorting": false,
-                    "settings": {
-                        "duration_max": 1.0,
-                        "duration_min": 1.0,
-                        "loop": true,
-                        "max_particles": 32,
-                        "start_delay": 0.0
-                    },
-                    "spawn": {
-                        "color": [
-                            1.0,
-                            0.6200000047683716,
-                            0.07999999821186066,
-                            0.0
-                        ],
-                        "lifetime_max": 2.0,
-                        "lifetime_min": 1.0,
-                        "rotation_max": 0.0,
-                        "rotation_min": 0.0,
-                        "rotation_velocity_max": 0.0,
-                        "rotation_velocity_min": 0.0,
-                        "shape": "box",
-                        "shape_size": [
-                            0.15000000596046448,
-                            0.10000000149011612,
-                            0.10000000149011612
-                        ],
-                        "size": [
-                            0.10000000149011612,
-                            0.10000000149011612
-                        ],
-                        "size_scale_max": 0.5,
-                        "size_scale_min": 0.5,
-                        "velocity_max": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "velocity_min": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ]
-                    },
-                    "sprite": {
-                        "frame_columns": 1,
-                        "frame_count": 1,
-                        "frame_rate": 10.0,
-                        "frame_rows": 1,
-                        "loop": true,
-                        "mode": "none",
-                        "random_start_frame": true,
-                        "start_frame": 0
-                    },
-                    "translucent_render_priority": 1,
-                    "type": "ParticleSystem",
-                    "update": {
-                        "billboard_mode": "spherical",
-                        "color_over_lifetime": {
-                            "time_mid": 0.3449999988079071,
-                            "value_end": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            "value_start": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        },
-                        "gravity": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "size_over_lifetime": {
-                            "enabled": false,
-                            "time_mid": 0.49799999594688416,
-                            "value_end": [
-                                1.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_mid": [
-                                1.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_start": [
-                                1.0,
-                                1.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "velocity_over_lifetime": {
-                            "enabled": true,
-                            "time_mid": 0.5,
-                            "value_end_max": [
-                                0.0,
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            "value_end_min": [
-                                0.0,
-                                0.0,
-                                -0.009999999776482582,
-                                0.0
-                            ],
-                            "value_mid_max": [
-                                0.0,
-                                0.0,
-                                0.05000000074505806,
-                                0.0
-                            ],
-                            "value_mid_min": [
-                                0.0,
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        },
-                        "world_space": true
-                    }
+                    "material_files": [
+                        "../content/materials/demo_content/tileable/paper/paper_old.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/props/note.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
                 }
             ],
-            "id": 3357,
-            "name": "note_glitch_1",
-            "parent_entity_id": 489,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/particles/note_glitch.entity"
+            "id": 3359,
+            "name": "paper_2",
+            "parent_entity_id": 3148
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.24696826934814453,
+                        0.02026653289794922,
+                        0.8565044403076172
+                    ],
+                    "rotation_euler": [
+                        -140.7993621826172,
+                        -43.01620864868164,
+                        147.3650360107422
+                    ],
+                    "rotation_quat": [
+                        -0.4191628694534302,
+                        0.12821345031261444,
+                        0.8757073283195496,
+                        -0.20248587429523468
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/tileable/paper/paper_old.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/props/note.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "id": 3360,
+            "name": "paper_3",
+            "parent_entity_id": 3148
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.1424241065979004,
+                        -0.08157920837402344,
+                        0.6432628631591797
+                    ],
+                    "rotation_euler": [
+                        -148.6154022216797,
+                        34.77392578125,
+                        -162.96800231933594
+                    ],
+                    "rotation_quat": [
+                        0.32273685932159424,
+                        -0.056119997054338455,
+                        0.92057865858078,
+                        -0.2126649022102356
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/tileable/paper/paper_old.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/props/note.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "id": 3361,
+            "name": "paper_4",
+            "parent_entity_id": 3148
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.3125326633453369,
+                        0.47171497344970703,
+                        1.8712491989135742
+                    ],
+                    "rotation_euler": [
+                        -154.51327514648438,
+                        -30.247943878173828,
+                        170.0144500732422
+                    ],
+                    "rotation_quat": [
+                        -0.2720487117767334,
+                        0.024612320587038994,
+                        0.9430207014083862,
+                        -0.1899886280298233
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/tileable/paper/paper_old.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/props/note.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "id": 3362,
+            "name": "paper_5",
+            "parent_entity_id": 3148
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        -0.42630434036254883,
+                        -0.01430654525756836,
+                        0.1844930648803711
+                    ],
+                    "rotation_euler": [
+                        -172.8731231689453,
+                        -16.325279235839844,
+                        179.7133026123047
+                    ],
+                    "rotation_quat": [
+                        -0.14186246693134308,
+                        -0.006352963857352734,
+                        0.9879742860794067,
+                        -0.06116921082139015
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/tileable/paper/paper_old.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/props/note.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "id": 3363,
+            "name": "paper_6",
+            "parent_entity_id": 3148
         }
     ],
     "exposure_ev100": 0.0,
@@ -557431,7 +556953,7 @@
     "fog_luminance": 4.0,
     "fog_luminance_synced_to_sky": false,
     "fog_sky_intensity": 1.0,
-    "fog_start_distance": 0.5,
+    "fog_start_distance": 1.0,
     "fog_volumetric_active": true,
     "fog_volumetric_ambient_strength": 0.3499999940395355,
     "fog_volumetric_phase_g": 0.550000011920929,
@@ -557446,7 +556968,7 @@
     "fog_wind_texture_active": true,
     "global_wetness_intensity": 0.2199999988079071,
     "name": "The Orb Cave",
-    "next_entity_id": 3357,
+    "next_entity_id": 3363,
     "shadow_quality": 2,
     "sky_active": false,
     "sky_ambient_lux": 15.707962989807129,
