@@ -2877,9 +2877,6 @@ function renderer_get_is_fog_volumetric_active() end
 function renderer_get_is_fog_wind_texture_active() end
 
 ---@return boolean
-function renderer_get_is_fxaa_active() end
-
----@return boolean
 function renderer_get_is_local_light_shadows_active() end
 
 ---@return boolean
@@ -3254,9 +3251,6 @@ function renderer_set_fog_volumetric_sun_visibility_min(t_visibility) end
 ---@param t_active boolean
 function renderer_set_fog_wind_texture_active(t_active) end
 
----@param t_active boolean
-function renderer_set_fxaa_active(t_active) end
-
 ---@param t_gamma number
 function renderer_set_gamma(t_gamma) end
 
@@ -3512,6 +3506,9 @@ function settings_get_ambient_volume() end
 ---@return integer
 function settings_get_anisotropic_filter_level() end
 
+---@return integer
+function settings_get_anti_aliasing() end
+
 ---@return table
 function settings_get_available_monitors() end
 
@@ -3535,9 +3532,6 @@ function settings_get_dev_mode_active() end
 ---@param t_default_value number?
 ---@return number
 function settings_get_float(t_section, t_key, t_default_value) end
-
----@return boolean
-function settings_get_fxaa_active() end
 
 ---@return string
 function settings_get_game_title() end
@@ -3658,6 +3652,9 @@ function settings_set_ambient_volume(t_volume) end
 ---@param t_integer_1 integer
 function settings_set_anisotropic_filter_level(t_integer_1) end
 
+---@param t_integer_1 integer
+function settings_set_anti_aliasing(t_integer_1) end
+
 ---@param t_section string
 ---@param t_key string
 ---@param t_value boolean
@@ -3667,9 +3664,6 @@ function settings_set_bool(t_section, t_key, t_value) end
 ---@param t_key string
 ---@param t_value number
 function settings_set_float(t_section, t_key, t_value) end
-
----@param t_active boolean
-function settings_set_fxaa_active(t_active) end
 
 ---@param t_gamma number
 function settings_set_gamma(t_gamma) end

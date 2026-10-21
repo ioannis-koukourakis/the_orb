@@ -1,0 +1,76 @@
+[general]
+
+type = unlit
+
+cull_face = back
+
+blend_mode = alpha
+
+casts_shadows = false
+
+is_masked = false
+
+affected_by_ssao = false
+
+ssr_excluded = true
+
+use_ssr = false
+
+ssr_strength = 1.000000
+
+ssao_strength = 1.000000
+
+reflection_fallback_strength = 1.000000
+
+use_anisotropic_filtering = true
+
+distance_cull_distance = 0.000000
+
+
+
+
+
+[uniforms]
+
+u_albedo_color = 0.420732,1.000000,0.050000
+
+u_albedo_brightness = 1.000000
+
+u_map_tiling = 1.000000,1.000000
+
+u_sprite_scale = 1.000000,1.000000
+
+u_mask_threshold = 0.350000
+
+u_use_albedo_map = false
+
+u_sprite_offset_next = 0.000000,0.000000
+
+u_emission_color = 0.000000,0.000000,0.000000
+
+u_emissive_multiplier = 1.000000
+
+u_emissive_match_sky_fill = false
+
+u_masked = false
+
+u_use_emission_map = false
+
+u_uv_scroll_speed = 0.000000,0.000000
+
+u_sprite_offset = 0.000000,0.000000
+
+u_sprite_blend = 0.000000
+
+u_use_ssao = false
+
+u_ssao_strength = 1.000000
+
+u_ssr_excluded = true
+
+u_use_ssr = false
+
+u_ssr_strength = 1.000000
+
+u_reflection_fallback_strength = 1.000000
+

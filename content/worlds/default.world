@@ -1,0 +1,2381 @@
+{
+    "auto_exposure_active": true,
+    "auto_exposure_bias": 0.0,
+    "auto_exposure_center_weight": 0.8500000238418579,
+    "auto_exposure_ev_max": 17.0,
+    "auto_exposure_ev_min": -4.0,
+    "auto_exposure_key": 0.18000000715255737,
+    "auto_exposure_speed_down": 1.0,
+    "auto_exposure_speed_up": 3.0,
+    "bloom_active": true,
+    "bloom_blur_radius": 0.0010000000474974513,
+    "bloom_intensity": 0.009999999776482582,
+    "bloom_knee": 0.5,
+    "bloom_threshold": 0.5,
+    "color_correction_active": false,
+    "distance_culling_active": false,
+    "distance_culling_distance": 256.0,
+    "distant_world_darken_active": false,
+    "distant_world_darken_end": 0.8999999761581421,
+    "distant_world_darken_factor": 0.30000001192092896,
+    "distant_world_darken_start": 0.3499999940395355,
+    "editor_camera_position": [
+        1.893871545791626,
+        2.4536614418029785,
+        -3.9639623165130615
+    ],
+    "editor_camera_rotation": [
+        -30.550846099853516,
+        -2363.549560546875,
+        0.0
+    ],
+    "entities": [
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        -0.5,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        16.0,
+                        1.0,
+                        16.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_triplanar_dark_grey.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.10000000149011612,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 0,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 1,
+                    "collision_mask": 65534,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.800000011920929,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.10000000149011612,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.10000000149011612,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                }
+            ],
+            "id": 2,
+            "name": "ground",
+            "parent_entity_id": 5
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.5,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        1.7075475398087292e-06,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        1.4901162970204496e-08,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_triplanar_yellow.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.10000000149011612,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 0,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 1,
+                    "collision_mask": 65534,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.800000011920929,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.10000000149011612,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.10000000149011612,
+                    "rolling_friction": 0.30000001192092896,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                }
+            ],
+            "id": 3,
+            "name": "cube",
+            "parent_entity_id": 5,
+            "prefab_locked": true,
+            "prefab_member": true,
+            "prefab_source": "../content/entities/primitive/cube.entity"
+        },
+        {
+            "active": true,
+            "child_entity_ids": [
+                2,
+                125,
+                126,
+                127,
+                128,
+                3
+            ],
+            "id": 5,
+            "name": "geometry",
+            "parent_entity_id": 0
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": true,
+                    "position": [
+                        -2.796952486038208,
+                        0.29921460151672363,
+                        -2.0191826820373535
+                    ],
+                    "rotation_euler": [
+                        -90.0,
+                        -69.11712646484375,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        0.5823355913162231,
+                        -0.5823355913162231,
+                        -0.4011051654815674,
+                        -0.4011051654815674
+                    ],
+                    "scale": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_orange.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.0,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 2,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 16,
+                    "collision_mask": 65535,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.5,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.0,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 10.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.0,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                },
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/components/push_impulse_interactable.lua",
+                    "script_parameters": {
+                        "can_interact": {
+                            "default_value": "true",
+                            "description": "Can the player interact with this entity.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "impulse_strength": {
+                            "default_value": "40.0",
+                            "description": "Impulse magnitude along camera yaw forward.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "40.000000"
+                        },
+                        "interact_label": {
+                            "default_value": "Push",
+                            "description": "HUD / interact label.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 3,
+                            "value": "Push"
+                        },
+                        "interaction_distance": {
+                            "default_value": "2.5",
+                            "description": "Max interact distance.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "2.5"
+                        }
+                    },
+                    "type": "Script"
+                }
+            ],
+            "id": 11,
+            "name": "cube_dynamic_orange",
+            "parent_entity_id": 0,
+            "prefab_locked": true,
+            "prefab_member": true,
+            "prefab_source": "../content/entities/demo_content/props/box_dynamic_interactable.entity",
+            "tags": [
+                "interactable"
+            ]
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        1.0,
+                        7.5
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        16.0,
+                        2.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_triplanar_yellow.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.10000000149011612,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 0,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 1,
+                    "collision_mask": 65534,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.800000011920929,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.10000000149011612,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.10000000149011612,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                }
+            ],
+            "id": 125,
+            "name": "wall",
+            "parent_entity_id": 5
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        1.0,
+                        -7.5
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        16.0,
+                        2.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_triplanar_yellow.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.10000000149011612,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 0,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 1,
+                    "collision_mask": 65534,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.800000011920929,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.10000000149011612,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.10000000149011612,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                }
+            ],
+            "id": 126,
+            "name": "wall_1",
+            "parent_entity_id": 5
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        7.5,
+                        1.0,
+                        1.4677643775939941e-06
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -90.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        0.7071068286895752,
+                        0.0,
+                        -0.7071068286895752,
+                        0.0
+                    ],
+                    "scale": [
+                        16.0,
+                        2.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_triplanar_yellow.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.10000000149011612,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 0,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 1,
+                    "collision_mask": 65534,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.800000011920929,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.10000000149011612,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.10000000149011612,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                }
+            ],
+            "id": 127,
+            "name": "wall_2",
+            "parent_entity_id": 5
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        -7.5,
+                        1.0,
+                        -3.203749656677246e-07
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -90.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        0.7071068286895752,
+                        0.0,
+                        -0.7071068286895752,
+                        0.0
+                    ],
+                    "scale": [
+                        16.0,
+                        2.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_triplanar_yellow.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.10000000149011612,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 0,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 1,
+                    "collision_mask": 65534,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.800000011920929,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.10000000149011612,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.10000000149011612,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                }
+            ],
+            "id": 128,
+            "name": "wall_3",
+            "parent_entity_id": 5
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": true,
+                    "position": [
+                        0.8882503509521484,
+                        0.20399290323257446,
+                        -0.7645869255065918
+                    ],
+                    "rotation_euler": [
+                        -90.0,
+                        -44.96039581298828,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        0.653374969959259,
+                        -0.653374969959259,
+                        -0.27037230134010315,
+                        -0.27037230134010315
+                    ],
+                    "scale": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_blue.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.0,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 2,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 16,
+                    "collision_mask": 65535,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.5,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.0,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 10.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.0,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                },
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/components/push_impulse_interactable.lua",
+                    "script_parameters": {
+                        "can_interact": {
+                            "default_value": "true",
+                            "description": "Can the player interact with this entity.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "impulse_strength": {
+                            "default_value": "40.0",
+                            "description": "Impulse magnitude along camera yaw forward.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "40.000000"
+                        },
+                        "interact_label": {
+                            "default_value": "Push",
+                            "description": "HUD / interact label.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 3,
+                            "value": "Push"
+                        },
+                        "interaction_distance": {
+                            "default_value": "2.5",
+                            "description": "Max interact distance.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "2.5"
+                        }
+                    },
+                    "type": "Script"
+                }
+            ],
+            "id": 129,
+            "name": "cube_dynamic_blue",
+            "parent_entity_id": 0,
+            "prefab_locked": true,
+            "prefab_member": true,
+            "prefab_source": "../content/entities/demo_content/props/box_dynamic_interactable.entity",
+            "tags": [
+                "interactable"
+            ]
+        },
+        {
+            "active": true,
+            "child_entity_ids": [
+                152,
+                165,
+                166,
+                167,
+                168,
+                169
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        -5.095983028411865
+                    ],
+                    "rotation_euler": [
+                        -180.0,
+                        0.0,
+                        -180.0
+                    ],
+                    "rotation_quat": [
+                        1.910685465164705e-15,
+                        4.371138828673793e-08,
+                        1.0,
+                        4.371138828673793e-08
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/player/player_controller.lua",
+                    "type": "Script"
+                }
+            ],
+            "id": 132,
+            "name": "player",
+            "parent_entity_id": 0,
+            "prefab_locked": true,
+            "prefab_member": true,
+            "prefab_source": "../content/entities/demo_content/characters/player_character.entity"
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": true,
+                    "position": [
+                        2.5190885066986084,
+                        0.4032188653945923,
+                        -0.6447999477386475
+                    ],
+                    "rotation_euler": [
+                        90.0,
+                        -35.854888916015625,
+                        -180.0
+                    ],
+                    "rotation_quat": [
+                        0.2176561951637268,
+                        -0.21765625476837158,
+                        -0.6727746725082397,
+                        -0.6727746725082397
+                    ],
+                    "scale": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/primitive/primitive_teal.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cube.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.0,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 2,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 16,
+                    "collision_mask": 65535,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "shape_type": 0
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.5,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.0,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 10.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.0,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                },
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/components/push_impulse_interactable.lua",
+                    "script_parameters": {
+                        "can_interact": {
+                            "default_value": "true",
+                            "description": "Can the player interact with this entity.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 2,
+                            "value": "true"
+                        },
+                        "impulse_strength": {
+                            "default_value": "40.0",
+                            "description": "Impulse magnitude along camera yaw forward.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "40.000000"
+                        },
+                        "interact_label": {
+                            "default_value": "Push",
+                            "description": "HUD / interact label.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 3,
+                            "value": "Push"
+                        },
+                        "interaction_distance": {
+                            "default_value": "2.5",
+                            "description": "Max interact distance.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 0,
+                            "value": "2.5"
+                        }
+                    },
+                    "type": "Script"
+                }
+            ],
+            "id": 146,
+            "name": "cube_dynamic_teal",
+            "parent_entity_id": 0,
+            "prefab_locked": true,
+            "prefab_member": true,
+            "prefab_source": "../content/entities/demo_content/props/box_dynamic_interactable.entity",
+            "tags": [
+                "interactable"
+            ]
+        },
+        {
+            "active": true,
+            "child_entity_ids": [
+                153
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": true,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "angular_damping": 0.0,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 3,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": false,
+                    "collision_callbacks_enabled": true,
+                    "collision_layer": 4,
+                    "collision_mask": 65535,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "",
+                            "offset": [
+                                0.0,
+                                0.8999999761581421,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.20000000298023224,
+                                1.399999976158142,
+                                0.20000000298023224
+                            ],
+                            "shape_type": 2
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.5,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.0,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.0,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": true,
+                    "type": "PhysicsBody",
+                    "use_ccd": true
+                }
+            ],
+            "id": 152,
+            "name": "body",
+            "parent_entity_id": 132,
+            "prefab_member": true,
+            "tags": [
+                "player"
+            ]
+        },
+        {
+            "active": true,
+            "child_entity_ids": [
+                154,
+                161,
+                163
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "id": 153,
+            "name": "sound",
+            "parent_entity_id": 152,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [
+                155,
+                156,
+                157,
+                158,
+                159,
+                160
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "id": 154,
+            "name": "footsteps",
+            "parent_entity_id": 153,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.25,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.03500000014901161,
+                    "pitch": 1.1996870040893555,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 155,
+            "name": "default",
+            "parent_entity_id": 154,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.25,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.03500000014901161,
+                    "pitch": 1.1996870040893555,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_grass_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 156,
+            "name": "grass",
+            "parent_entity_id": 154,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.25,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.03500000014901161,
+                    "pitch": 1.1996870040893555,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_gravel_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 157,
+            "name": "gravel",
+            "parent_entity_id": 154,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.25,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.03500000014901161,
+                    "pitch": 1.1996870040893555,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 158,
+            "name": "stone",
+            "parent_entity_id": 154,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.25,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.03500000014901161,
+                    "pitch": 1.1996870040893555,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 159,
+            "name": "water",
+            "parent_entity_id": 154,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.25,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.03500000014901161,
+                    "pitch": 1.1996870040893555,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_water_shallow_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 160,
+            "name": "water_shallow",
+            "parent_entity_id": 154,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [
+                162
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "id": 161,
+            "name": "jump",
+            "parent_entity_id": 153,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.3499999940395355,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.0,
+                    "pitch": 1.07375168800354,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 162,
+            "name": "default",
+            "parent_entity_id": 161,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [
+                164
+            ],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                }
+            ],
+            "id": 163,
+            "name": "land",
+            "parent_entity_id": 153,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "affected_by_listener_sound_zones": true,
+                    "air_absorption_cutoff_hz": 1200.0,
+                    "air_absorption_enabled": false,
+                    "air_absorption_filter_type": 0,
+                    "air_absorption_inner_radius": 1.0,
+                    "air_absorption_outer_radius": 50.0,
+                    "full_spatialization_at": 1.0,
+                    "gain": 0.75,
+                    "gain_randomization_enabled": true,
+                    "gain_randomization_max": 1.25,
+                    "gain_randomization_min": 0.75,
+                    "inner_radius": 0.0,
+                    "looping": false,
+                    "outer_radius": 0.0,
+                    "pan": 0.03500000014901161,
+                    "pitch": 1.0847324132919312,
+                    "pitch_randomization_enabled": true,
+                    "pitch_randomization_max": 1.25,
+                    "pitch_randomization_min": 1.0,
+                    "play_mode": 0,
+                    "play_on_start": false,
+                    "sound_category": 0,
+                    "sound_file_paths": [
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_1.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_2.wav",
+                        "../content/sounds/demo_content/one_shot/footsteps/ftsp_stone_3.wav"
+                    ],
+                    "spatial": false,
+                    "type": "Sound"
+                }
+            ],
+            "id": 164,
+            "name": "default",
+            "parent_entity_id": 163,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/player/player_interaction.lua",
+                    "type": "Script"
+                }
+            ],
+            "id": 165,
+            "name": "interaction",
+            "parent_entity_id": 132,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "script_file_path": "../content/scripts/player/player_hud.lua",
+                    "type": "Script"
+                }
+            ],
+            "id": 166,
+            "name": "hud",
+            "parent_entity_id": 132,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        1.7000000476837158,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        2.0648623436092528e-11,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        1.8019323554975542e-13,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        1.0,
+                        1.0,
+                        1.0000001192092896
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "default_fov": 65.0,
+                    "fov": 65.0,
+                    "type": "Camera"
+                }
+            ],
+            "id": 167,
+            "name": "camera",
+            "parent_entity_id": 132,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        0.9000000357627869,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        0.0,
+                        -0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        0.4000000059604645,
+                        1.7999999523162842,
+                        0.4000000059604645
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": true,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../engine/materials/default.mat"
+                    ],
+                    "mesh_file": "../content/meshes/primitive/cylinder.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "id": 168,
+            "name": "debug_mesh",
+            "parent_entity_id": 132,
+            "prefab_member": true
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        0.0,
+                        1.9499999284744263,
+                        0.0
+                    ],
+                    "rotation_euler": [
+                        -1.001791224553017e-05,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_quat": [
+                        1.0,
+                        -8.742277657347586e-08,
+                        0.0,
+                        0.0
+                    ],
+                    "scale": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "billboard": true,
+                    "editor_only": true,
+                    "font_id": "",
+                    "font_pixel_size": 0.0,
+                    "material_file": "",
+                    "opaque": false,
+                    "screen_space_size": true,
+                    "text": "Player",
+                    "text_color": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "type": "TextMesh",
+                    "use_mask": true,
+                    "world_height": 0.25
+                }
+            ],
+            "id": 169,
+            "name": "debug_label",
+            "parent_entity_id": 132,
+            "prefab_member": true
+        }
+    ],
+    "exposure_ev100": 0.0,
+    "fog_absorption": 1.0,
+    "fog_active": true,
+    "fog_affect_sky": true,
+    "fog_cloud_altitude_origin": 0.0,
+    "fog_cloud_base_scale": 222.0,
+    "fog_cloud_detail_scale": 80.0,
+    "fog_cloud_detail_wind_speed": 30.0,
+    "fog_cloud_max_multiplier": 1.0,
+    "fog_cloud_min_multiplier": 0.25,
+    "fog_cloud_vertical_warp": 0.01600000075995922,
+    "fog_cloud_wind_speed": 12.0,
+    "fog_color": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "fog_density": 2.5,
+    "fog_luminance": 0.6366197466850281,
+    "fog_luminance_synced_to_sky": true,
+    "fog_sky_intensity": 1.0,
+    "fog_start_distance": 32.0,
+    "fog_volumetric_active": true,
+    "fog_volumetric_ambient_strength": 1.0,
+    "fog_volumetric_phase_g": 0.75,
+    "fog_volumetric_scattering_color": [
+        1.0,
+        0.9366506934165955,
+        0.7574626803398132
+    ],
+    "fog_volumetric_scattering_strength": 1.0,
+    "fog_volumetric_sky_scatter_strength": 0.3499999940395355,
+    "fog_volumetric_sun_visibility_min": 0.0,
+    "fog_wind_texture_active": true,
+    "global_wetness_intensity": 0.0,
+    "name": "Default World",
+    "next_entity_id": 169,
+    "shadow_quality": 2,
+    "sky_active": true,
+    "sky_ambient_lux": 2.0,
+    "sky_brightness": 1.0,
+    "sky_color": [
+        0.8267565369606018,
+        0.9302437901496887,
+        0.9593495726585388
+    ],
+    "sky_contrast": 1.0,
+    "sky_diffuse_ibl_intensity": 0.75,
+    "sky_dome_visible": true,
+    "sky_ibl_active": true,
+    "sky_ibl_apply_fog": false,
+    "sky_rotation": 0.0,
+    "sky_specular_ibl_intensity": 0.5,
+    "sky_texture_file": "",
+    "soundscape": {
+        "fade_duration": 0.3499999940395355,
+        "loops": [],
+        "one_shots": []
+    },
+    "ssao_active": true,
+    "ssao_bias": 0.009999999776482582,
+    "ssao_radius": 1.0,
+    "ssao_strength": 1.0,
+    "ssgi_active": true,
+    "ssgi_radius": 3.0,
+    "ssgi_strength": 0.5,
+    "ssgi_thickness": 0.5,
+    "ssr_active": true,
+    "ssr_edge_fade": 0.07999999821186066,
+    "ssr_reflection_source_mode": 0,
+    "ssr_reflection_static_color": [
+        0.6364864110946655,
+        0.7007059454917908,
+        0.7649253606796265
+    ],
+    "ssr_strength": 1.0,
+    "sunlight_active": true,
+    "sunlight_color": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "sunlight_direction": {
+        "x": -0.5848976969718933,
+        "y": -0.44992130994796753,
+        "z": -0.6748819351196289
+    },
+    "sunlight_lux": 6.0,
+    "sunlight_shadow_active": true,
+    "sunlight_shadow_bias": 1.0,
+    "sunlight_shadow_blur": 0.0,
+    "sunlight_shadow_normal_bias": 1.0,
+    "sunlight_specular_intensity": 1.0,
+    "sunlight_temperature_k": 6600.0,
+    "tonemap_brightness": 1.0,
+    "tonemap_color_highlights": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "tonemap_color_midtones": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "tonemap_color_shadows": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "tonemap_contrast": 1.0,
+    "tonemap_highlight_range": 0.6669999957084656,
+    "tonemap_saturation": 1.0,
+    "tonemap_shadow_range": 0.3330000042915344,
+    "wind_active": false,
+    "wind_direction": [
+        1.0,
+        0.0
+    ],
+    "wind_noise_texture_file": "",
+    "wind_speed": 12.0,
+    "world_sound_zone": {
+        "fade_duration": 0.3499999940395355,
+        "gain_multiplier": 1.0,
+        "low_pass_cutoff_hz": 20000.0,
+        "reverb_damping": 0.5,
+        "reverb_high_pass_cutoff_hz": 120.0,
+        "reverb_level": 0.0,
+        "reverb_low_pass_cutoff_hz": 12000.0,
+        "reverb_predelay_ms": 0.0,
+        "reverb_room_size": 0.5,
+        "reverb_send_ambient": 1.0,
+        "reverb_send_game": 1.0,
+        "reverb_send_gui": 0.0,
+        "reverb_send_voice": 1.0,
+        "reverb_width": 1.0
+    },
+    "world_transform": {
+        "active": true,
+        "interpolation_enabled": false,
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation_euler": [
+            0.0,
+            -0.0,
+            0.0
+        ],
+        "rotation_quat": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "type": "Transform"
+    }
+}

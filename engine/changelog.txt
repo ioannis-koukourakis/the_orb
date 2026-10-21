@@ -1,0 +1,154 @@
+======================
+Detis Engine changelog
+======================
+
+Newest release at the top. 
+
+-----------------------------------------------------------------------------
+1.0.0-beta4
+-----------------------------------------------------------------------------
+
+Rendering
+- Temporal filtering.
+- Temporal anti-aliasing. None, FXAA, and TAA share one dropdown in the editor and in game settings. TAA is the default.
+- Screen-space global illumination, with quality, thickness, material filters, pixel accumulation, and a denoiser.
+- Screen-space global illumination keeps its history through a normal look. A fast pan still drops it.
+- GTAO now uses temporal filtering.
+- GTAO darkens sunlit surfaces at full strength. 
+- Volumetric fog now uses temporal filtering. 
+- Occlusion culling. 
+- Pixel culling.
+- Each fog volume has its own luminance now. Earlier unused parameters have been removed. 
+- Translucent materials and particles sort by priority. Translucent shading and the shared lighting copy for reflections are cheaper.
+- Faint translucent surfaces refract less. 
+- Translucent lighting intensity blends from the unlit sheet to a fully lit one.
+- Water material settings are grouped with the other translucents. The water depth bias setting was removed.
+- Sharper shadows. 
+- Reflection fallback color still applies when image-based lighting is off.
+- Screen-space reflections fade as the hit sits back from the surface. A hit on a silhouette falls back to the environment.
+- Reflections stay steady on flat mirrors and along contact edges.
+- Screen-space reflections default to medium.
+- Diffuse lighting uses Oren-Nayar. Rough surfaces soften at grazing angles.
+- Anisotropic filtering now applies reliably, including on billboard flipbooks.
+- Billboards hold up at steep angles. A billboard whose material fails to load uses the default material instead of going invisible.
+- Default camera far plane increased to 4000 meters.
+- Lighting and fog passes are cheaper. Draws no longer upload a world position.
+- Pixel alignment offset fix. 
+- Pause also freezes water and other tiling shaders.
+- Text meshes can use opaque and unlit materials. Font alpha is fixed.
+- In-game ImGui does not draw the default ImGui background.
+
+Editor
+- Center Origin on Children moves a group's origin to the middle of its children and leaves the children where they are.
+- Decorators paint into one root Decorators folder. Worlds painted with the old per-object decorator folders must be repainted manually.
+- Save and Save As for entities.
+- Texture packer loads textures on its own path. The texture converter scans subfolders.
+- Unique materials can be edited, including sprite sheets.
+- Mouse look sensitivity slider for the editor spectator. Spectator max speed is higher.
+- Editor UI hints. Drag values, component inspectors, the world panel, fog volumes, and sound components are easier to read.
+- File browser folders use a stronger color.
+- Artist-friendly error panel. Each issue lists the entities that use the missing file, and can select them in the world.
+- Roughness, metalness, ambient occlusion, and transmission can be set above 1.
+- Soundscape loops and one-shots can add several files at once. Adding a file no longer closes the row.
+- Reloading assets retries meshes and materials that failed to load. A failed mesh keeps its material slots.
+- Performance metrics can show the live value, the average, the peak, or the minimum. The choice is saved.
+- On Linux, stopping the game no longer leaves the editor in fullscreen.
+- World hierarchy context menu order updated.
+- The editor window can resize while a windowed game is running. The game window opens after its required data has loaded.
+- Borderless mode maximizes correctly. Windowed game runtime hides the maximize button. Standard resolutions are listed.
+- The mouse cursor stays visible when a gamepad is connected and the gizmo mode changes.
+- The input bindings file is readable as text.
+- The terrain tool edits existing terrain and no longer handles creating new instances. 
+- Logos, scripts, and content paths load on non-English OS.
+- A failed world script load keeps the script path stored on the world.
+- Runtime script reload keeps the running world intact.
+- One-shot particle emitters play back correctly.
+- Text input widgets use a default height when none is set.
+- Renderer metrics time the lighting buffer copy on its own.
+
+Scripting
+- world_load_from_file takes an optional skip-preload flag for seamless world changes.
+- physics_body_warp_to_transform snaps a physics body onto its entity transform.
+- Sound categories have a mix multiplier on top of the saved volume. Music playback exposes mix, time, pause, and fade.
+- Character controller capsules can be offset and rotated on any axis. Use with caution. Keep the capsules vertical.
+
+Audio
+- A fixed brickwall limiter sits on the final mix, ahead of the master volume.
+- Sounds no longer click on start or stop. 
+- Synced sounds start on the right frame. 
+- Looping sounds keep looping.
+- Stale frames from an audio device are dropped.
+- Default music volume is 0.40. Default ambient volume is 0.50.
+
+The Orb Demo
+- Main menu map, logo splashes, credits page, and a pause menu.
+- The Orb maps live under demo_content. 
+- Arrival, cave, and ending sequences are fully scripted, including seamless travel between maps.
+- Holding select and aim together zooms the inspect view further.
+- A look-at camera effect can turn the view toward an entity or a point.
+- Escape during the logo splashes skips them. 
+- The pause menu opens reliably.
+- The ending sequence still completes if the player looks away at the last moment.
+
+Engine package
+- detis_engine_no_editor.exe ships for exported games.
+- Exporting a game warns that the EULA still applies. EULA text, help links, and the in-editor credits are updated.
+
+-----------------------------------------------------------------------------
+1.0.0-beta3
+-----------------------------------------------------------------------------
+
+Editor
+- Transform reparent preserves world pose. 
+- Undo/redo for parenting and grouping polish.
+- Selection debug lines and gizmo cache behave correctly while manipulating transforms.
+- Transform snap control, play/reload/collision/mute cluster layout.
+- Multi-selection translation stays intact while snap is on.
+- Gizmo translate/rotate/scale no longer hides the mouse until you move it.
+- Reload Assets toast centers on the 3D viewport, not the full window.
+- Editor shortcuts documented as engine-fixed; gameplay bindings stay in content config.
+
+Scripting
+- entity_set_parent and transform parent APIs aligned.
+
+Gameplay
+- Fixed player ceiling trace.
+
+Engine
+- Frame timer now uses steady_clock with non-negative delta.
+- Added remove_entity re-entry guard during nested removal.
+- Callback manager snapshots listeners before invoke.
+- Log now flushes to disk on fatal crash path.
+
+Engine package
+- editor_input_bindings.ini moved from content/config to engine/config.
+- Removed unused entries from default_engine_settings.ini.
+
+-----------------------------------------------------------------------------
+1.0.0-beta2
+-----------------------------------------------------------------------------
+
+Editor
+- Mesh hot-reload.
+- Particle system UI and options.
+- Transform and rotation serialization fixes and related inspector UI.
+- Reverb UI improvements.
+
+Scripting
+- Module on_ready callbacks run after the world is ready so scripts can reference entities safely.
+- Removed obsolete reverb Lua API.
+
+Gameplay
+- Particle simulation uses the fixed timestep.
+
+Physics
+- Dynamic bodies no longer support mesh collision shapes.
+
+Engine
+- Renderer overdraw optimizations.
+- Borderless window fixes.
+- UI memory leak fix.
+- Native Linux support.
+
+Engine package
+- First-run default settings seed correctly on a fresh install.

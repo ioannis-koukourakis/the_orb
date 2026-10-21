@@ -16,7 +16,7 @@ Linux
   From this folder: ./The Orb.sh (or cd bin && ./The Orb)
   If the shell script will not run, mark it executable once: chmod +x "The Orb.sh"
 
-Logs are written to bin/log.txt on all platforms.
+Logs are written to bin/log.txt on both platforms.
 
 
 What is included

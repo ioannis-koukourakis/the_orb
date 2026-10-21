@@ -1,0 +1,298 @@
+{
+    "active": true,
+    "components": [
+        {
+            "active": true,
+            "script_file_path": "../content/scripts/components/lamp.lua",
+            "script_parameters": {
+                "can_interact": {
+                    "default_value": "true",
+                    "description": "Can player interact with this lamp.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                },
+                "fade_duration": {
+                    "default_value": "0.3",
+                    "description": "Seconds to fade lights/emissive on/off when toggling. 0 for instant.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.25"
+                },
+                "flicker": {
+                    "default_value": "false",
+                    "description": "Enable light flickering effect.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                },
+                "flicker_custom_pattern": {
+                    "default_value": "detisengineisawesome",
+                    "description": "Custom flicker pattern (a=dim, m=normal, z=bright). Only used when preset is Custom.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 3,
+                    "value": "detisengineisawesome"
+                },
+                "flicker_preset": {
+                    "default_value": "flicker_1",
+                    "description": "Flicker pattern preset.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 3,
+                    "value": "flicker_1"
+                },
+                "flicker_random_offset": {
+                    "default_value": "true",
+                    "description": "Randomize starting position in pattern.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                },
+                "flicker_smoothness": {
+                    "default_value": "0.5",
+                    "description": "Smoothness of transitions (0=instant, 1=very smooth)",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "0.5"
+                },
+                "flicker_speed": {
+                    "default_value": "10.0",
+                    "description": "Pattern playback speed in Hz.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "10.0"
+                },
+                "interaction_distance": {
+                    "default_value": "2.0",
+                    "description": "Distance at which player can interact.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 0,
+                    "value": "2.5"
+                },
+                "lights_entity": {
+                    "default_value": "",
+                    "description": "Container whose Light/Mesh children are controlled. Empty = this entity.",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 10,
+                    "value": "."
+                },
+                "lit": {
+                    "default_value": "true",
+                    "description": "Initial lamp state (lit or unlit).",
+                    "has_range": false,
+                    "max_value": 100.0,
+                    "min_value": 0.0,
+                    "type": 2,
+                    "value": "true"
+                }
+            },
+            "type": "Script"
+        },
+        {
+            "angular_damping": 0.0,
+            "angular_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "auto_disable": true,
+            "body_type": 0,
+            "collision_callback_filter_character": true,
+            "collision_callback_filter_dynamic": true,
+            "collision_callback_filter_kinematic": true,
+            "collision_callback_filter_static": true,
+            "collision_callbacks_enabled": false,
+            "collision_layer": 1,
+            "collision_mask": 65534,
+            "collision_shapes": [
+                {
+                    "mesh_file_path": "",
+                    "offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shape_size": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "shape_type": 0
+                }
+            ],
+            "force_awake": false,
+            "friction": 0.5,
+            "inherit_surface_motion": true,
+            "linear_damping": 0.0,
+            "linear_factor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mass": 1.0,
+            "physics_body_enabled": true,
+            "restitution": 0.0,
+            "rolling_friction": 0.0,
+            "standing_mass_multiplier": 20.0,
+            "trigger_callbacks_enabled": false,
+            "type": "PhysicsBody",
+            "use_ccd": false
+        },
+        {
+            "active": true,
+            "editor_only": false,
+            "ignore_distance_culling": false,
+            "is_unique_material": true,
+            "material_files": [
+                "../content/materials/demo_content/props/lamp_cube_emissive.mat"
+            ],
+            "mesh_file": "../content/meshes/primitive/cube.glb",
+            "type": "Mesh",
+            "unique_material_uniforms": [
+                {
+                    "submesh_index": 0,
+                    "uniforms": {
+                        "u_detail_normal_map_strength": 1.0,
+                        "u_detail_normal_map_tiling": [
+                            8.0,
+                            8.0
+                        ],
+                        "u_albedo_brightness": 1.0,
+                        "u_albedo_color": [
+                            0.3656719923019409,
+                            0.3656719923019409,
+                            0.3656719923019409
+                        ],
+                        "u_albedo_tints_reflection": true,
+                        "u_emission_color": [
+                            1.0,
+                            0.699999988079071,
+                            0.25
+                        ],
+                        "u_emissive_multiplier": 200.0,
+                        "u_height_scale": 0.0,
+                        "u_map_tiling": [
+                            1.0,
+                            1.0
+                        ],
+                        "u_mask_threshold": 0.3499999940395355,
+                        "u_masked": false,
+                        "u_normal_map_strength": 1.0,
+                        "u_reflection_fallback_strength": 1.0,
+                        "u_rma_value": [
+                            0.800000011920929,
+                            0.0,
+                            1.0,
+                            0.0
+                        ],
+                        "u_sprite_blend": 0.0,
+                        "u_sprite_offset": [
+                            0.0,
+                            0.0
+                        ],
+                        "u_sprite_offset_next": [
+                            0.0,
+                            0.0
+                        ],
+                        "u_sprite_scale": [
+                            1.0,
+                            1.0
+                        ],
+                        "u_ssao_strength": 1.0,
+                        "u_ssr_excluded": false,
+                        "u_ssr_strength": 1.0,
+                        "u_subsurface_color": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "u_use_detail_normal_map": false,
+                        "u_use_albedo_map": false,
+                        "u_use_emission_map": false,
+                        "u_use_normal_map": false,
+                        "u_use_rma_map": false,
+                        "u_use_ssao": true,
+                        "u_use_ssr": false,
+                        "u_uv_scroll_speed": [
+                            0.0,
+                            0.0
+                        ],
+                        "u_parallax_lod_end": 50.0
+                    }
+                }
+            ],
+            "visible": true
+        },
+        {
+            "active": true,
+            "angle": 0.7853981852531433,
+            "cast_shadows": false,
+            "cast_specular": true,
+            "color": [
+                1.0,
+                0.75,
+                0.4000000059604645
+            ],
+            "ignore_distance_culling": false,
+            "light_type": 0,
+            "lumens": 800.0,
+            "range": 16.0,
+            "shadow_bias": 0.10000000149011612,
+            "shadow_blur": 1.0,
+            "shadow_normal_bias": 1.0,
+            "temperature_k": 6500.0,
+            "type": "Light",
+            "volumetric_fog_source_active": false,
+            "volumetric_fog_strength": 1.0
+        },
+        {
+            "active": true,
+            "interpolation_enabled": false,
+            "position": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation_quat": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "type": "Transform"
+        }
+    ],
+    "name": "lamp_cube",
+    "tags": [
+        "interactable"
+    ]
+}

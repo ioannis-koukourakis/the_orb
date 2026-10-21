@@ -20,13 +20,13 @@
     "distant_world_darken_factor": 0.3499999940395355,
     "distant_world_darken_start": 0.3499999940395355,
     "editor_camera_position": [
-        -26.380083084106445,
-        3.4306163787841797,
-        17.32988739013672
+        -27.282691955566406,
+        3.7224326133728027,
+        18.659435272216797
     ],
     "editor_camera_rotation": [
-        -4.450028419494629,
-        -382.0997314453125,
+        -3.850131034851074,
+        -39.85243225097656,
         0.0
     ],
     "entities": [
@@ -116666,7 +116666,7 @@
                     "ignore_distance_culling": false,
                     "is_unique_material": false,
                     "material_files": [
-                        "../content/materials/demo_content/tileable/water/water_surface_large_stream_sunlit_menu.mat"
+                        "../content/materials/demo_content/tileable/water/water_surface_large_stream_sunlit.mat"
                     ],
                     "mesh_file": "../content/meshes/primitive/plane.glb",
                     "requires_translucent_sorting": [
@@ -116706,7 +116706,6 @@
                 10027,
                 10026,
                 4901,
-                4900,
                 1086,
                 139,
                 138,
@@ -132340,7 +132339,8 @@
                 12120,
                 12122,
                 37533,
-                37539
+                37539,
+                37551
             ],
             "id": 217,
             "name": "rock_small_01",
@@ -148654,9 +148654,9 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -28.57602310180664,
-                        1.4785979986190796,
-                        6.948601245880127
+                        -28.62995147705078,
+                        1.4788306951522827,
+                        7.621621131896973
                     ],
                     "rotation_euler": [
                         109.5621337890625,
@@ -149790,9 +149790,9 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -29.07296371459961,
-                        1.8514262437820435,
-                        6.604005336761475
+                        -28.524005889892578,
+                        1.79794180393219,
+                        6.261940956115723
                     ],
                     "rotation_euler": [
                         -73.75912475585938,
@@ -154507,9 +154507,9 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -29.430274963378906,
-                        1.7610628604888916,
-                        8.901684761047363
+                        -29.132539749145508,
+                        1.7610856294631958,
+                        7.942639350891113
                     ],
                     "rotation_euler": [
                         121.46322631835938,
@@ -159851,9 +159851,9 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -29.783279418945313,
-                        1.7274084091186523,
-                        12.059253692626953
+                        -29.44704818725586,
+                        1.7273755073547363,
+                        13.87707805633545
                     ],
                     "rotation_euler": [
                         -31.996479034423828,
@@ -165094,9 +165094,9 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -29.710615158081055,
-                        2.1566691398620605,
-                        7.847599029541016
+                        -28.52599334716797,
+                        1.50355863571167,
+                        8.239675521850586
                     ],
                     "rotation_euler": [
                         56.65608215332031,
@@ -172784,7 +172784,8 @@
                 31728,
                 31414,
                 31734,
-                31733
+                31733,
+                37550
             ],
             "id": 1227,
             "name": "cretan_oak_02",
@@ -175320,118 +175321,6 @@
             "prefab_locked": true,
             "prefab_member": true,
             "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_02.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -29.157590866088867,
-                        0.794947624206543,
-                        15.52334213256836
-                    ],
-                    "rotation_euler": [
-                        -65.1580810546875,
-                        67.5958251953125,
-                        102.83297729492188
-                    ],
-                    "rotation_quat": [
-                        0.202570378780365,
-                        -0.6454750895500183,
-                        -0.05745351314544678,
-                        0.7341841459274292
-                    ],
-                    "scale": [
-                        0.84368896484375,
-                        0.8436889052391052,
-                        0.84368896484375
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/rocks/rock_big.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/rocks/rock_big_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                },
-                {
-                    "angular_damping": 0.0,
-                    "angular_factor": [
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "auto_disable": true,
-                    "body_type": 0,
-                    "collision_callback_filter_character": true,
-                    "collision_callback_filter_dynamic": true,
-                    "collision_callback_filter_kinematic": true,
-                    "collision_callback_filter_static": true,
-                    "collision_callbacks_enabled": false,
-                    "collision_layer": 1,
-                    "collision_mask": 65534,
-                    "collision_shapes": [
-                        {
-                            "mesh_file_path": "../content/meshes/demo_content/rocks/rock_big_01.glb",
-                            "offset": [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            "rotation": [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            "shape_size": [
-                                0.5,
-                                0.5,
-                                0.5
-                            ],
-                            "shape_type": 4
-                        }
-                    ],
-                    "force_awake": false,
-                    "friction": 0.5,
-                    "inherit_surface_motion": true,
-                    "linear_damping": 0.0,
-                    "linear_factor": [
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "mass": 1.0,
-                    "physics_body_enabled": true,
-                    "restitution": 0.0,
-                    "rolling_friction": 0.0,
-                    "standing_mass_multiplier": 20.0,
-                    "trigger_callbacks_enabled": false,
-                    "type": "PhysicsBody",
-                    "use_ccd": false
-                }
-            ],
-            "id": 4900,
-            "name": "rock_big_01_01_copy_copy_136",
-            "parent_entity_id": 36,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/rocks/rock_big_01.entity"
         },
         {
             "active": true,
@@ -349700,9 +349589,9 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -32.20199966430664,
-                        2.5658552646636963,
-                        11.19799518585205
+                        -32.45225143432617,
+                        2.509711980819702,
+                        11.293206214904785
                     ],
                     "rotation_euler": [
                         -136.19532775878906,
@@ -352779,6 +352668,175 @@
             "id": 37543,
             "name": "_decorators",
             "parent_entity_id": 0
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        -21.740968704223633,
+                        1.9528062343597412,
+                        7.527410507202148
+                    ],
+                    "rotation_euler": [
+                        19.494495391845703,
+                        -56.997196197509766,
+                        -25.168838500976563
+                    ],
+                    "rotation_quat": [
+                        0.8629343509674072,
+                        0.042756274342536926,
+                        -0.4913696050643921,
+                        -0.10987348109483719
+                    ],
+                    "scale": [
+                        1.2310103178024292,
+                        1.2310104370117188,
+                        1.2310103178024292
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/foliage/cretan_oak/cretan_oak_02_branch.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/foliage/cretan_oak/cretan_oak_bush_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                }
+            ],
+            "id": 37550,
+            "name": "cretan_oak_5",
+            "parent_entity_id": 1227,
+            "prefab_locked": true,
+            "prefab_member": true,
+            "prefab_source": "../content/entities/demo_content/foliage/cretan_oak/cretan_oak_bush_01.entity"
+        },
+        {
+            "active": true,
+            "child_entity_ids": [],
+            "components": [
+                {
+                    "active": true,
+                    "interpolation_enabled": false,
+                    "position": [
+                        -29.55558967590332,
+                        2.2799832820892334,
+                        7.4040913581848145
+                    ],
+                    "rotation_euler": [
+                        -54.58580780029297,
+                        25.077375411987305,
+                        45.20231246948242
+                    ],
+                    "rotation_quat": [
+                        0.762600839138031,
+                        -0.48737403750419617,
+                        0.006093358621001244,
+                        0.42528748512268066
+                    ],
+                    "scale": [
+                        0.6707608699798584,
+                        0.6707608103752136,
+                        0.6707608699798584
+                    ],
+                    "type": "Transform"
+                },
+                {
+                    "active": true,
+                    "editor_only": false,
+                    "gpu_instancing_active": true,
+                    "ignore_distance_culling": false,
+                    "is_unique_material": false,
+                    "material_files": [
+                        "../content/materials/demo_content/rocks/rock_small.mat"
+                    ],
+                    "mesh_file": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                    "requires_translucent_sorting": [
+                        false
+                    ],
+                    "translucent_render_priorities": [
+                        -1
+                    ],
+                    "type": "Mesh",
+                    "visible": true
+                },
+                {
+                    "angular_damping": 0.0,
+                    "angular_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "auto_disable": true,
+                    "body_type": 0,
+                    "collision_callback_filter_character": true,
+                    "collision_callback_filter_dynamic": true,
+                    "collision_callback_filter_kinematic": true,
+                    "collision_callback_filter_static": true,
+                    "collision_callbacks_enabled": false,
+                    "collision_layer": 1,
+                    "collision_mask": 65534,
+                    "collision_shapes": [
+                        {
+                            "mesh_file_path": "../content/meshes/demo_content/rocks/rock_small_01.glb",
+                            "offset": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "shape_size": [
+                                0.6000000238418579,
+                                0.5,
+                                0.6000000238418579
+                            ],
+                            "shape_type": 2
+                        }
+                    ],
+                    "force_awake": false,
+                    "friction": 0.5,
+                    "inherit_surface_motion": true,
+                    "linear_damping": 0.0,
+                    "linear_factor": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "mass": 1.0,
+                    "physics_body_enabled": true,
+                    "restitution": 0.0,
+                    "rolling_friction": 0.0,
+                    "standing_mass_multiplier": 20.0,
+                    "trigger_callbacks_enabled": false,
+                    "type": "PhysicsBody",
+                    "use_ccd": false
+                }
+            ],
+            "id": 37551,
+            "name": "rock_small_01_01_copy_7",
+            "parent_entity_id": 217,
+            "prefab_locked": true,
+            "prefab_member": true,
+            "prefab_source": "../content/entities/demo_content/rocks/rock_small_01.entity"
         }
     ],
     "exposure_ev100": 0.0,
@@ -352799,7 +352857,7 @@
         0.5528455376625061
     ],
     "fog_density": 2.700000047683716,
-    "fog_luminance": 1.9098591804504395,
+    "fog_luminance": 1.5915493965148926,
     "fog_luminance_synced_to_sky": true,
     "fog_sky_intensity": 1.0,
     "fog_start_distance": 12.0,
@@ -352817,10 +352875,10 @@
     "fog_wind_texture_active": false,
     "global_wetness_intensity": 0.15000000596046448,
     "name": "The Orb Main Menu",
-    "next_entity_id": 37548,
+    "next_entity_id": 37551,
     "shadow_quality": 2,
     "sky_active": true,
-    "sky_ambient_lux": 6.0,
+    "sky_ambient_lux": 5.0,
     "sky_brightness": 1.0,
     "sky_color": [
         1.0,
@@ -352828,7 +352886,7 @@
         1.0
     ],
     "sky_contrast": 1.0,
-    "sky_diffuse_ibl_intensity": 0.6399999856948853,
+    "sky_diffuse_ibl_intensity": 0.8299999833106995,
     "sky_dome_visible": true,
     "sky_ibl_active": true,
     "sky_ibl_apply_fog": true,
@@ -352871,25 +352929,25 @@
     "sunlight_lux": 12.0,
     "sunlight_shadow_active": true,
     "sunlight_shadow_bias": 1.0,
-    "sunlight_shadow_blur": 1.0,
+    "sunlight_shadow_blur": 0.0,
     "sunlight_shadow_normal_bias": 1.0,
     "sunlight_specular_intensity": 1.0,
     "sunlight_temperature_k": 4000.0,
-    "tonemap_brightness": 1.159999966621399,
+    "tonemap_brightness": 1.0,
     "tonemap_color_highlights": [
-        0.9186992049217224,
-        0.9143269658088684,
-        0.9074955582618713
+        0.9634146094322205,
+        0.9516656398773193,
+        0.9516656398773193
     ],
     "tonemap_color_midtones": [
-        0.7740432024002075,
-        0.851600706577301,
-        0.857723593711853
+        0.8359607458114624,
+        0.8889199495315552,
+        0.8902438879013062
     ],
     "tonemap_color_shadows": [
-        0.5166402459144592,
-        0.5838956236839294,
-        0.7520325183868408
+        0.6412849426269531,
+        0.6412850022315979,
+        0.7967479825019836
     ],
     "tonemap_contrast": 1.0,
     "tonemap_highlight_range": 0.30000001192092896,

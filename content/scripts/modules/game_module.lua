@@ -45,6 +45,10 @@ local m_engine_boot_splash_consumed = false
 -- Showcase hack for saving the loction of a few dynamic rocks in the exteror world before crossing into the cave.
 local m_orb_arrival_movable_layout_for_cave_door = nil
 
+-- Cave one-shot events for this play pass. Same lifetime as the rock snapshot above.
+local m_orb_cave_wind_event_has_played = false
+local m_orb_cave_reveal_stinger_has_played = false
+
 ------------------------------------------------
 -- INTERFACE
 ------------------------------------------------
@@ -135,8 +139,35 @@ end
 
 ------------------------------------------------
 
-function GameModule.clear_orb_arrival_movable_layout_for_cave_door()
+function GameModule.clear_orb_arrival_play_pass()
+    -- Orb ending and start new game both reset the play pass.
     m_orb_arrival_movable_layout_for_cave_door = nil
+    m_orb_cave_wind_event_has_played = false
+    m_orb_cave_reveal_stinger_has_played = false
+end
+
+------------------------------------------------
+
+function GameModule.get_orb_cave_wind_event_has_played()
+    return m_orb_cave_wind_event_has_played
+end
+
+------------------------------------------------
+
+function GameModule.set_orb_cave_wind_event_has_played(t_has_played)
+    m_orb_cave_wind_event_has_played = t_has_played == true
+end
+
+------------------------------------------------
+
+function GameModule.get_orb_cave_reveal_stinger_has_played()
+    return m_orb_cave_reveal_stinger_has_played
+end
+
+------------------------------------------------
+
+function GameModule.set_orb_cave_reveal_stinger_has_played(t_has_played)
+    m_orb_cave_reveal_stinger_has_played = t_has_played == true
 end
 
 ------------------------------------------------

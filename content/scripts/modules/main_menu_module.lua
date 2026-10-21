@@ -53,12 +53,14 @@ local WINDOW_MODE_OPTIONS = { "Windowed", "Fullscreen", "Borderless" }
 local VSYNC_MENU_OPTIONS = { "Disabled", "Adaptive" }
 local VSYNC_MENU_MODES = { VSyncMode.OFF, VSyncMode.ADAPTIVE }
 local ANISOTROPIC_OPTIONS = { "Off", "2x", "4x", "8x", "16x" }
-local QUALITY_OPTIONS = { "Off", "Low", "Medium", "High", "Ultra" }
+local SSGI_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
+local SSGI_QUALITY_MENU_MAX = 3
 local SHADOW_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
 local SHADOW_QUALITY_MENU_MAX = 3
 local GTAO_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
+local ANTI_ALIASING_OPTIONS = { "None", "FXAA", "TAA" }
 local SSR_OPTIONS = { "Off", "Low", "Medium", "High" }
-local RENDER_SCALE_PERCENTS = { 25, 50, 75, 100, 125, 150 }
+local RENDER_SCALE_PERCENTS = { 50, 75, 100, 125, 150 }
 local RENDER_SCALE_WARNING_PERCENT = 100
 local WINDOW_MODE_WINDOWED = 0
 
@@ -102,7 +104,6 @@ local m_button_credits = nil
 local m_button_back = nil
 
 -- Checkbox
-local m_checkbox_fxaa = nil
 local m_checkbox_fps_overlay = nil
 
 -- Slider
@@ -117,6 +118,7 @@ local m_combo_vsync = nil
 local m_combo_monitor = nil
 local m_combo_resolution = nil
 local m_combo_render_scale = nil
+local m_combo_anti_aliasing = nil
 local m_combo_anisotropic = nil
 local m_combo_shadows = nil
 local m_combo_ssao = nil
@@ -694,11 +696,10 @@ local function draw_main_page()
             m_menu_open = false
             input_set_mouse_capture(true)
 
-            -- Temp Hack to mitigate the absence of a proper save system: 
-            -- Clear any existing changes the player might have made 
-            -- to the orb arrival world by interacting with dynamic entities. 
+            -- Temp Hack to mitigate the absence of a proper save system. 
+            -- Clear any existing changes the player might have made and reset events.
             if module_get_is_valid(GAME_MODULE_NAME) then
-                module_call_function(GAME_MODULE_NAME, "clear_orb_arrival_movable_layout_for_cave_door")
+                module_call_function(GAME_MODULE_NAME, "clear_orb_arrival_play_pass")
                 module_call_function(GAME_MODULE_NAME, "set_exterior_intro_pending_full")
             end
 
@@ -874,24 +875,21 @@ local function draw_options_page()
     UiWidgets.label("Graphics", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
-    -- FXAA tick box.
-    m_checkbox_fxaa.checked = settings_get_fxaa_active()
-    UiWidgets.label_row("FXAA", UiSkin.LABEL_WIDTH, UiSkin.ROW_HEIGHT, UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_MUTED, UiSkin.MENU_ROW_LABEL_FONT_ID)
-    if UiWidgets.checkbox(m_checkbox_fxaa) then
-        settings_set_fxaa_active(m_checkbox_fxaa.checked)
-    end
-    gui_dummy(vec2(1.0, 10.0))
-
     -- Gamma slider. Now it starts feeling like an actual game. Hell yeah!
     draw_slider_row("Gamma  %.2f", m_slider_gamma, settings_get_gamma, settings_set_gamma)
 
     -- Render scale combo. 
     -- Need to convert the current render scale to the nearest available option.
-    -- Stops at 150 percent for the game. 
+    -- Stops at 150 percent for the game as people don't know how to handle it causing severe performance issues.
+    -- Also starts at 50 percent. 25 percent is way too low for this demo. 
     local render_scale_selected_index = 1
     local current_render_percent = math.floor(settings_get_render_scale() * 100.0 + 0.5)
+    local menu_min_render_percent = RENDER_SCALE_PERCENTS[1]
     local menu_max_render_percent = RENDER_SCALE_PERCENTS[#RENDER_SCALE_PERCENTS]
-    if current_render_percent > menu_max_render_percent then
+    if current_render_percent < menu_min_render_percent then
+        current_render_percent = menu_min_render_percent
+        settings_set_render_scale(menu_min_render_percent / 100.0)
+    elseif current_render_percent > menu_max_render_percent then
         current_render_percent = menu_max_render_percent
         settings_set_render_scale(menu_max_render_percent / 100.0)
     end
@@ -904,6 +902,9 @@ local function draw_options_page()
         end
     end
     draw_labeled_combo("Render Scale", m_combo_render_scale, render_scale_selected_index, apply_render_scale_combo_setting)
+
+    -- Anti-aliasing. None, FXAA, or temporal.
+    draw_labeled_combo("Anti-Aliasing", m_combo_anti_aliasing, settings_get_anti_aliasing() + 1, settings_set_anti_aliasing)
 
     -- Print a warning for multisampling. 
     if current_render_percent > RENDER_SCALE_WARNING_PERCENT then
@@ -921,7 +922,13 @@ local function draw_options_page()
     draw_labeled_combo("Anisotropic", m_combo_anisotropic, settings_get_anisotropic_filter_level() + 1, settings_set_anisotropic_filter_level)
     draw_labeled_combo("Shadows", m_combo_shadows, shadow_quality + 1, apply_shadow_map_quality_setting)
     draw_labeled_combo("SSAO", m_combo_ssao, settings_get_ssao_quality() + 1, settings_set_ssao_quality)
-    draw_labeled_combo("SSGI", m_combo_ssgi, settings_get_ssgi_quality() + 1, settings_set_ssgi_quality)
+    -- SSGI stops at High. Ultra from an older save runs as High.
+    local ssgi_quality = settings_get_ssgi_quality()
+    if ssgi_quality > SSGI_QUALITY_MENU_MAX then
+        settings_set_ssgi_quality(SSGI_QUALITY_MENU_MAX)
+        ssgi_quality = SSGI_QUALITY_MENU_MAX
+    end
+    draw_labeled_combo("SSGI", m_combo_ssgi, ssgi_quality + 1, settings_set_ssgi_quality)
     draw_labeled_combo("Reflections", m_combo_ssr, settings_get_ssr_quality() + 1, settings_set_ssr_quality)
     gui_dummy(vec2(1.0, 16.0))
 
@@ -1226,10 +1233,11 @@ function MainMenuModule.on_initialize()
     m_combo_resolution = new_menu_combo("main_menu_resolution", { "Resolution" })
     m_combo_resolution.on_before_open = refresh_resolution_combo
     m_combo_render_scale = new_menu_combo("main_menu_render_scale", render_scale_labels)
+    m_combo_anti_aliasing = new_menu_combo("main_menu_anti_aliasing", ANTI_ALIASING_OPTIONS)
     m_combo_anisotropic = new_menu_combo("main_menu_anisotropic", ANISOTROPIC_OPTIONS)
     m_combo_shadows = new_menu_combo("main_menu_shadows", SHADOW_QUALITY_OPTIONS)
     m_combo_ssao = new_menu_combo("main_menu_ssao", GTAO_QUALITY_OPTIONS)
-    m_combo_ssgi = new_menu_combo("main_menu_ssgi", QUALITY_OPTIONS)
+    m_combo_ssgi = new_menu_combo("main_menu_ssgi", SSGI_QUALITY_OPTIONS)
     m_combo_ssr = new_menu_combo("main_menu_ssr", SSR_OPTIONS)
 
     -- Initialize graphics settings sliders.
@@ -1246,23 +1254,6 @@ function MainMenuModule.on_initialize()
                                                         GAMEPAD_LOOK_SENSITIVITY_MAX)
     
     -- Initialize checkboxes.
-    m_checkbox_fxaa = UiWidgets.new_checkbox({
-            id = "main_menu_fxaa",
-            label = "",
-            size = vec2(22.0, 22.0),
-            checked = settings_get_fxaa_active(),
-            font_size = UiSkin.MENU_CHECKBOX_FONT_SIZE,
-            text_color = UiSkin.COLOR_CREAM,
-            border_color = UiSkin.COLOR_MUTED,
-            border_thickness = 2.0,
-            hover = { color = UiSkin.COLOR_EMBER_BRIGHT },
-            focused = { color = UiSkin.COLOR_EMBER_BRIGHT },
-            pressed = { color = UiSkin.COLOR_EMBER_BRIGHT },
-            check_idle = { color = UiSkin.COLOR_MUTED },
-            check = UiSkin.STYLE_FILL,
-        }
-    )
-
     m_checkbox_fps_overlay = UiWidgets.new_checkbox({
             id = "main_menu_fps_overlay",
             label = "",

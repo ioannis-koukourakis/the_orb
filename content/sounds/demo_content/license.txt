@@ -37,4 +37,8 @@ Sources used for creating demo content sounds.
 - Dark Choir Singing by BrainClaim -- https://freesound.org/s/273804/ -- License: Creative Commons 0
 - Riser Hit sfx 040.wav by AudioPapkin -- https://freesound.org/s/648734/ -- License: Creative Commons 0
 - AMBIndoor_Cinematis_HalloweenSpecial_Vol5_Basement_Movement_4_Freebie by guidofm -- https://freesound.org/s/831754/ -- License: Creative Commons 0
+- Monster Tiger Wild Cold by szegvari -- https://freesound.org/s/546834/ -- License: Creative Commons 0
+- groan.mp3 by Kneeling -- https://freesound.org/s/473525/ -- License: Creative Commons 0
+- hard breath.wav by rezidentevil -- https://freesound.org/s/396048/ -- License: Creative Commons 0
+- Nfld wind int moans 09.flac by TRP -- https://freesound.org/s/575272/ -- License: Creative Commons 0
 

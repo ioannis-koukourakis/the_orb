@@ -8,6 +8,7 @@ local TheOrbCaveWorld = {}
 
 local Colors = dofile("../content/scripts/shared/colors.lua")
 local OrbCaveDeathPit = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_cave/the_orb_cave_death_pit.lua")
+local OrbCaveOneShotEvents = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_cave/the_orb_cave_one_shot_events.lua")
 local TheOrbWorldPaths = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_world_paths.lua")
 
 ----------------------------------------------------
@@ -193,9 +194,6 @@ local m_ending_sync_completed_sound_entity_id = 0
 local m_ending_sync_completed_sound_is_playing = false
 local m_ending_sync_stinger_sound_entity_id = 0
 local m_ending_sync_stinger_sound_played = false
-local m_reveal_stinger_sound_entity_id = 0
-local m_reveal_stinger_trigger_entity_id = 0
-local m_reveal_stinger_has_played = false
 local m_orb_choir_sound_entity_id = 0
 local m_orb_choir_sound_authored_gain = 1.0
 local m_orb_choir_sound_is_playing = false
@@ -239,22 +237,6 @@ local function set_orb_sound_gain_if_changed(t_sound_entity_id, t_target_gain)
     end
 
     sound_set_gain(t_sound_entity_id, t_target_gain)
-end
-
-----------------------------------------------------
-
-local function play_orb_reveal_stinger_once_per_session()
-    if m_reveal_stinger_has_played then
-        return
-    end
-
-    if not entity_get_is_valid(m_reveal_stinger_sound_entity_id)
-        or not entity_get_has_sound_component(m_reveal_stinger_sound_entity_id) then
-        return
-    end
-
-    m_reveal_stinger_has_played = true
-    sound_play(m_reveal_stinger_sound_entity_id, ORB_SHORT_SOUND_FADE_DURATION)
 end
 
 ----------------------------------------------------
@@ -666,6 +648,15 @@ end
 
 ----------------------------------------------------
 
+local function lock_player_controls_for_ending()
+    world_call_entity_script_function(m_player_entity_id, "set_controls_locked", true)
+    if get_game_mode_active() then
+        input_set_mouse_capture(true)
+    end
+end
+
+----------------------------------------------------
+
 local function play_ending_sync_pulse_camera_burst()
     local fade_in_seconds = ORB_SYNC_PULSE_CROSSFADE_DURATION
     local fade_out_seconds = 0.11
@@ -816,7 +807,8 @@ local function process_orb_lookat_pull(t_delta_time, t_frame)
             or not t_frame.is_in_affected_area
             or t_frame.distance > t_frame.effective_ending_stare_distance then
             stop_orb_camera_lookat_pull()
-        elseif t_frame.is_sphere_clearly_on_view then
+        -- White flash holds the pull. Looking away cannot break it.
+        elseif m_ending_warp_sound_fade_is_active or t_frame.is_sphere_clearly_on_view then
             m_orb_lookat_break_escape_seconds = 0.0
         else
             m_orb_lookat_break_escape_seconds = m_orb_lookat_break_escape_seconds + t_delta_time
@@ -873,7 +865,8 @@ local function process_ending_stare_and_sync(t_delta_time, t_frame)
     end
 
     -- Increase ending look time when the player is staring at the orb.
-    if t_frame.is_ending_stare_for_effects then
+    -- The white flash keeps the stare building if the player looks away.
+    if t_frame.is_ending_stare_for_effects or m_ending_warp_sound_fade_is_active then
         if m_ending_state == ENDING_STATE_REST then
             m_ending_state = ENDING_STATE_CHARGING
         end
@@ -892,8 +885,10 @@ local function process_ending_stare_and_sync(t_delta_time, t_frame)
         m_ending_sync_stinger_sound_played = false
     end
 
-    -- Looking away and escaping the camera pull before the sync commit returns the ending to rest.
-    if (m_ending_state == ENDING_STATE_CHARGING or m_ending_state == ENDING_STATE_SYNCING) and not t_frame.is_ending_stare_for_effects then
+    -- Looking away and escaping the camera pull before the white flash returns the ending to rest.
+    if not m_ending_warp_sound_fade_is_active
+        and (m_ending_state == ENDING_STATE_CHARGING or m_ending_state == ENDING_STATE_SYNCING)
+        and not t_frame.is_ending_stare_for_effects then
         
         -- Play desync effects and reset the ending state when the player looks away.
         if m_ending_state == ENDING_STATE_SYNCING or m_ending_white > 0.0 then
@@ -1000,6 +995,8 @@ local function process_ending_stare_and_sync(t_delta_time, t_frame)
         if t_frame.ending_white_ramp_time >= warp_start_ramp_seconds then
             if not m_ending_warp_sound_fade_is_active then
                 m_ending_warp_sound_fade_is_active = true
+                -- Freeze look and movement for the white flash, title, and teleport.
+                lock_player_controls_for_ending()
                 if music_get_is_playing() then
                     music_stop(ENDING_WARP_LEAD_DURATION)
                 end
@@ -1111,9 +1108,7 @@ local function process_ending_warp_fade(t_delta_time, t_frame)
             if entity_get_is_valid(m_orb_glitch_sound_entity_id) then
                 sound_stop(m_orb_glitch_sound_entity_id, 0.0)
             end
-            if entity_get_is_valid(m_reveal_stinger_sound_entity_id) then
-                sound_stop(m_reveal_stinger_sound_entity_id, 0.0)
-            end
+
             stop_orb_choir_sync_sound(0.0)
             m_ending_warp_sound_fade_is_complete = true
         end
@@ -1256,10 +1251,7 @@ local function lock_player_for_ending()
         return
     end
 
-    world_call_entity_script_function(m_player_entity_id, "set_controls_locked", true)
-    if get_game_mode_active() then
-        input_set_mouse_capture(true)
-    end
+    lock_player_controls_for_ending()
     m_ending_is_player_locked = true
 end
 
@@ -1316,7 +1308,7 @@ local function process_ending_world_change()
     end
 
     if module_get_is_valid(GAME_MODULE_NAME) then
-        module_call_function(GAME_MODULE_NAME, "clear_orb_arrival_movable_layout_for_cave_door")
+        module_call_function(GAME_MODULE_NAME, "clear_orb_arrival_play_pass")
         module_call_function(GAME_MODULE_NAME, "set_exterior_intro_pending_white_auto")
     end
 
@@ -1358,12 +1350,8 @@ function TheOrbCaveWorld.on_overlap(t_trigger_entity_id, t_other_entity_id, t_en
         return
     end
 
-    -- Check for overlap with the orb reveal stinger trigger.
-    if entity_get_is_valid(m_reveal_stinger_trigger_entity_id)
-        and t_trigger_entity_id == m_reveal_stinger_trigger_entity_id then
-        if t_enter then
-            play_orb_reveal_stinger_once_per_session()
-        end
+    -- Check for overlap with the wind blast and the orb reveal stinger.
+    if OrbCaveOneShotEvents.on_overlap(t_trigger_entity_id, t_enter) then
         return
     end
 
@@ -1439,13 +1427,6 @@ function TheOrbCaveWorld.on_ready()
         m_ending_sync_completed_sound_entity_id = 0
     end
 
-    m_reveal_stinger_sound_entity_id = get_orb_child_entity_id("sound/snd_reveal_stinger", "snd_reveal_stinger")
-    if not entity_get_is_valid(m_reveal_stinger_sound_entity_id)
-        or not entity_get_has_sound_component(m_reveal_stinger_sound_entity_id) then
-        print_warning("[TheOrbCaveWorld] Alien sphere snd_reveal_stinger was not found.")
-        m_reveal_stinger_sound_entity_id = 0
-    end
-
     m_ending_sync_stinger_sound_entity_id = get_orb_child_entity_id("sound/snd_sync_stinger", "snd_sync_stinger")
     if not entity_get_is_valid(m_ending_sync_stinger_sound_entity_id)
         or not entity_get_has_sound_component(m_ending_sync_stinger_sound_entity_id) then
@@ -1453,13 +1434,8 @@ function TheOrbCaveWorld.on_ready()
         m_ending_sync_stinger_sound_entity_id = 0
     end
 
-    m_reveal_stinger_trigger_entity_id = world_get_entity_by_name("trigger_alien_sphere_reveal_stinger")
-    if not entity_get_is_valid(m_reveal_stinger_trigger_entity_id) then
-        print_warning("[TheOrbCaveWorld] trigger_orb_reveal_stinger was not found.")
-        m_reveal_stinger_trigger_entity_id = 0
-    else
-        physics_body_set_trigger_callbacks_enabled(m_reveal_stinger_trigger_entity_id, true)
-    end
+    -- Setup the wind blast and the orb reveal stinger.
+    OrbCaveOneShotEvents.setup_one_shot_events()
 
     -- Setup the Orb Cave Death Pit system.
     OrbCaveDeathPit.set_player_entity_id(m_player_entity_id)
