@@ -928,7 +928,7 @@ local function draw_options_page()
         settings_set_ssgi_quality(SSGI_QUALITY_MENU_MAX)
         ssgi_quality = SSGI_QUALITY_MENU_MAX
     end
-    draw_labeled_combo("SSGI", m_combo_ssgi, ssgi_quality + 1, settings_set_ssgi_quality)
+    draw_labeled_combo("Bounce", m_combo_ssgi, ssgi_quality + 1, settings_set_ssgi_quality)
     draw_labeled_combo("Reflections", m_combo_ssr, settings_get_ssr_quality() + 1, settings_set_ssr_quality)
     gui_dummy(vec2(1.0, 16.0))
 

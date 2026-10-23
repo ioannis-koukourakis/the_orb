@@ -52,7 +52,7 @@ void main()
 	// Get parameters.
 	vec2 resolution = u_resolution;
 	float pixel_scale = max(u_params.x, 1.0);
-	float color_bits = max(u_params.y, 1.0);
+	float color_bits = clamp(u_params.y, 1.0, 16.0);
 	float dither_strength = clamp(u_params.z, 0.0, 1.0);
 
 	//////////////////////////////////////////////////////////////

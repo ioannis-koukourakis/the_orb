@@ -5,6 +5,30 @@ Detis Engine changelog
 Newest release at the top. 
 
 -----------------------------------------------------------------------------
+1.0.0-beta5
+-----------------------------------------------------------------------------
+
+Rendering
+- Temporal anti-aliasing sharpen is lighter.
+- Light and fog loops, and shadow samples, stay inside fixed bounds.
+- Display sharpen follows local contrast. 
+- Screen-space reflection marches sample mip 0.
+- A bad or extreme reflection offset drops out instead of blowing the lit pixel.
+- Looking straight into a light no longer turns the shaded pixel black. 
+- Parallax height marches sample with an explicit gradient.
+- Sharper sun shadows at the same cost, and a cheaper cascade pass.
+- Screen-space bounce shimmer fixes, including the TAA edge when bounce overlaps the screen border.
+- GTAO bent normals.
+
+Editor
+- Screen Space Bounce replaces the Screen Space GI label in the world panel, materials, debug view, and engine settings. The options menu calls it Bounce.
+- Wind, Wetness, occlusion culling, and Nav Zone are marked Experimental.
+
+The Orb Demo
+- Arrival, cave, and main menu lighting was retuned.
+- The options menu lists anti-aliasing after render scale.
+
+-----------------------------------------------------------------------------
 1.0.0-beta4
 -----------------------------------------------------------------------------
 
@@ -152,3 +176,5 @@ Engine
 
 Engine package
 - First-run default settings seed correctly on a fresh install.
+
+-----------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 {
     "auto_exposure_active": true,
-    "auto_exposure_bias": 0.0,
+    "auto_exposure_bias": 0.25,
     "auto_exposure_center_weight": 0.8500000238418579,
     "auto_exposure_ev_max": 1.0,
     "auto_exposure_ev_min": -1.0,
@@ -20,13 +20,13 @@
     "distant_world_darken_factor": 0.18299999833106995,
     "distant_world_darken_start": 0.15000000596046448,
     "editor_camera_position": [
-        -25.667131423950195,
-        4.910655975341797,
-        36.4697265625
+        -27.135541915893555,
+        4.406392574310303,
+        39.83046340942383
     ],
     "editor_camera_rotation": [
-        -9.03897476196289,
-        -10136.1591796875,
+        -1.7889987230300903,
+        -9782.087890625,
         0.0
     ],
     "entities": [
@@ -216727,7 +216727,6 @@
                 10728,
                 10730,
                 10731,
-                10877,
                 10732,
                 10733,
                 10734,
@@ -216817,7 +216816,6 @@
                 10881,
                 10882,
                 10883,
-                10884,
                 10885,
                 10889,
                 10890,
@@ -216943,7 +216941,6 @@
                 22681,
                 24427,
                 22682,
-                22683,
                 22684,
                 22685,
                 22686,
@@ -216959,9 +216956,7 @@
                 23349,
                 22692,
                 23508,
-                22693,
                 24017,
-                22694,
                 23860,
                 22695,
                 23353,
@@ -219449,7 +219444,6 @@
                 25253,
                 25044,
                 25045,
-                28327,
                 27444,
                 25046,
                 26421,
@@ -219900,7 +219894,6 @@
                 25350,
                 27830,
                 25351,
-                28347,
                 25352,
                 25786,
                 25355,
@@ -219955,7 +219948,6 @@
                 25390,
                 25391,
                 25392,
-                28333,
                 28124,
                 25394,
                 27101,
@@ -220031,7 +220023,6 @@
                 25446,
                 27798,
                 25447,
-                28315,
                 25448,
                 25450,
                 25754,
@@ -221396,7 +221387,6 @@
                 26880,
                 27312,
                 26881,
-                28338,
                 26883,
                 27831,
                 26884,
@@ -221407,7 +221397,6 @@
                 27320,
                 26889,
                 26890,
-                28346,
                 26891,
                 27839,
                 26892,
@@ -221715,7 +221704,6 @@
                 27297,
                 27088,
                 29488,
-                28323,
                 27090,
                 27091,
                 27301,
@@ -221947,7 +221935,6 @@
                 30015,
                 28633,
                 27310,
-                28476,
                 27311,
                 28422,
                 27313,
@@ -222034,7 +222021,6 @@
                 27392,
                 27826,
                 27395,
-                28343,
                 27396,
                 28337,
                 27398,
@@ -222043,7 +222029,6 @@
                 27403,
                 28351,
                 27404,
-                28345,
                 27406,
                 27407,
                 30339,
@@ -222240,10 +222225,8 @@
                 27957,
                 27607,
                 28991,
-                28334,
                 27609,
                 27614,
-                28332,
                 27965,
                 27615,
                 28278,
@@ -222442,12 +222425,9 @@
                 27904,
                 28336,
                 27905,
-                28340,
                 27909,
-                28344,
                 27913,
                 27914,
-                28348,
                 27917,
                 27919,
                 28803,
@@ -253898,63 +253878,6 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -12.84046745300293,
-                        2.268502712249756,
-                        18.003572463989258
-                    ],
-                    "rotation_euler": [
-                        -9.717634201049805,
-                        54.81664276123047,
-                        -5.212797164916992
-                    ],
-                    "rotation_quat": [
-                        0.8854163885116577,
-                        -0.054257165640592575,
-                        0.46161937713623047,
-                        -0.001275036484003067
-                    ],
-                    "scale": [
-                        1.483410358428955,
-                        1.483410358428955,
-                        1.483410358428955
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 10877,
-            "name": "grass_patch_560",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
                         -11.82234001159668,
                         2.5677549839019775,
                         20.726335525512695
@@ -254284,63 +254207,6 @@
             ],
             "id": 10883,
             "name": "grass_patch_566",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.458102226257324,
-                        2.5671818256378174,
-                        19.426923751831055
-                    ],
-                    "rotation_euler": [
-                        -1.345003604888916,
-                        -8.503900527954102,
-                        -14.326757431030273
-                    ],
-                    "rotation_quat": [
-                        0.9892870783805847,
-                        -0.020858293399214745,
-                        -0.07209908217191696,
-                        -0.1252107322216034
-                    ],
-                    "scale": [
-                        1.150650978088379,
-                        1.150650978088379,
-                        1.150650978088379
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 10884,
-            "name": "grass_patch_567",
             "parent_entity_id": 10215,
             "prefab_locked": true,
             "prefab_member": true,
@@ -310243,63 +310109,6 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -14.323441505432129,
-                        2.51790189743042,
-                        18.819379806518555
-                    ],
-                    "rotation_euler": [
-                        -27.26346206665039,
-                        87.21758270263672,
-                        -41.76166534423828
-                    ],
-                    "rotation_quat": [
-                        0.7153943181037903,
-                        0.07947185635566711,
-                        0.6871018409729004,
-                        -0.09892582893371582
-                    ],
-                    "scale": [
-                        1.4712810516357422,
-                        1.4712810516357422,
-                        1.4712811708450317
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 22683,
-            "name": "grass_patch_664",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
                         -16.100788116455078,
                         2.866177797317505,
                         18.764381408691406
@@ -310800,120 +310609,6 @@
             ],
             "id": 22692,
             "name": "grass_patch_717",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -15.059005737304688,
-                        2.5092785358428955,
-                        17.312793731689453
-                    ],
-                    "rotation_euler": [
-                        -26.326295852661133,
-                        62.78123474121094,
-                        -30.683244705200195
-                    ],
-                    "rotation_quat": [
-                        0.8329700827598572,
-                        -0.05327921360731125,
-                        0.5405426025390625,
-                        -0.10552749782800674
-                    ],
-                    "scale": [
-                        1.2314814329147339,
-                        1.2314814329147339,
-                        1.2314814329147339
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 22693,
-            "name": "grass_patch_718",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.898795127868652,
-                        2.632225513458252,
-                        18.204660415649414
-                    ],
-                    "rotation_euler": [
-                        -4.150643348693848,
-                        44.78483200073242,
-                        -15.841032981872559
-                    ],
-                    "rotation_quat": [
-                        0.9170763492584229,
-                        0.019296657294034958,
-                        0.3816802203655243,
-                        -0.11366133391857147
-                    ],
-                    "scale": [
-                        1.5667279958724976,
-                        1.566727876663208,
-                        1.566727876663208
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 22694,
-            "name": "grass_patch_719",
             "parent_entity_id": 10215,
             "prefab_locked": true,
             "prefab_member": true,
@@ -608353,63 +608048,6 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -14.519442558288574,
-                        2.581688165664673,
-                        19.369104385375977
-                    ],
-                    "rotation_euler": [
-                        -7.032172679901123,
-                        79.06938171386719,
-                        -21.431520462036133
-                    ],
-                    "rotation_quat": [
-                        0.763622522354126,
-                        0.0716601237654686,
-                        0.6330624222755432,
-                        -0.1047741174697876
-                    ],
-                    "scale": [
-                        0.8286445140838623,
-                        0.8286443948745728,
-                        0.8286445140838623
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28315,
-            "name": "grass_patch_6177",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
                         -15.634791374206543,
                         2.837864875793457,
                         19.597911834716797
@@ -608809,63 +608447,6 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -14.237016677856445,
-                        2.5157036781311035,
-                        19.31546974182129
-                    ],
-                    "rotation_euler": [
-                        -16.558542251586914,
-                        63.35623550415039,
-                        -23.56613540649414
-                    ],
-                    "rotation_quat": [
-                        0.8398388028144836,
-                        -0.013841018080711365,
-                        0.5337472558021545,
-                        -0.09794450551271439
-                    ],
-                    "scale": [
-                        0.9865641593933105,
-                        0.9865641593933105,
-                        0.9865641593933105
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28323,
-            "name": "grass_patch_6185",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
                         -16.278827667236328,
                         2.8433620929718018,
                         18.48630714416504
@@ -609024,63 +608605,6 @@
             ],
             "id": 28326,
             "name": "grass_patch_6188",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.083144187927246,
-                        2.5088067054748535,
-                        19.442846298217773
-                    ],
-                    "rotation_euler": [
-                        -7.519050598144531,
-                        -12.399137496948242,
-                        -7.060220241546631
-                    ],
-                    "rotation_quat": [
-                        0.9896941184997559,
-                        -0.07169696688652039,
-                        -0.10354134440422058,
-                        -0.06814873218536377
-                    ],
-                    "scale": [
-                        0.7559517025947571,
-                        0.7559517025947571,
-                        0.7559515833854675
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28327,
-            "name": "grass_patch_6189",
             "parent_entity_id": 10215,
             "prefab_locked": true,
             "prefab_member": true,
@@ -609322,177 +608846,6 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -14.416937828063965,
-                        2.592987060546875,
-                        20.305227279663086
-                    ],
-                    "rotation_euler": [
-                        13.527771949768066,
-                        57.213233947753906,
-                        2.7509548664093018
-                    ],
-                    "rotation_quat": [
-                        0.8729196786880493,
-                        0.09195772558450699,
-                        0.47780588269233704,
-                        -0.035447727888822556
-                    ],
-                    "scale": [
-                        1.0296506881713867,
-                        1.0296506881713867,
-                        1.0296508073806763
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28332,
-            "name": "grass_patch_6194",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.44952392578125,
-                        2.5934975147247314,
-                        20.706464767456055
-                    ],
-                    "rotation_euler": [
-                        -4.412981986999512,
-                        45.05333709716797,
-                        -1.3557687997817993
-                    ],
-                    "rotation_quat": [
-                        0.9231263399124146,
-                        -0.03103167749941349,
-                        0.3832233250141144,
-                        0.0038289790973067284
-                    ],
-                    "scale": [
-                        1.2209336757659912,
-                        1.2209336757659912,
-                        1.2209336757659912
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28333,
-            "name": "grass_patch_6195",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -13.865972518920898,
-                        2.5648770332336426,
-                        20.114120483398438
-                    ],
-                    "rotation_euler": [
-                        -173.34375,
-                        -62.10708999633789,
-                        169.74598693847656
-                    ],
-                    "rotation_quat": [
-                        0.5173529982566833,
-                        -0.04660078138113022,
-                        -0.8544952273368835,
-                        0.003515553195029497
-                    ],
-                    "scale": [
-                        0.8697737455368042,
-                        0.8697735667228699,
-                        0.8697736263275146
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28334,
-            "name": "grass_patch_6196",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
                         -14.96272087097168,
                         2.6987898349761963,
                         19.46289825439453
@@ -609664,63 +609017,6 @@
                     "active": true,
                     "interpolation_enabled": false,
                     "position": [
-                        -14.675201416015625,
-                        2.6050796508789063,
-                        20.516971588134766
-                    ],
-                    "rotation_euler": [
-                        171.29660034179688,
-                        -33.16513442993164,
-                        176.10340881347656
-                    ],
-                    "rotation_quat": [
-                        -0.2819371223449707,
-                        0.05413267761468887,
-                        0.9543578028678894,
-                        0.08235549926757813
-                    ],
-                    "scale": [
-                        0.9491888880729675,
-                        0.9491887092590332,
-                        0.949188768863678
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28338,
-            "name": "grass_patch_6200",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
                         -16.018388748168945,
                         2.9054107666015625,
                         19.46358871459961
@@ -609765,63 +609061,6 @@
             ],
             "id": 28339,
             "name": "grass_patch_6201",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.509743690490723,
-                        2.55306339263916,
-                        18.395034790039063
-                    ],
-                    "rotation_euler": [
-                        -5.5375142097473145,
-                        57.83484649658203,
-                        -17.606287002563477
-                    ],
-                    "rotation_quat": [
-                        0.8675711750984192,
-                        0.032131683081388474,
-                        0.4837654232978821,
-                        -0.11071954667568207
-                    ],
-                    "scale": [
-                        0.9875708818435669,
-                        0.9875708818435669,
-                        0.9875709414482117
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28340,
-            "name": "grass_patch_6202",
             "parent_entity_id": 10215,
             "prefab_locked": true,
             "prefab_member": true,
@@ -609936,348 +609175,6 @@
             ],
             "id": 28342,
             "name": "grass_patch_6204",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.408598899841309,
-                        2.5865485668182373,
-                        20.555646896362305
-                    ],
-                    "rotation_euler": [
-                        -168.48414611816406,
-                        74.2000503540039,
-                        -167.1375732421875
-                    ],
-                    "rotation_quat": [
-                        0.6053509712219238,
-                        -0.02875037118792534,
-                        0.795344352722168,
-                        -0.012289971113204956
-                    ],
-                    "scale": [
-                        1.03411865234375,
-                        1.034118413925171,
-                        1.03411865234375
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28343,
-            "name": "grass_patch_6205",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -15.056212425231934,
-                        2.703538656234741,
-                        20.28116226196289
-                    ],
-                    "rotation_euler": [
-                        131.52574157714844,
-                        80.65328216552734,
-                        113.39833068847656
-                    ],
-                    "rotation_quat": [
-                        0.665033757686615,
-                        0.15963158011436462,
-                        0.7268786430358887,
-                        -0.062412410974502563
-                    ],
-                    "scale": [
-                        0.9420881271362305,
-                        0.9420881867408752,
-                        0.9420881867408752
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28344,
-            "name": "grass_patch_6206",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.548576354980469,
-                        2.6383819580078125,
-                        19.891542434692383
-                    ],
-                    "rotation_euler": [
-                        -150.04832458496094,
-                        -75.16825103759766,
-                        142.19740295410156
-                    ],
-                    "rotation_quat": [
-                        0.623774528503418,
-                        -0.09887586534023285,
-                        -0.7753198146820068,
-                        0.002870559925213456
-                    ],
-                    "scale": [
-                        1.0238897800445557,
-                        1.0238897800445557,
-                        1.0238897800445557
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28345,
-            "name": "grass_patch_6207",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.625948905944824,
-                        2.587956428527832,
-                        18.551305770874023
-                    ],
-                    "rotation_euler": [
-                        -177.04893493652344,
-                        -3.7712886333465576,
-                        166.89117431640625
-                    ],
-                    "rotation_quat": [
-                        0.03561653569340706,
-                        -0.11320531368255615,
-                        -0.9926934838294983,
-                        0.021813131868839264
-                    ],
-                    "scale": [
-                        0.839958131313324,
-                        0.8399578928947449,
-                        0.839958131313324
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28346,
-            "name": "grass_patch_6208",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.579225540161133,
-                        2.62168550491333,
-                        19.7275447845459
-                    ],
-                    "rotation_euler": [
-                        -16.187644958496094,
-                        62.713985443115234,
-                        -23.150009155273438
-                    ],
-                    "rotation_quat": [
-                        0.8429424166679382,
-                        -0.014412933960556984,
-                        0.5288322567939758,
-                        -0.09786203503608704
-                    ],
-                    "scale": [
-                        1.2012261152267456,
-                        1.2012261152267456,
-                        1.2012261152267456
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28347,
-            "name": "grass_patch_6209",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -14.241724967956543,
-                        2.5002431869506836,
-                        18.972291946411133
-                    ],
-                    "rotation_euler": [
-                        -177.62738037109375,
-                        57.511226654052734,
-                        167.47593688964844
-                    ],
-                    "rotation_quat": [
-                        -0.47612208127975464,
-                        -0.10550442337989807,
-                        -0.8701757788658142,
-                        0.07050438225269318
-                    ],
-                    "scale": [
-                        1.0339628458023071,
-                        1.033962607383728,
-                        1.0339628458023071
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28348,
-            "name": "grass_patch_6210",
             "parent_entity_id": 10215,
             "prefab_locked": true,
             "prefab_member": true,
@@ -617289,63 +616186,6 @@
             ],
             "id": 28475,
             "name": "grass_patch_6337",
-            "parent_entity_id": 10215,
-            "prefab_locked": true,
-            "prefab_member": true,
-            "prefab_source": "../content/entities/demo_content/foliage/grass/grass_patch_1.entity"
-        },
-        {
-            "active": true,
-            "child_entity_ids": [],
-            "components": [
-                {
-                    "active": true,
-                    "interpolation_enabled": false,
-                    "position": [
-                        -15.012758255004883,
-                        2.3918094635009766,
-                        16.591394424438477
-                    ],
-                    "rotation_euler": [
-                        -7.125162124633789,
-                        -29.203641891479492,
-                        -0.26150035858154297
-                    ],
-                    "rotation_quat": [
-                        0.9657928943634033,
-                        -0.06070573627948761,
-                        -0.25147509574890137,
-                        -0.01786918006837368
-                    ],
-                    "scale": [
-                        1.1118056774139404,
-                        1.1118056774139404,
-                        1.1118056774139404
-                    ],
-                    "type": "Transform"
-                },
-                {
-                    "active": true,
-                    "editor_only": false,
-                    "gpu_instancing_active": true,
-                    "ignore_distance_culling": false,
-                    "is_unique_material": false,
-                    "material_files": [
-                        "../content/materials/demo_content/foliage/grass/grass_patch.mat"
-                    ],
-                    "mesh_file": "../content/meshes/demo_content/foliage/grass/grass_patch_01.glb",
-                    "requires_translucent_sorting": [
-                        false
-                    ],
-                    "translucent_render_priorities": [
-                        -1
-                    ],
-                    "type": "Mesh",
-                    "visible": true
-                }
-            ],
-            "id": 28476,
-            "name": "grass_patch_6338",
             "parent_entity_id": 10215,
             "prefab_locked": true,
             "prefab_member": true,
@@ -816413,7 +815253,7 @@
         1.0
     ],
     "fog_density": 1.5,
-    "fog_luminance": 1.5915493965148926,
+    "fog_luminance": 1.9098591804504395,
     "fog_luminance_synced_to_sky": true,
     "fog_sky_intensity": 0.15000000596046448,
     "fog_start_distance": 8.0,
@@ -816431,15 +815271,15 @@
     "fog_wind_texture_active": true,
     "global_wetness_intensity": 0.15000000596046448,
     "name": "The Orb Arrival",
-    "next_entity_id": 37927,
+    "next_entity_id": 37930,
     "shadow_quality": 2,
     "sky_active": true,
-    "sky_ambient_lux": 5.0,
+    "sky_ambient_lux": 6.0,
     "sky_brightness": 1.0,
     "sky_color": [
-        1.0,
-        1.0,
-        1.0
+        0.9674797058105469,
+        0.9454174041748047,
+        0.9281512498855591
     ],
     "sky_contrast": 1.0,
     "sky_diffuse_ibl_intensity": 0.8299999833106995,
@@ -816447,7 +815287,7 @@
     "sky_ibl_active": true,
     "sky_ibl_apply_fog": true,
     "sky_rotation": 346.3999938964844,
-    "sky_specular_ibl_intensity": 1.1829999685287476,
+    "sky_specular_ibl_intensity": 1.5,
     "sky_texture_file": "../content/textures/demo_content/sky/sky_daylight_02.dds",
     "soundscape": {
         "fade_duration": 0.3499999940395355,
@@ -816455,11 +815295,12 @@
         "one_shots": []
     },
     "ssao_active": true,
+    "ssao_bent_normals": false,
     "ssao_bias": 0.009999999776482582,
     "ssao_radius": 4.0,
     "ssao_strength": 1.2000000476837158,
     "ssgi_active": true,
-    "ssgi_radius": 6.0,
+    "ssgi_radius": 8.0,
     "ssgi_strength": 8.0,
     "ssgi_thickness": 1.0,
     "ssr_active": true,
@@ -816482,28 +815323,28 @@
         "y": -0.810041606426239,
         "z": -0.15077552199363708
     },
-    "sunlight_lux": 12.0,
+    "sunlight_lux": 14.0,
     "sunlight_shadow_active": true,
     "sunlight_shadow_bias": 1.0,
     "sunlight_shadow_blur": 1.0,
     "sunlight_shadow_normal_bias": 1.0,
     "sunlight_specular_intensity": 0.75,
     "sunlight_temperature_k": 4000.0,
-    "tonemap_brightness": 1.059999942779541,
+    "tonemap_brightness": 1.0,
     "tonemap_color_highlights": [
         1.0,
         1.0,
         1.0
     ],
     "tonemap_color_midtones": [
-        0.8658536672592163,
-        0.8617330193519592,
-        0.837695837020874
+        0.8943089246749878,
+        0.8906735181808472,
+        0.8906735181808472
     ],
     "tonemap_color_shadows": [
-        0.6874215602874756,
-        0.6874215602874756,
-        0.8130081295967102
+        0.5849196910858154,
+        0.6064226031303406,
+        0.6951219439506531
     ],
     "tonemap_contrast": 1.0,
     "tonemap_highlight_range": 0.30000001192092896,
