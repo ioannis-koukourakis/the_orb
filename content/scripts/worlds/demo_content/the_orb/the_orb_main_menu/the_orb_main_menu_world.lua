@@ -1,6 +1,3 @@
--- @NOTE: Main menu world. Camera and music stay here. The menu UI lives in MainMenuModule.
--- Boot splash is first title load this process only. Company logo, then engine logo. Skippable. Not shown on return to menu.
-
 local TheOrbMainMenuWorld = {}
 
 ----------------------------------------------------
@@ -8,6 +5,7 @@ local TheOrbMainMenuWorld = {}
 ----------------------------------------------------
 
 local LogoSplash = dofile("../content/scripts/shared/logo_splash.lua")
+local GammaCalibration = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_main_menu/gamma_calibration.lua")
 local Utilities = dofile("../content/scripts/shared/utilities.lua")
 
 ----------------------------------------------------
@@ -29,12 +27,17 @@ local BOOT_SPLASH_LOGO_PATHS = {
 }
 local BOOT_SPLASH_BLACK = vec3(0.0, 0.0, 0.0)
 
+local BOOT_STATE_SPLASH = 0
+local BOOT_STATE_GAMMA = 1
+local BOOT_STATE_TITLE = 2
+
 ----------------------------------------------------
 -- PROPERTIES
 ----------------------------------------------------
 
 local m_menu_camera_entity_id = 0
-local m_splash_playing = false
+local m_boot_state = BOOT_STATE_TITLE
+local m_gamma_return_to_title = false
 local m_menu_sound_fade_is_active = false
 
 ----------------------------------------------------
@@ -42,6 +45,8 @@ local m_menu_sound_fade_is_active = false
 ----------------------------------------------------
 
 local function begin_title_menu()
+    m_boot_state = BOOT_STATE_TITLE
+
     -- UI state setup.
     module_call_function(MAIN_MENU_MODULE_NAME, "set_pause_menu_active", false)
     module_call_function(MAIN_MENU_MODULE_NAME, "set_title_menu_screen_active", true)
@@ -72,12 +77,57 @@ local function begin_title_menu()
 end
 
 ----------------------------------------------------
+
+local function begin_gamma_calibration(t_return_to_title)
+    -- Hold the title menu until the player confirms gamma.
+    GammaCalibration.set_active(true)
+    m_boot_state = BOOT_STATE_GAMMA
+    m_gamma_return_to_title = t_return_to_title == true
+    module_call_function(MAIN_MENU_MODULE_NAME, "set_boot_splash_active", true)
+
+    -- If returning tothe menu from the gamma calibration screen,
+    -- deactivate the title menu and menu open states so it can be resumed.
+    if m_gamma_return_to_title then
+        module_call_function(MAIN_MENU_MODULE_NAME, "set_title_menu_screen_active", false)
+        module_call_function(MAIN_MENU_MODULE_NAME, "set_menu_open", false)
+    end
+
+    -- Capture the mouse.
+    if get_game_mode_active() then
+        input_set_mouse_capture(false)
+    end
+
+    -- If returning to the title menu, do not continue.
+    if m_gamma_return_to_title then
+        return
+    end
+
+    -- Stay quiet until the title fade. 
+    -- @NOTE: The splash may already have muted the mix.
+    m_menu_sound_fade_is_active = false
+    Utilities.sound_set_all_category_mix_multiplier(0.0)
+end
+
+----------------------------------------------------
+-- INTERFACE
+----------------------------------------------------
+
+function TheOrbMainMenuWorld.begin_gamma_calibration_from_menu()
+    if m_boot_state ~= BOOT_STATE_TITLE then
+        return
+    end
+
+    begin_gamma_calibration(true)
+end
+
+----------------------------------------------------
 -- LIFECYCLE
 ----------------------------------------------------
 
 function TheOrbMainMenuWorld.on_ready()
     -- Initialize splash state.
-    m_splash_playing = false
+    m_boot_state = BOOT_STATE_TITLE
+    m_gamma_return_to_title = false
     m_menu_sound_fade_is_active = false
     LogoSplash.set_active(false)
     if module_get_is_valid(MAIN_MENU_MODULE_NAME) then
@@ -110,7 +160,7 @@ function TheOrbMainMenuWorld.on_ready()
         module_call_function(GAME_MODULE_NAME, "set_engine_boot_splash_consumed", true)
         LogoSplash.set_logo_paths(BOOT_SPLASH_LOGO_PATHS)
         LogoSplash.set_active(true)
-        m_splash_playing = true
+        m_boot_state = BOOT_STATE_SPLASH
         module_call_function(MAIN_MENU_MODULE_NAME, "set_boot_splash_active", true)
         m_menu_sound_fade_is_active = true
         Utilities.sound_set_all_category_mix_multiplier(0.0)
@@ -124,6 +174,12 @@ function TheOrbMainMenuWorld.on_ready()
         return
     end
 
+    -- First time we launch we ask for gamma once. All later launches skip this.
+    if get_game_mode_active() and GammaCalibration.get_is_pending() then
+        begin_gamma_calibration()
+        return
+    end
+
     -- If no splashes are pending, begin main menu. 
     begin_title_menu()
 end
@@ -132,26 +188,48 @@ end
 
 function TheOrbMainMenuWorld.on_process(t_delta_time)
     -- Process the logo splash and begin the main menu when it finishes.
-    if m_splash_playing then
+    if m_boot_state == BOOT_STATE_SPLASH then
         LogoSplash.process(t_delta_time)
         if not LogoSplash.get_is_active() then
-            m_splash_playing = false
             module_call_function(MAIN_MENU_MODULE_NAME, "set_boot_splash_active", false)
-            begin_title_menu()
+            if get_game_mode_active() and GammaCalibration.get_is_pending() then
+                begin_gamma_calibration()
+            else
+                begin_title_menu()
+            end
+        end
+    
+    -- Gamma calibration screen.
+    elseif m_boot_state == BOOT_STATE_GAMMA then
+        GammaCalibration.process(t_delta_time)
+        if not GammaCalibration.get_is_active() then
+            module_call_function(MAIN_MENU_MODULE_NAME, "set_boot_splash_active", false)
+
+            -- Resume the title menu.
+            if m_gamma_return_to_title then
+                m_gamma_return_to_title = false
+                m_boot_state = BOOT_STATE_TITLE
+                module_call_function(MAIN_MENU_MODULE_NAME, "set_pause_menu_active", false)
+                module_call_function(MAIN_MENU_MODULE_NAME, "set_title_menu_screen_active", true)
+                module_call_function(MAIN_MENU_MODULE_NAME, "set_menu_open", true)
+            -- Otherwise, begin the title menu.
+            else
+                begin_title_menu()
+            end
         end
     end
 
+    -- Fade in the menu sound as the black screen clears.
     if not m_menu_sound_fade_is_active then
         return
     end
 
-    -- Screen fade intensity is 1 while the view is covered. Sound comes in as it clears.
     local fade_intensity = module_call_function(CAMERA_EFFECTS_MODULE_NAME, "get_screen_fade")
     if type(fade_intensity) ~= "number" then
         fade_intensity = 0.0
     end
     Utilities.sound_set_all_category_mix_multiplier(1.0 - fade_intensity)
-    if not m_splash_playing and fade_intensity <= 0.0 then
+    if m_boot_state ~= BOOT_STATE_SPLASH and fade_intensity <= 0.0 then
         m_menu_sound_fade_is_active = false
     end
 end
@@ -159,20 +237,23 @@ end
 ----------------------------------------------------
 
 function TheOrbMainMenuWorld.on_draw(_t_delta_time)
-    -- Draw the logo splash if it is currently playing.
-    if not m_splash_playing then
-        return
+    -- Draw the logo splash.
+    if m_boot_state == BOOT_STATE_SPLASH then
+        LogoSplash.draw()
+    -- Draw the gamma calibration screen.
+    elseif m_boot_state == BOOT_STATE_GAMMA then
+        GammaCalibration.draw()
     end
-
-    LogoSplash.draw()
 end
 
 ----------------------------------------------------
 
 function TheOrbMainMenuWorld.on_shutdown()
-    m_splash_playing = false
+    m_boot_state = BOOT_STATE_TITLE
+    m_gamma_return_to_title = false
     m_menu_sound_fade_is_active = false
     LogoSplash.set_active(false)
+    GammaCalibration.set_active(false)
     if module_get_is_valid(MAIN_MENU_MODULE_NAME) then
         module_call_function(MAIN_MENU_MODULE_NAME, "set_boot_splash_active", false)
     end

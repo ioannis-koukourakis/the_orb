@@ -98,6 +98,7 @@ local m_button_start = nil
 local m_button_continue = nil
 local m_button_return_to_main_menu = nil
 local m_button_options = nil
+local m_button_brightness = nil
 local m_button_controls = nil
 local m_button_quit = nil
 local m_button_credits = nil
@@ -107,7 +108,6 @@ local m_button_back = nil
 local m_checkbox_fps_overlay = nil
 
 -- Slider
-local m_slider_gamma = nil
 local m_slider_master_volume = nil
 local m_slider_mouse_look_sensitivity = nil
 local m_slider_gamepad_look_sensitivity = nil
@@ -724,16 +724,27 @@ local function draw_main_page()
         set_page(PAGE_OPTIONS)
     end
 
+    -- Main menu
+    if not m_pause_menu_active then
+        -- Gamma claibration.
+        gui_dummy(vec2(1.0, 12.0))
+        if draw_menu_button(m_button_brightness) then
+            world_call_script_function("begin_gamma_calibration_from_menu")
+        end
+    end
+
     -- Controls btn
     gui_dummy(vec2(1.0, 12.0))
     if draw_menu_button(m_button_controls) then
         set_page(PAGE_CONTROLS)
     end
 
-    -- Credits btn
-    gui_dummy(vec2(1.0, 12.0))
-    if draw_menu_button(m_button_credits) then
-        set_page(PAGE_CREDITS)
+    if not m_pause_menu_active then
+        -- Credits btn
+        gui_dummy(vec2(1.0, 12.0))
+        if draw_menu_button(m_button_credits) then
+            set_page(PAGE_CREDITS)
+        end
     end
 
     -- Return to main menu btn
@@ -875,9 +886,6 @@ local function draw_options_page()
     UiWidgets.label("Graphics", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
-    -- Gamma slider. Now it starts feeling like an actual game. Hell yeah!
-    draw_slider_row("Gamma  %.2f", m_slider_gamma, settings_get_gamma, settings_set_gamma)
-
     -- Render scale combo. 
     -- Need to convert the current render scale to the nearest available option.
     -- Stops at 150 percent for the game as people don't know how to handle it causing severe performance issues.
@@ -903,14 +911,14 @@ local function draw_options_page()
     end
     draw_labeled_combo("Render Scale", m_combo_render_scale, render_scale_selected_index, apply_render_scale_combo_setting)
 
-    -- Anti-aliasing. None, FXAA, or temporal.
-    draw_labeled_combo("Anti-Aliasing", m_combo_anti_aliasing, settings_get_anti_aliasing() + 1, settings_set_anti_aliasing)
-
     -- Print a warning for multisampling. 
     if current_render_percent > RENDER_SCALE_WARNING_PERCENT then
         UiWidgets.label("Can hurt framerate.", UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_WARNING, UiSkin.MENU_ROW_LABEL_FONT_ID)
         gui_dummy(vec2(1.0, 8.0))
     end
+    
+    -- Anti-aliasing. None, FXAA, or temporal.
+    draw_labeled_combo("Anti-Aliasing", m_combo_anti_aliasing, settings_get_anti_aliasing() + 1, settings_set_anti_aliasing)
 
     -- Shadows stop at High for the demo to keep it performant.
     local shadow_quality = settings_get_shadow_map_quality()
@@ -1155,6 +1163,7 @@ function MainMenuModule.on_initialize()
     m_button_continue = new_menu_button("main_menu_continue", "Continue")
     m_button_return_to_main_menu = new_menu_button("main_menu_return", "Main Menu")
     m_button_options = new_menu_button("main_menu_options", "Options")
+    m_button_brightness = new_menu_button("main_menu_brightness", "Gamma")
     m_button_controls = new_menu_button("main_menu_controls", "Controls")
     m_button_credits = new_menu_button("main_menu_credits", "Credits")
     m_button_quit = new_menu_button("main_menu_quit", "Quit")
@@ -1241,7 +1250,6 @@ function MainMenuModule.on_initialize()
     m_combo_ssr = new_menu_combo("main_menu_ssr", SSR_OPTIONS)
 
     -- Initialize graphics settings sliders.
-    m_slider_gamma = new_menu_slider("main_menu_gamma", settings_get_gamma(), 0.01, 3.0)
     m_slider_master_volume = new_menu_slider("main_menu_master_volume", get_master_volume_percent(), 0.0, 100.0)
     m_slider_mouse_look_sensitivity = new_menu_slider("main_menu_mouse_look_sensitivity",
                                                         get_mouse_look_sensitivity_setting(),

@@ -20,13 +20,13 @@
     "distant_world_darken_factor": 0.30000001192092896,
     "distant_world_darken_start": 0.3499999940395355,
     "editor_camera_position": [
-        -2.906872272491455,
-        0.6359000205993652,
-        -18.574005126953125
+        -3.213120460510254,
+        0.18594935536384583,
+        -18.875041961669922
     ],
     "editor_camera_rotation": [
-        2.2998428344726563,
-        -130.1415252685547,
+        -1.7000852823257446,
+        -127.64173889160156,
         0.0
     ],
     "entities": [
@@ -5252,6 +5252,15 @@
                             "min_value": 0.0,
                             "type": 0,
                             "value": "3.0"
+                        },
+                        "interaction_label": {
+                            "default_value": "Enter",
+                            "description": "Label shown for the interaction prompt.",
+                            "has_range": false,
+                            "max_value": 100.0,
+                            "min_value": 0.0,
+                            "type": 3,
+                            "value": "Exit"
                         },
                         "loading_background": {
                             "default_value": "",
@@ -145300,7 +145309,7 @@
                         0.8958864212036133,
                         0.6716418266296387
                     ],
-                    "density": 0.004999999888241291,
+                    "density": 0.009999999776482582,
                     "falloff": 1.0,
                     "height_factor": 1.0,
                     "height_start": 0.0,
@@ -529574,7 +529583,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
+                            0.75,
                             0.25
                         ],
                         "u_sprite_offset_next": [
@@ -530958,8 +530967,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.0
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531245,7 +531254,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
+                            0.5,
                             0.0
                         ],
                         "u_sprite_offset_next": [
@@ -531377,8 +531386,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.75
+                            0.25,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531509,8 +531518,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.5
+                            0.25,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531641,8 +531650,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.75
+                            0.75,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531773,8 +531782,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.0
+                            0.25,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -531906,7 +531915,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.75,
-                            0.0
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532037,8 +532046,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.75
+                            0.5,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532169,8 +532178,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.5
+                            0.75,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532301,7 +532310,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
+                            0.5,
                             0.75
                         ],
                         "u_sprite_offset_next": [
@@ -532434,7 +532443,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.5,
-                            0.25
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532566,7 +532575,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.5,
-                            0.5
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532698,7 +532707,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.25,
-                            0.5
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532829,8 +532838,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.25
+                            0.25,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -532961,8 +532970,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.5
+                            0.0,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -533093,8 +533102,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.75
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -533225,7 +533234,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
+                            0.0,
                             0.25
                         ],
                         "u_sprite_offset_next": [
@@ -545980,7 +545989,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
+                            0.25,
                             0.25
                         ],
                         "u_sprite_offset_next": [
@@ -546174,7 +546183,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
+                            0.25,
                             0.5
                         ],
                         "u_sprite_offset_next": [
@@ -546368,8 +546377,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.5
+                            0.5,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -546562,8 +546571,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.5
+                            0.25,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -546756,8 +546765,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.75
+                            0.25,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -546950,8 +546959,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.0
+                            0.5,
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547144,8 +547153,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.75
+                            0.5,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547339,7 +547348,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.25,
-                            0.5
+                            0.75
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547532,7 +547541,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
+                            0.5,
                             0.25
                         ],
                         "u_sprite_offset_next": [
@@ -547726,8 +547735,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.5
+                            0.5,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -547920,8 +547929,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.0
+                            0.5,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -548114,8 +548123,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.5
+                            0.75,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -548308,8 +548317,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.0
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -548876,8 +548885,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.5
+                            0.0,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -549070,7 +549079,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
+                            0.75,
                             0.0
                         ],
                         "u_sprite_offset_next": [
@@ -549264,7 +549273,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
+                            0.0,
                             0.25
                         ],
                         "u_sprite_offset_next": [
@@ -549458,7 +549467,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
+                            0.75,
                             0.5
                         ],
                         "u_sprite_offset_next": [
@@ -549652,8 +549661,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.75
+                            0.75,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550131,8 +550140,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.25
+                            0.0,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550325,8 +550334,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
-                            0.25
+                            0.75,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -550519,7 +550528,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
+                            0.0,
                             0.0
                         ],
                         "u_sprite_offset_next": [
@@ -550714,7 +550723,7 @@
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
                             0.0,
-                            0.75
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -551261,7 +551270,7 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.5,
+                            0.0,
                             0.0
                         ],
                         "u_sprite_offset_next": [
@@ -551455,8 +551464,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.25,
-                            0.75
+                            0.0,
+                            0.0
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -551649,8 +551658,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.75,
-                            0.5
+                            0.5,
+                            0.25
                         ],
                         "u_sprite_offset_next": [
                             0.0,
@@ -551843,8 +551852,8 @@
                         "u_specular_intensity": 1.0,
                         "u_sprite_blend": 0.0,
                         "u_sprite_offset": [
-                            0.0,
-                            0.0
+                            0.5,
+                            0.5
                         ],
                         "u_sprite_offset_next": [
                             0.0,

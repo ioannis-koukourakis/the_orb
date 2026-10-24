@@ -9,6 +9,10 @@ Newest release at the top.
 -----------------------------------------------------------------------------
 
 Rendering
+- Laptops with a dedicated GPU start on that GPU.
+- Intel Arc can compile shadow compares. NVIDIA and AMD keep the fast mip 0 fetch.
+- New installs default to medium shadows. An existing High setting is left alone.
+- Medium sun shadows sample ten times and High samples twelve.
 - Temporal anti-aliasing sharpen is lighter.
 - Light and fog loops, and shadow samples, stay inside fixed bounds.
 - Display sharpen follows local contrast. 
@@ -16,17 +20,16 @@ Rendering
 - A bad or extreme reflection offset drops out instead of blowing the lit pixel.
 - Looking straight into a light no longer turns the shaded pixel black. 
 - Parallax height marches sample with an explicit gradient.
-- Sharper sun shadows at the same cost, and a cheaper cascade pass.
-- Screen-space bounce shimmer fixes, including the TAA edge when bounce overlaps the screen border.
-- GTAO bent normals.
 
 Editor
+- Loading door interaction labels can be set in the editor.
 - Screen Space Bounce replaces the Screen Space GI label in the world panel, materials, debug view, and engine settings. The options menu calls it Bounce.
 - Wind, Wetness, occlusion culling, and Nav Zone are marked Experimental.
 
 The Orb Demo
-- Arrival, cave, and main menu lighting was retuned.
-- The options menu lists anti-aliasing after render scale.
+- First launch shows a gamma calibration screen that can also be accessed from the title screen. 
+- The options menu no longer has a gamma slider.
+- The options menu lists anti-aliasing after render scale and perfomance related warnings show up under the proper settings.
 
 -----------------------------------------------------------------------------
 1.0.0-beta4

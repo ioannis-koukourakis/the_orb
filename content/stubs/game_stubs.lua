@@ -66,6 +66,8 @@ interact_label = nil
 ---@type number
 interaction_distance = nil
 ---@type string
+interaction_label = nil
+---@type string
 lights_entity = nil
 ---@type boolean
 lit = nil

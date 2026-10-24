@@ -17,6 +17,7 @@ local GAME_MODULE = "game_module"
 --@PARAMETER loading_title STRING "Loading..." "Title drawn on the loading screen."
 --@PARAMETER loading_background FILE "" "Optional fullscreen loading image." FILTER[Image files{.dds,.png,.jpg,.jpeg,.tga},.*]
 --@PARAMETER loading_font STRING "" "Font id from fonts.ini. Empty uses the default UI font."
+--@PARAMETER interaction_label STRING "Enter" "Label shown for the interaction prompt."
 
 ------------------------------------------------
 -- INTERFACE
@@ -35,6 +36,9 @@ end
 ------------------------------------------------
 
 function LoadingDoor.get_interact_label()
+    if type(interaction_label) == "string" then
+        return interaction_label
+    end
     return "Enter"
 end
 
