@@ -9,8 +9,16 @@ Newest release at the top.
 -----------------------------------------------------------------------------
 
 Rendering
+- Water clipped through the bottom-left of the view keeps the refracted scene on the pixel that was drawn.
+- SSR blur mips use the same packed float as bloom.
+- The G-buffer color pass keeps a fragment that is as close as the depth prepass, or closer.
+- Instance and wind data are given a new GPU buffer each upload, so a frame still drawing is left alone.
+- Uniform blocks are updated in place. A new store on every upload was the frame cost.
+- Foliage depth is drawn with the foliage shader, so the depth test matches on AMD.
+- Reflections and water keep the lit scene behind them.
 - Laptops with a dedicated GPU start on that GPU.
-- Intel Arc can compile shadow compares. NVIDIA and AMD keep the fast mip 0 fetch.
+- Sun and spot shadows use a plain texture compare. The shadow maps have no mip chain.
+- Alpha-to-coverage stays off. The geometry targets are not multisampled.
 - New installs default to medium shadows. An existing High setting is left alone.
 - Medium sun shadows sample ten times and High samples twelve.
 - Temporal anti-aliasing sharpen is lighter.

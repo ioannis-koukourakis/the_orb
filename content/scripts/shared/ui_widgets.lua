@@ -559,12 +559,21 @@ local function draw_combo_popup_window(t_state)
             local option_label = t_state.options[i]
             local option_text_size = gui_get_text_size(option_label, font_size, t_state.font_id)
             local option_text_y = option_pos.y + (option_h - option_text_size.y) * 0.5
-            gui_draw_text(
-                option_label,
-                vec2(option_pos.x + pad, option_text_y),
-                font_size,
-                get_combo_label_color(t_state, option_style),
-                t_state.font_id)
+            local option_text_x = option_pos.x + pad
+            local option_clip_max_x = option_pos.x + widget_size.x - pad
+            if option_clip_max_x > option_text_x then
+                gui_push_clip_rect(
+                    vec2(option_text_x, option_pos.y),
+                    vec2(option_clip_max_x, option_pos.y + option_h),
+                    true)
+                gui_draw_text(
+                    option_label,
+                    vec2(option_text_x, option_text_y),
+                    font_size,
+                    get_combo_label_color(t_state, option_style),
+                    t_state.font_id)
+                gui_pop_clip_rect()
+            end
 
             if option_clicked then
                 option_clicked_any = true
@@ -1942,7 +1951,18 @@ function UiWidgets.combo(t_state)
     local text_size = gui_get_text_size(selected_label, font_size, t_state.font_id)
     local text_y = widget_pos.y + (widget_size.y - text_size.y) * 0.5
     local pad = 10.0 * (widget_size.x / t_state.width)
-    gui_draw_text(selected_label, vec2(widget_pos.x + pad, text_y), font_size, label_color, t_state.font_id)
+    local text_x = widget_pos.x + pad
+    local clip_max_x = widget_pos.x + widget_size.x - pad
+    if t_state.show_caret then
+        local caret_font_size = font_size * COMBO_CARET_FONT_SCALE
+        local caret_size = gui_get_text_size(COMBO_CARET_DOWN, caret_font_size, COMBO_CARET_FONT_ID)
+        clip_max_x = widget_pos.x + widget_size.x - caret_size.x - pad
+    end
+    if clip_max_x > text_x then
+        gui_push_clip_rect(vec2(text_x, widget_pos.y), vec2(clip_max_x, widget_pos.y + widget_size.y), true)
+        gui_draw_text(selected_label, vec2(text_x, text_y), font_size, label_color, t_state.font_id)
+        gui_pop_clip_rect()
+    end
 
     -- Draw the open/closed caret on the right when enabled.
     if t_state.show_caret then
@@ -2391,9 +2411,14 @@ function UiWidgets.new_modal(t_def)
         cancel_label = t_def.cancel_label or "Cancel",
         width = t_def.width or 360.0,
         height = t_def.height or 200.0,
+        auto_fit = t_def.auto_fit ~= false,
+        min_width = t_def.min_width or 300.0,
+        max_width = t_def.max_width or 480.0,
         font_size = t_def.font_size or 16.0,
         message_font_size = t_def.message_font_size or 14.0,
         font_id = t_def.font_id or "",
+        title_font_id = t_def.title_font_id or t_def.font_id or "",
+        message_font_id = t_def.message_font_id or t_def.font_id or "",
         title_color = t_def.title_color or Colors.WHITE,
         message_color = t_def.message_color or Colors.WHITE,
         corner_rounding = t_def.corner_rounding or 8.0,
@@ -2462,44 +2487,102 @@ function UiWidgets.modal(t_state)
     local layout_size = gui_get_layout_size()
 
     -- Draw the panel.
+    local pad = 24.0
+    local title_message_gap = 12.0
+    local message_buttons_gap = 28.0
+    local button_row_h = 56.0
+    local bottom_pad = 16.0
+    local title_band_h = t_state.font_size + 8.0
+    local message_line_h = gui_get_text_size("A", t_state.message_font_size, t_state.message_font_id).y
+
+    local message_line_count = 1
+    if t_state.message == "" then
+        message_line_count = 0
+    else
+        for char_index = 1, #t_state.message do
+            if string.sub(t_state.message, char_index, char_index) == "\n" then
+                message_line_count = message_line_count + 1
+            end
+        end
+    end
+
+    local message_max_line_width = 0.0
+    local message_line_start = 1
+    local message_length = #t_state.message
+    for char_index = 1, message_length + 1 do
+        if char_index > message_length or string.sub(t_state.message, char_index, char_index) == "\n" then
+            local line = string.sub(t_state.message, message_line_start, char_index - 1)
+            message_line_start = char_index + 1
+            if line ~= "" then
+                local line_width = gui_get_text_size(line, t_state.message_font_size, t_state.message_font_id).x
+                if line_width > message_max_line_width then
+                    message_max_line_width = line_width
+                end
+            end
+        end
+    end
+
+    local title_width = gui_get_text_size(t_state.title, t_state.font_size, t_state.title_font_id).x
+    local panel_w = t_state.width
+    local panel_h = t_state.height
+    if t_state.auto_fit then
+        local content_text_width = math.max(title_width, message_max_line_width)
+        panel_w = content_text_width + pad * 2.0
+        if panel_w < t_state.min_width then
+            panel_w = t_state.min_width
+        end
+        if panel_w > t_state.max_width then
+            panel_w = t_state.max_width
+        end
+
+        local message_block_h = message_line_count * message_line_h
+        if message_line_count > 1 then
+            message_block_h = message_block_h + (message_line_count - 1) * 6.0
+        end
+        panel_h = pad + title_band_h + title_message_gap + message_block_h + message_buttons_gap + button_row_h + bottom_pad
+    end
+
     local panel_pos = gui_get_aligned_position(
         vec2(0.0, 0.0),
         layout_size,
-        vec2(t_state.width, t_state.height),
+        vec2(panel_w, panel_h),
         GuiAlignH.CENTER,
         GuiAlignV.MIDDLE)
     local panel_x = panel_pos.x
     local panel_y = panel_pos.y
     draw_widget_surface(
         t_state.panel,
-        vec4(panel_pos.x, panel_pos.y, t_state.width, t_state.height),
+        vec4(panel_pos.x, panel_pos.y, panel_w, panel_h),
         t_state.corner_rounding)
 
-    -- Draw the title and message.
-    local pad = 24.0
-    local content_w = t_state.width - pad * 2.0
-    local content_x = panel_x + pad
+    -- Draw the title and message centered in the panel.
     gui_draw_text_aligned(
         t_state.title,
-        vec2(content_x, panel_y + 20.0),
-        vec2(content_w, 32.0),
-        GuiAlignH.LEFT,
+        vec2(panel_x, panel_y + pad),
+        vec2(panel_w, title_band_h),
+        GuiAlignH.CENTER,
         GuiAlignV.MIDDLE,
         t_state.font_size,
         t_state.title_color,
-        t_state.font_id)
+        t_state.title_font_id)
+
+    local message_area_y = panel_y + pad + title_band_h + title_message_gap
+    local message_area_h = panel_h - (pad + title_band_h + title_message_gap + message_buttons_gap + button_row_h + bottom_pad)
+    if message_area_h < message_line_h then
+        message_area_h = message_line_h
+    end
     gui_draw_text_aligned(
         t_state.message,
-        vec2(content_x, panel_y + 56.0),
-        vec2(content_w, t_state.height - 56.0 - 68.0),
-        GuiAlignH.LEFT,
-        GuiAlignV.TOP,
+        vec2(panel_x, message_area_y),
+        vec2(panel_w, message_area_h),
+        GuiAlignH.CENTER,
+        GuiAlignV.MIDDLE,
         t_state.message_font_size,
         t_state.message_color,
-        t_state.font_id)
+        t_state.message_font_id)
 
     -- Draw the buttons centered in the panel.
-    local button_y = panel_y + t_state.height - 60.0
+    local button_y = panel_y + panel_h - button_row_h - bottom_pad
     local button_gap = 12.0
     local row_w = 0.0
     if t_state.confirm_button then
@@ -2511,7 +2594,7 @@ function UiWidgets.modal(t_state)
         end
         row_w = row_w + t_state.cancel_button.width
     end
-    gui_set_cursor_screen_pos(vec2(panel_x + (t_state.width - row_w) * 0.5, button_y))
+    gui_set_cursor_screen_pos(vec2(panel_x + (panel_w - row_w) * 0.5, button_y))
 
     -- Draw the confirm button.
     if t_state.confirm_button then

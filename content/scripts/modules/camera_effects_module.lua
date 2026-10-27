@@ -14,6 +14,7 @@ local ImageTrailEffect = dofile("../content/scripts/camera_effects/image_trail_e
 local VertigoEffect = dofile("../content/scripts/camera_effects/vertigo_effect.lua")
 local ScreenFadeEffect = dofile("../content/scripts/camera_effects/screen_fade_effect.lua")
 local CameraLookAtEffect = dofile("../content/scripts/camera_effects/camera_lookat_effect.lua")
+local MotionBlur = dofile("../content/scripts/camera_effects/motion_blur.lua")
 
 ------------------------------------------------
 -- SETTINGS
@@ -791,6 +792,9 @@ function CameraEffects.on_initialize()
     renderer_set_custom_post_process_texture_file(PS1_FILTER_PASS_INDEX, "")
     renderer_set_custom_post_process_params(PS1_FILTER_PASS_INDEX, PS1_FILTER_PARAMS)
     set_no_ps1_filter_effect()
+
+    -- Set the custom post process shader for the motion blur pass.
+    MotionBlur.initialize()
 end
 
 ------------------------------------------------
@@ -927,6 +931,9 @@ end
 
 function CameraEffects.on_shutdown()
     reset_all_effects()
+
+    -- Turn off the motion blur pass.
+    MotionBlur.shutdown()
 end
 
 ------------------------------------------------

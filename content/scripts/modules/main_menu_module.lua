@@ -10,6 +10,7 @@ local UiWidgets = dofile("../content/scripts/shared/ui_widgets.lua")
 local Colors = dofile("../content/scripts/shared/colors.lua")
 local UiSkin = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_main_menu/main_menu_skin.lua")
 local TheOrbWorldPaths = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_world_paths.lua")
+local MotionBlur = dofile("../content/scripts/camera_effects/motion_blur.lua")
 
 ----------------------------------------------------
 -- SETTINGS
@@ -75,9 +76,9 @@ local DEFAULT_MOUSE_LOOK_SENSITIVITY = 0.002
 local MOUSE_LOOK_SENSITIVITY_MIN = 0.0005
 local MOUSE_LOOK_SENSITIVITY_MAX = 0.006
 local GAMEPAD_LOOK_SENSITIVITY_KEY = "gamepad_look_sensitivity"
-local DEFAULT_GAMEPAD_LOOK_SENSITIVITY = 2.5
+local DEFAULT_GAMEPAD_LOOK_SENSITIVITY = 4.0
 local GAMEPAD_LOOK_SENSITIVITY_MIN = 0.5
-local GAMEPAD_LOOK_SENSITIVITY_MAX = 6.0
+local GAMEPAD_LOOK_SENSITIVITY_MAX = 10.0
 
 ----------------------------------------------------
 -- PROPERTIES
@@ -106,6 +107,7 @@ local m_button_back = nil
 
 -- Checkbox
 local m_checkbox_fps_overlay = nil
+local m_checkbox_motion_blur = nil
 
 -- Slider
 local m_slider_master_volume = nil
@@ -130,6 +132,10 @@ local m_vsync_enabled_brought_down = false
 -- Modal 
 local m_modal_shadow_restart = nil
 local m_button_shadow_restart_ok = nil
+local m_modal_reset_defaults = nil
+local m_button_reset_defaults_confirm = nil
+local m_button_reset_defaults_cancel = nil
+local m_button_reset_defaults = nil
 
 -- Community footer buttons.
 local m_community_buttons = {}
@@ -487,6 +493,28 @@ end
 
 ----------------------------------------------------
 
+local function apply_settings_reset_to_defaults()
+    local shadow_quality_before_reset = settings_get_shadow_map_quality()
+
+    if not settings_reset_to_defaults() then
+        return
+    end
+
+    MotionBlur.set_enabled(MotionBlur.get_enabled_setting())
+    m_monitors = {}
+    m_resolutions = {}
+    m_vsync_enabled_brought_down = false
+    m_slider_master_volume.value = get_master_volume_percent()
+    m_slider_mouse_look_sensitivity.value = get_mouse_look_sensitivity_setting()
+    m_slider_gamepad_look_sensitivity.value = get_gamepad_look_sensitivity_setting()
+
+    if settings_get_shadow_map_quality() ~= shadow_quality_before_reset then
+        m_modal_shadow_restart.open = true
+    end
+end
+
+----------------------------------------------------
+
 local function draw_slider_row(t_format, t_slider, t_get_value, t_set_value)
     if not t_slider.held then
         t_slider.value = t_get_value()
@@ -788,7 +816,7 @@ end
 ----------------------------------------------------
 
 local function draw_options_page()
-    UiWidgets.label("Display", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
+    UiWidgets.label("Display", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_SECTION_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
     -- GPU used by the application.
@@ -855,7 +883,7 @@ local function draw_options_page()
 
     -- Interface settings.
     -- Just an fps overlay toggle for now.
-    UiWidgets.label("Interface", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
+    UiWidgets.label("Interface", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_SECTION_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
     m_checkbox_fps_overlay.checked = settings_get_bool(UI_SETTINGS_SECTION, FPS_OVERLAY_SETTINGS_KEY, false)
@@ -866,8 +894,15 @@ local function draw_options_page()
     gui_dummy(vec2(1.0, 16.0))
 
     -- Gameplay settings.
-    UiWidgets.label("Gameplay", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
+    UiWidgets.label("Gameplay", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_SECTION_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
+
+    m_checkbox_motion_blur.checked = MotionBlur.get_enabled_setting()
+    UiWidgets.label_row("Motion blur", UiSkin.LABEL_WIDTH, UiSkin.ROW_HEIGHT, UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_MUTED, UiSkin.MENU_ROW_LABEL_FONT_ID)
+    if UiWidgets.checkbox(m_checkbox_motion_blur) then
+        MotionBlur.set_enabled_setting(m_checkbox_motion_blur.checked)
+    end
+    gui_dummy(vec2(1.0, 12.0))
 
     -- Mouse and gamepad look sensitivity sliders.
     draw_slider_row(
@@ -883,7 +918,7 @@ local function draw_options_page()
     gui_dummy(vec2(1.0, 16.0))
 
     -- Graphics settings.
-    UiWidgets.label("Graphics", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
+    UiWidgets.label("Graphics", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_SECTION_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
     -- Render scale combo. 
@@ -941,12 +976,17 @@ local function draw_options_page()
     gui_dummy(vec2(1.0, 16.0))
 
     -- Sound settings.
-    UiWidgets.label("Sound", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_LABEL_FONT_ID)
+    UiWidgets.label("Sound", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_SECTION_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
     draw_slider_row("Master  %.0f%%",
                     m_slider_master_volume,
                     get_master_volume_percent,
                     set_master_volume_percent)
+    gui_dummy(vec2(1.0, 16.0))
+
+    if UiWidgets.button(m_button_reset_defaults) then
+        m_modal_reset_defaults.open = true
+    end
 end
 
 ----------------------------------------------------
@@ -1279,6 +1319,23 @@ function MainMenuModule.on_initialize()
         }
     )
 
+    m_checkbox_motion_blur = UiWidgets.new_checkbox({
+            id = "main_menu_motion_blur",
+            label = "",
+            size = vec2(22.0, 22.0),
+            checked = MotionBlur.get_enabled_setting(),
+            font_size = UiSkin.MENU_CHECKBOX_FONT_SIZE,
+            text_color = UiSkin.COLOR_CREAM,
+            border_color = UiSkin.COLOR_MUTED,
+            border_thickness = 2.0,
+            hover = { color = UiSkin.COLOR_EMBER_BRIGHT },
+            focused = { color = UiSkin.COLOR_EMBER_BRIGHT },
+            pressed = { color = UiSkin.COLOR_EMBER_BRIGHT },
+            check_idle = { color = UiSkin.COLOR_MUTED },
+            check = UiSkin.STYLE_FILL,
+        }
+    )
+
     -- Initialize shadow restart modal.
     m_button_shadow_restart_ok = UiWidgets.new_button({
             id = "main_menu_shadow_restart_ok",
@@ -1298,16 +1355,75 @@ function MainMenuModule.on_initialize()
             id = "main_menu_shadow_restart",
             title = "Restart required",
             message = "Restart the engine for the new shadow map\nresolution and cascade count to take effect.",
-            width = 520.0,
-            height = 240.0,
             font_size = UiSkin.MENU_MODAL_TITLE_FONT_SIZE,
             message_font_size = UiSkin.MENU_MODAL_MESSAGE_FONT_SIZE,
-            font_id = UiSkin.MENU_LABEL_FONT_ID,
+            title_font_id = UiSkin.MENU_MODAL_TITLE_FONT_ID,
+            message_font_id = UiSkin.MENU_ROW_LABEL_FONT_ID,
             title_color = UiSkin.COLOR_CREAM,
-            message_color = UiSkin.COLOR_MUTED,
+            message_color = UiSkin.COLOR_CREAM,
             panel = UiSkin.WIDGET_STYLE_IDLE,
             dim = { color = Colors.get_with_alpha(Colors.BLACK, 0.45) },
             confirm_button = m_button_shadow_restart_ok,
+        }
+    )
+
+    m_button_reset_defaults_confirm = UiWidgets.new_button({
+            id = "main_menu_reset_defaults_confirm",
+            width = 120.0,
+            height = 44.0,
+            label = "Reset",
+            font_size = UiSkin.MENU_MODAL_BUTTON_FONT_SIZE,
+            font_id = UiSkin.MENU_LABEL_FONT_ID,
+            text_color = UiSkin.BUTTON_TEXT_COLOR,
+            idle = UiSkin.STYLE_BUTTON_IDLE,
+            hover = UiSkin.STYLE_BUTTON_HOVER,
+            pressed = UiSkin.STYLE_BUTTON_PRESSED,
+            focused = UiSkin.STYLE_BUTTON_FOCUSED,
+        }
+    )
+    m_button_reset_defaults_cancel = UiWidgets.new_button({
+            id = "main_menu_reset_defaults_cancel",
+            width = 120.0,
+            height = 44.0,
+            label = "Cancel",
+            font_size = UiSkin.MENU_MODAL_BUTTON_FONT_SIZE,
+            font_id = UiSkin.MENU_LABEL_FONT_ID,
+            text_color = UiSkin.BUTTON_TEXT_COLOR,
+            idle = UiSkin.STYLE_BUTTON_IDLE,
+            hover = UiSkin.STYLE_BUTTON_HOVER,
+            pressed = UiSkin.STYLE_BUTTON_PRESSED,
+            focused = UiSkin.STYLE_BUTTON_FOCUSED,
+        }
+    )
+    m_modal_reset_defaults = UiWidgets.new_modal({
+            id = "main_menu_reset_defaults",
+            title = "Reset settings?",
+            message = "Restore all options to their shipped defaults.",
+            font_size = UiSkin.MENU_MODAL_TITLE_FONT_SIZE,
+            message_font_size = UiSkin.MENU_MODAL_MESSAGE_FONT_SIZE,
+            title_font_id = UiSkin.MENU_MODAL_TITLE_FONT_ID,
+            message_font_id = UiSkin.MENU_ROW_LABEL_FONT_ID,
+            title_color = UiSkin.COLOR_CREAM,
+            message_color = UiSkin.COLOR_CREAM,
+            panel = UiSkin.WIDGET_STYLE_IDLE,
+            dim = { color = Colors.get_with_alpha(Colors.BLACK, 0.45) },
+            confirm_button = m_button_reset_defaults_confirm,
+            cancel_button = m_button_reset_defaults_cancel,
+        }
+    )
+
+    m_button_reset_defaults = UiWidgets.new_button({
+            id = "main_menu_reset_defaults",
+            width = UiSkin.SCROLL_CONTENT_WIDTH,
+            height = UiSkin.BUTTON_HEIGHT,
+            label = "Reset to defaults",
+            font_size = UiSkin.MENU_BUTTON_FONT_SIZE,
+            font_id = UiSkin.MENU_LABEL_FONT_ID,
+            text_color = UiSkin.BUTTON_TEXT_COLOR,
+            idle = UiSkin.STYLE_BUTTON_IDLE,
+            hover = UiSkin.STYLE_BUTTON_HOVER,
+            pressed = UiSkin.STYLE_BUTTON_PRESSED,
+            focused = UiSkin.STYLE_BUTTON_FOCUSED,
         }
     )
 
@@ -1331,7 +1447,7 @@ function MainMenuModule.on_process(_t_delta_time)
     -- Xbox B and PS Circle are both the cancel binding.
     if m_menu_open and input_get_action_pressed_event("cancel") then
         -- Skip if a modal or combo is open.
-        if m_modal_shadow_restart.open or UiWidgets.get_is_any_combo_open() then
+        if m_modal_shadow_restart.open or m_modal_reset_defaults.open or UiWidgets.get_is_any_combo_open() then
             return
         end
 
@@ -1407,7 +1523,11 @@ function MainMenuModule.on_draw(_t_delta_time)
     -- End drawing the main menu canvas.
     UiWidgets.end_menu_canvas()
 
-    -- Draw the modal for shadow restart if it is open.
+    local reset_defaults_result = UiWidgets.modal(m_modal_reset_defaults)
+    if reset_defaults_result == "confirm" then
+        apply_settings_reset_to_defaults()
+    end
+
     UiWidgets.modal(m_modal_shadow_restart)
 end
 

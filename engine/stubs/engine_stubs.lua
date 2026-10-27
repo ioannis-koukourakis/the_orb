@@ -4399,6 +4399,10 @@ function transform_get_local_up(t_entity_id) end
 
 ---@param t_entity_id integer
 ---@return vec3
+function transform_get_render_world_position(t_entity_id) end
+
+---@param t_entity_id integer
+---@return vec3
 function transform_get_world_forward(t_entity_id) end
 
 ---@param t_entity_id integer

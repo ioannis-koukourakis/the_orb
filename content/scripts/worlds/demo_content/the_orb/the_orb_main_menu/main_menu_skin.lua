@@ -64,24 +64,26 @@ MainMenuSkin.COMMUNITY_LINKS = {
 }
 
 -- 
-MainMenuSkin.MENU_SECTION_FONT_SIZE = 20.0
+MainMenuSkin.MENU_SECTION_FONT_SIZE = 24.0
+MainMenuSkin.MENU_SECTION_FONT_ID = "marcellus_24"
 MainMenuSkin.MENU_CONTROLS_HEADER_FONT_SIZE = 30.0
 MainMenuSkin.MENU_CONTROLS_SHORTCUT_FONT_SIZE = 22.0
-MainMenuSkin.MENU_ROW_FONT_SIZE = 15.0
+MainMenuSkin.MENU_ROW_FONT_SIZE = 20.0
 
 -- Checkbox
-MainMenuSkin.MENU_CHECKBOX_FONT_SIZE = 16.0
+MainMenuSkin.MENU_CHECKBOX_FONT_SIZE = 18.0
 
 -- Modal.
-MainMenuSkin.MENU_MODAL_TITLE_FONT_SIZE = 20.0
-MainMenuSkin.MENU_MODAL_MESSAGE_FONT_SIZE = 15.0
+MainMenuSkin.MENU_MODAL_TITLE_FONT_SIZE = 24.0
+MainMenuSkin.MENU_MODAL_TITLE_FONT_ID = "marcellus_24"
+MainMenuSkin.MENU_MODAL_MESSAGE_FONT_SIZE = 20.0
 MainMenuSkin.MENU_MODAL_BUTTON_FONT_SIZE = 18.0
 
 -- Credits
 MainMenuSkin.DEMO_CREDITS_TITLE = "Credits"
 MainMenuSkin.DEMO_CREDITS_SUBTITLE = ""
 MainMenuSkin.MENU_LABEL_FONT_ID = "marcellus_20"
-MainMenuSkin.MENU_ROW_LABEL_FONT_ID = "marcellus_15"
+MainMenuSkin.MENU_ROW_LABEL_FONT_ID = "marcellus_20"
 MainMenuSkin.CREDITS_TITLE_FONT_ID = "marcellus_40"
 MainMenuSkin.CREDITS_TITLE_FONT_SIZE = 40.0
 MainMenuSkin.CREDITS_SECTION_FONT_ID = "marcellus_24"
@@ -156,7 +158,7 @@ MainMenuSkin.SCROLL_GUTTER = 34.0
 MainMenuSkin.SCROLL_CONTENT_WIDTH = MainMenuSkin.CONTENT_WIDTH - MainMenuSkin.SCROLL_GUTTER
 
 -- General label settings
-MainMenuSkin.LABEL_WIDTH = 150.0
+MainMenuSkin.LABEL_WIDTH = 168.0
 MainMenuSkin.LABEL_ROW_GAP = 12.0
 
 -- Compo
@@ -170,7 +172,7 @@ MainMenuSkin.MENU_BUTTON_WIDTH = 280.0
 MainMenuSkin.MENU_BACK_BUTTON_GAP = 20.0 -- gap between the menu and the back button
 
 -- Layout row height
-MainMenuSkin.ROW_HEIGHT = 34.0
+MainMenuSkin.ROW_HEIGHT = 38.0
 
 ----------------------------------------------------
 

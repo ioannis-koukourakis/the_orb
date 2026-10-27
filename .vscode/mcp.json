@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "detis-engine": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/bin/detis_mcp"
+    }
+  }
+}
