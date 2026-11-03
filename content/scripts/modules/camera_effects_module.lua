@@ -9,12 +9,12 @@ local FovShakeEffect = dofile("../content/scripts/camera_effects/fov_shake_effec
 local FovFadeEffect = dofile("../content/scripts/camera_effects/fov_fade_effect.lua")
 local VignetteEffect = dofile("../content/scripts/camera_effects/vignette_effect.lua")
 local Ps1FilterEffect = dofile("../content/scripts/camera_effects/ps1_filter_effect.lua")
+local MotionBlurEffect = dofile("../content/scripts/camera_effects/motion_blur_effect.lua")
 local RadialBlurEffect = dofile("../content/scripts/camera_effects/radial_blur_effect.lua")
 local ImageTrailEffect = dofile("../content/scripts/camera_effects/image_trail_effect.lua")
 local VertigoEffect = dofile("../content/scripts/camera_effects/vertigo_effect.lua")
 local ScreenFadeEffect = dofile("../content/scripts/camera_effects/screen_fade_effect.lua")
 local CameraLookAtEffect = dofile("../content/scripts/camera_effects/camera_lookat_effect.lua")
-local MotionBlur = dofile("../content/scripts/camera_effects/motion_blur.lua")
 
 ------------------------------------------------
 -- SETTINGS
@@ -794,7 +794,7 @@ function CameraEffects.on_initialize()
     set_no_ps1_filter_effect()
 
     -- Set the custom post process shader for the motion blur pass.
-    MotionBlur.initialize()
+    MotionBlurEffect.initialize()
 end
 
 ------------------------------------------------
@@ -803,6 +803,9 @@ function CameraEffects.on_ready()
     -- Set the custom post process passes to idle.
     set_no_vignette_effect()
     set_no_ps1_filter_effect()
+
+    -- Apply the saved motion blur setting.
+    MotionBlurEffect.set_enabled_from_saved_setting()
 end
 
 ------------------------------------------------
@@ -931,9 +934,7 @@ end
 
 function CameraEffects.on_shutdown()
     reset_all_effects()
-
-    -- Turn off the motion blur pass.
-    MotionBlur.shutdown()
+    MotionBlurEffect.shutdown()
 end
 
 ------------------------------------------------

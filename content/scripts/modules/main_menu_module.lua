@@ -10,7 +10,7 @@ local UiWidgets = dofile("../content/scripts/shared/ui_widgets.lua")
 local Colors = dofile("../content/scripts/shared/colors.lua")
 local UiSkin = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_main_menu/main_menu_skin.lua")
 local TheOrbWorldPaths = dofile("../content/scripts/worlds/demo_content/the_orb/the_orb_world_paths.lua")
-local MotionBlur = dofile("../content/scripts/camera_effects/motion_blur.lua")
+local MotionBlurEffect = dofile("../content/scripts/camera_effects/motion_blur_effect.lua")
 
 ----------------------------------------------------
 -- SETTINGS
@@ -28,14 +28,6 @@ local PAGE_CREDITS = 4
 -- Credits configuration.
 local CREDITS_INI_PATH = "../content/config/game_credits.ini"
 
-local CREDITS_SECTION_ORDER = {
-    "Contributors",
-    "Special Thanks",
-    "Third-Party Libraries",
-    "Fonts",
-    "Additional Content Sources",
-}
-
 local CREDITS_ENTRY_SPACING = 16.0
 local CREDITS_SECTION_SPACING = 16.0
 
@@ -50,18 +42,19 @@ local CAMERA_EFFECTS_MODULE_NAME = "CameraEffectsModule"
 -- Graphics options.
 local WINDOW_MODE_OPTIONS = { "Windowed", "Fullscreen", "Borderless" }
 -- Classic vsync is left out fr the demo as it waits a whole refresh when a frame is late, 
--- so 60 drops to 30 and that sucks. 
+-- so 60 drops to 30 and makes the game feel slow. 
 local VSYNC_MENU_OPTIONS = { "Disabled", "Adaptive" }
 local VSYNC_MENU_MODES = { VSyncMode.OFF, VSyncMode.ADAPTIVE }
 local ANISOTROPIC_OPTIONS = { "Off", "2x", "4x", "8x", "16x" }
-local SSGI_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
-local SSGI_QUALITY_MENU_MAX = 3
+local SSGI_QUALITY_OPTIONS = { "Off", "Low", "High" }
 local SHADOW_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
 local SHADOW_QUALITY_MENU_MAX = 3
 local GTAO_QUALITY_OPTIONS = { "Off", "Low", "Medium", "High" }
 local ANTI_ALIASING_OPTIONS = { "None", "FXAA", "TAA" }
-local SSR_OPTIONS = { "Off", "Low", "Medium", "High" }
-local RENDER_SCALE_PERCENTS = { 50, 75, 100, 125, 150 }
+-- Off, Low, High. Low is the old medium trace. Saved High stays enum value 3.
+local SSR_OPTIONS = { "Off", "Low", "High" }
+local SSR_MENU_HIGH_OPTION = 2
+local RENDER_SCALE_PERCENTS = { 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200 }
 local RENDER_SCALE_WARNING_PERCENT = 100
 local WINDOW_MODE_WINDOWED = 0
 
@@ -108,6 +101,7 @@ local m_button_back = nil
 -- Checkbox
 local m_checkbox_fps_overlay = nil
 local m_checkbox_motion_blur = nil
+local m_checkbox_contact_shadows = nil
 
 -- Slider
 local m_slider_master_volume = nil
@@ -406,6 +400,17 @@ end
 
 ----------------------------------------------------
 
+local function apply_ssr_quality_setting(t_zero_based_index)
+    -- The third menu row is High. Its saved value is not the row index.
+    local quality = t_zero_based_index
+    if t_zero_based_index >= SSR_MENU_HIGH_OPTION then
+        quality = SSRQuality.HIGH
+    end
+    settings_set_ssr_quality(quality)
+end
+
+----------------------------------------------------
+
 local function apply_shadow_map_quality_setting(t_zero_based_index)
     local previous_quality = settings_get_shadow_map_quality()
     if t_zero_based_index == previous_quality then
@@ -500,7 +505,7 @@ local function apply_settings_reset_to_defaults()
         return
     end
 
-    MotionBlur.set_enabled(MotionBlur.get_enabled_setting())
+    MotionBlurEffect.set_enabled_from_saved_setting()
     m_monitors = {}
     m_resolutions = {}
     m_vsync_enabled_brought_down = false
@@ -897,10 +902,11 @@ local function draw_options_page()
     UiWidgets.label("Gameplay", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_SECTION_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
-    m_checkbox_motion_blur.checked = MotionBlur.get_enabled_setting()
+    -- Motion blur.
+    m_checkbox_motion_blur.checked = MotionBlurEffect.get_enabled_setting()
     UiWidgets.label_row("Motion blur", UiSkin.LABEL_WIDTH, UiSkin.ROW_HEIGHT, UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_MUTED, UiSkin.MENU_ROW_LABEL_FONT_ID)
     if UiWidgets.checkbox(m_checkbox_motion_blur) then
-        MotionBlur.set_enabled_setting(m_checkbox_motion_blur.checked)
+        MotionBlurEffect.set_enabled_setting(m_checkbox_motion_blur.checked)
     end
     gui_dummy(vec2(1.0, 12.0))
 
@@ -921,10 +927,10 @@ local function draw_options_page()
     UiWidgets.label("Graphics", UiSkin.MENU_SECTION_FONT_SIZE, UiSkin.COLOR_EMBER, UiSkin.MENU_SECTION_FONT_ID)
     gui_dummy(vec2(1.0, 8.0))
 
-    -- Render scale combo. 
+    -- Render scale combo.
     -- Need to convert the current render scale to the nearest available option.
-    -- Stops at 150 percent for the game as people don't know how to handle it causing severe performance issues.
-    -- Also starts at 50 percent. 25 percent is way too low for this demo. 
+    -- Steps of 10 from 50 to 200. 25 percent is way too low for this demo.
+    -- Above 100 the row warns that it can hurt framerate.
     local render_scale_selected_index = 1
     local current_render_percent = math.floor(settings_get_render_scale() * 100.0 + 0.5)
     local menu_min_render_percent = RENDER_SCALE_PERCENTS[1]
@@ -964,15 +970,25 @@ local function draw_options_page()
     -- Other regular graphics settings.
     draw_labeled_combo("Anisotropic", m_combo_anisotropic, settings_get_anisotropic_filter_level() + 1, settings_set_anisotropic_filter_level)
     draw_labeled_combo("Shadows", m_combo_shadows, shadow_quality + 1, apply_shadow_map_quality_setting)
-    draw_labeled_combo("SSAO", m_combo_ssao, settings_get_ssao_quality() + 1, settings_set_ssao_quality)
-    -- SSGI stops at High. Ultra from an older save runs as High.
-    local ssgi_quality = settings_get_ssgi_quality()
-    if ssgi_quality > SSGI_QUALITY_MENU_MAX then
-        settings_set_ssgi_quality(SSGI_QUALITY_MENU_MAX)
-        ssgi_quality = SSGI_QUALITY_MENU_MAX
+
+    -- Sun contact shadows. The cascade map stays on either way.
+    m_checkbox_contact_shadows.checked = settings_get_screen_space_contact_shadow_active()
+    UiWidgets.label_row("Contact Shadows", UiSkin.LABEL_WIDTH, UiSkin.ROW_HEIGHT, UiSkin.MENU_ROW_FONT_SIZE, UiSkin.COLOR_MUTED, UiSkin.MENU_ROW_LABEL_FONT_ID)
+    if UiWidgets.checkbox(m_checkbox_contact_shadows) then
+        settings_set_screen_space_contact_shadow_active(m_checkbox_contact_shadows.checked)
     end
-    draw_labeled_combo("Bounce", m_combo_ssgi, ssgi_quality + 1, settings_set_ssgi_quality)
-    draw_labeled_combo("Reflections", m_combo_ssr, settings_get_ssr_quality() + 1, settings_set_ssr_quality)
+    gui_dummy(vec2(1.0, 8.0))
+    draw_labeled_combo("SSAO", m_combo_ssao, settings_get_ssao_quality() + 1, settings_set_ssao_quality)
+    draw_labeled_combo("Bounce", m_combo_ssgi, settings_get_ssgi_quality() + 1, settings_set_ssgi_quality)
+    -- Saved Medium reads as Low. High is the last row, not quality plus one.
+    local ssr_quality = settings_get_ssr_quality()
+    local ssr_selected_index = ssr_quality + 1
+    if ssr_quality >= SSRQuality.HIGH then
+        ssr_selected_index = SSR_MENU_HIGH_OPTION + 1
+    elseif ssr_quality == SSRQuality.MEDIUM then
+        ssr_selected_index = SSRQuality.LOW + 1
+    end
+    draw_labeled_combo("Reflections", m_combo_ssr, ssr_selected_index, apply_ssr_quality_setting)
     gui_dummy(vec2(1.0, 16.0))
 
     -- Sound settings.
@@ -1218,33 +1234,26 @@ function MainMenuModule.on_initialize()
     if credits_ini == nil then
         print_error("[MainMenuModule] Credits config not found at " .. CREDITS_INI_PATH)
     else
-        for section_index = 1, #CREDITS_SECTION_ORDER do
-            local section_name = CREDITS_SECTION_ORDER[section_index]
+        -- Iterate through sections and entries in the order they appear in the ini.
+        for section_index = 1, #credits_ini do
+            local section_name = credits_ini[section_index]
             local section_table = credits_ini[section_name]
-            if section_table ~= nil then
-                local layer = {
-                    section_name = section_name,
-                    entries = {},
-                }
+            local layer = {
+                section_name = section_name,
+                entries = {},
+            }
 
-                local entry_names = {}
-                for entry_name, _ in pairs(section_table) do
-                    if entry_name ~= "name_header" and entry_name ~= "value_header" then
-                        entry_names[#entry_names + 1] = entry_name
-                    end
-                end
-                table.sort(entry_names)
-
-                for entry_index = 1, #entry_names do
-                    local entry_name = entry_names[entry_index]
+            for entry_index = 1, #section_table do
+                local entry_name = section_table[entry_index]
+                if entry_name ~= "name_header" and entry_name ~= "value_header" then
                     layer.entries[#layer.entries + 1] = {
                         name = entry_name,
                         value = section_table[entry_name],
                     }
                 end
-
-                m_credits_layers[#m_credits_layers + 1] = layer
             end
+
+            m_credits_layers[#m_credits_layers + 1] = layer
         end
     end
 
@@ -1306,7 +1315,26 @@ function MainMenuModule.on_initialize()
             id = "main_menu_fps_overlay",
             label = "",
             size = vec2(22.0, 22.0),
+            row_height = UiSkin.ROW_HEIGHT,
             checked = settings_get_bool(UI_SETTINGS_SECTION, FPS_OVERLAY_SETTINGS_KEY, false),
+            font_size = UiSkin.MENU_CHECKBOX_FONT_SIZE,
+            text_color = UiSkin.COLOR_CREAM,
+            border_color = UiSkin.COLOR_MUTED,
+            border_thickness = 2.0,
+            hover = { color = UiSkin.COLOR_EMBER_BRIGHT },
+            focused = { color = UiSkin.COLOR_EMBER_BRIGHT },
+            pressed = { color = UiSkin.COLOR_EMBER_BRIGHT },
+            check_idle = { color = UiSkin.COLOR_MUTED },
+            check = UiSkin.STYLE_FILL,
+        }
+    )
+
+    m_checkbox_contact_shadows = UiWidgets.new_checkbox({
+            id = "main_menu_contact_shadows",
+            label = "",
+            size = vec2(22.0, 22.0),
+            row_height = UiSkin.ROW_HEIGHT,
+            checked = settings_get_screen_space_contact_shadow_active(),
             font_size = UiSkin.MENU_CHECKBOX_FONT_SIZE,
             text_color = UiSkin.COLOR_CREAM,
             border_color = UiSkin.COLOR_MUTED,
@@ -1323,7 +1351,8 @@ function MainMenuModule.on_initialize()
             id = "main_menu_motion_blur",
             label = "",
             size = vec2(22.0, 22.0),
-            checked = MotionBlur.get_enabled_setting(),
+            row_height = UiSkin.ROW_HEIGHT,
+            checked = MotionBlurEffect.get_enabled_setting(),
             font_size = UiSkin.MENU_CHECKBOX_FONT_SIZE,
             text_color = UiSkin.COLOR_CREAM,
             border_color = UiSkin.COLOR_MUTED,
@@ -1469,8 +1498,17 @@ function MainMenuModule.on_process(_t_delta_time)
         return
     end
 
+    -- A modal or combo is open. Leave this press for that close.
+    if m_menu_open and (m_modal_shadow_restart.open or m_modal_reset_defaults.open or UiWidgets.get_is_any_combo_open()) then
+        return
+    end
+
     -- We are in the main menu. Do not open the pause menu.
+    -- Escape is back. The title page itself stays put.
     if m_title_menu_screen_active then
+        if m_page ~= PAGE_MAIN then
+            set_page(PAGE_MAIN)
+        end
         return
     end
 
@@ -1523,11 +1561,13 @@ function MainMenuModule.on_draw(_t_delta_time)
     -- End drawing the main menu canvas.
     UiWidgets.end_menu_canvas()
 
+    -- Reset defaults modal.
     local reset_defaults_result = UiWidgets.modal(m_modal_reset_defaults)
     if reset_defaults_result == "confirm" then
         apply_settings_reset_to_defaults()
     end
 
+    -- Shadow restart modal.
     UiWidgets.modal(m_modal_shadow_restart)
 end
 

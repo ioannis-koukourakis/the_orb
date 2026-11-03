@@ -63,7 +63,7 @@ MainMenuSkin.COMMUNITY_LINKS = {
     { label = "Website", url = "https://detissoftworks.com" },
 }
 
--- 
+-- Menu section.
 MainMenuSkin.MENU_SECTION_FONT_SIZE = 24.0
 MainMenuSkin.MENU_SECTION_FONT_ID = "marcellus_24"
 MainMenuSkin.MENU_CONTROLS_HEADER_FONT_SIZE = 30.0

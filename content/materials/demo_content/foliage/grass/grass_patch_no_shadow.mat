@@ -20,6 +20,7 @@ u_albedo_map = ../content/textures/demo_content/foliage/grass/grass_patch_albedo
 
 [uniforms]
 u_wind_multiplier = 2.000000
+u_back_face_normal_mode = 0.000000
 u_subsurface_color = 0.895522,0.895522,0.895522
 u_color_variation = 1.000000
 u_normal_map_strength = 0.000000

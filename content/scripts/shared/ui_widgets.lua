@@ -1071,6 +1071,7 @@ function UiWidgets.new_checkbox(t_def)
         check_idle = t_def.check_idle,
         border_color = t_def.border_color,
         border_thickness = t_def.border_thickness or 2.0,
+        row_height = t_def.row_height or 0.0,
         clicked = false,
         hovered = false,
         held = false,
@@ -1094,6 +1095,10 @@ function UiWidgets.checkbox(t_state)
     end
     local total_w = box.x + label_w
     local total_h = math.max(box.y, t_state.font_size)
+    -- A taller row centers the tick on the label. The drawn box stays its own size.
+    if t_state.row_height and t_state.row_height > total_h then
+        total_h = t_state.row_height
+    end
 
     -- Capture click hit-testing for the full checkbox row.
     begin_widget_interaction(t_state, vec2(total_w, total_h))
@@ -1899,8 +1904,8 @@ function UiWidgets.combo(t_state)
         end
     end
 
-    -- Face B closes without changing the current setting.
-    if t_state.open and input_get_action_pressed_event("cancel") then
+    -- Face B and Escape close without changing the current setting.
+    if t_state.open and (input_get_action_pressed_event("cancel") or input_get_action_pressed_event("game_pause")) then
         close_combo(t_state)
     end
 
@@ -2506,6 +2511,7 @@ function UiWidgets.modal(t_state)
         end
     end
 
+    -- Calculate the maximum line width of the message.
     local message_max_line_width = 0.0
     local message_line_start = 1
     local message_length = #t_state.message
@@ -2522,6 +2528,7 @@ function UiWidgets.modal(t_state)
         end
     end
 
+    -- Calculate the panel width and height.
     local title_width = gui_get_text_size(t_state.title, t_state.font_size, t_state.title_font_id).x
     local panel_w = t_state.width
     local panel_h = t_state.height
@@ -2542,6 +2549,7 @@ function UiWidgets.modal(t_state)
         panel_h = pad + title_band_h + title_message_gap + message_block_h + message_buttons_gap + button_row_h + bottom_pad
     end
 
+    -- Get the panel position.
     local panel_pos = gui_get_aligned_position(
         vec2(0.0, 0.0),
         layout_size,
@@ -2550,6 +2558,8 @@ function UiWidgets.modal(t_state)
         GuiAlignV.MIDDLE)
     local panel_x = panel_pos.x
     local panel_y = panel_pos.y
+
+    -- Draw the panel.
     draw_widget_surface(
         t_state.panel,
         vec4(panel_pos.x, panel_pos.y, panel_w, panel_h),

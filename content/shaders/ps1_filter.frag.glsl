@@ -2,7 +2,7 @@
 
 #include "../../engine/shaders/include/custom_post_process_contract.glsl"
 
-// -------------------------------------------------------------------
+/////////////////////////////////////////////////////////////////////
 // PS1-style filter.
 // u_intensity: x = intensity
 // u_resolution: x = resolution, y = resolution
@@ -11,7 +11,7 @@
 // u_scene: x = scene, y = scene, z = scene
 // u_extra_texture: x = extra_texture, y = extra_texture, z = extra_texture
 // u_params: x = pixel scale, y = color bits, z = dither strength
-// -------------------------------------------------------------------
+/////////////////////////////////////////////////////////////////////
 
 out vec4 out_color;
 in vec2 UVs;

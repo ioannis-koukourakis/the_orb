@@ -3,7 +3,7 @@
 #include "../../engine/shaders/include/custom_post_process_contract.glsl"
 #include "../../engine/shaders/include/shader_math.glsl"
 
-// -------------------------------------------------------------------
+/////////////////////////////////////////////////////////////////////
 // Camera post-processing vignette.
 // u_intensity: x = intensity
 // u_time: x = time
@@ -11,7 +11,7 @@
 // u_scene: x = scene, y = scene, z = scene
 // u_extra_texture: x = extra_texture, y = extra_texture, z = extra_texture
 // u_params: x = pulse effect hz (0 = consistent)
-// -------------------------------------------------------------------
+/////////////////////////////////////////////////////////////////////
 
 out vec4 out_color;
 in vec2 UVs;
@@ -35,3 +35,5 @@ void main()
 	vec3 color = mix(scene_color, u_color, mask * strength);
 	out_color = vec4(color, 1.0);
 }
+
+// -------------------------------------------------------------------

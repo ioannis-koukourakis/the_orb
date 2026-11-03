@@ -1,50 +1,52 @@
-[general]
-type = foliage
-cull_face = none
-casts_shadows = true
-is_masked = true
-affected_by_ssao = true
-ssao_strength = 0.830000
-ssgi_receive = true
-ssgi_emissive_contribute = false
-ssr_excluded = false
-use_anisotropic_filtering = true
-distance_cull_distance = 0.000000
-
-
-[textures]
-u_rma_map = ../content/textures/demo_content/foliage/cretan_oak/cretan_oak_02_branch_rma.dds
-u_normal_map = ../content/textures/demo_content/foliage/cretan_oak/cretan_oak_02_branch_normal.dds
-u_albedo_map = ../content/textures/demo_content/foliage/cretan_oak/cretan_oak_02_branch_albedo.dds
-
-
-[uniforms]
-u_wind_multiplier = 1.000000
-u_subsurface_color = 0.977612,0.959101,0.667548
-u_color_variation = 0.750000
-u_normal_map_strength = 1.500000
-u_reflection_fallback_strength = 1.000000
-u_ssr_strength = 1.000000
-u_use_normal_map = true
-u_use_ssr = false
-u_ssgi_emissive_contribute = false
-u_ssr_excluded = false
-u_ssgi_receive = true
-u_ssao_strength = 0.830000
-u_use_ssao = true
-u_sprite_blend = 0.000000
-u_sprite_offset_next = 0.000000,0.000000
-u_masked = true
-u_rma_value = 0.830000,0.000000,0.000000,0.350000
-u_use_emission_map = false
-u_map_tiling = 1.000000,1.000000
-u_use_albedo_map = true
-u_albedo_tints_reflection = true
-u_albedo_color = 0.837398,0.837398,0.837398
-u_sprite_scale = 1.000000,1.000000
-u_emission_color = 0.000000,0.000000,0.000000
-u_use_rma_map = true
-u_albedo_brightness = 1.000000
-u_emissive_multiplier = 0.000000
-u_mask_threshold = 0.300000
-u_sprite_offset = 0.000000,0.000000
+[general]
+type = foliage
+cull_face = none
+casts_shadows = true
+casts_contact_shadows = true
+is_masked = true
+affected_by_ssao = true
+ssao_strength = 1.000000
+ssgi_receive = true
+ssgi_emissive_contribute = false
+ssr_excluded = false
+use_anisotropic_filtering = true
+distance_cull_distance = 0.000000
+
+
+[textures]
+u_albedo_map = ../content/textures/demo_content/foliage/cretan_oak/cretan_oak_02_branch_albedo.dds
+u_normal_map = ../content/textures/demo_content/foliage/cretan_oak/cretan_oak_02_branch_normal.dds
+u_rma_map = ../content/textures/demo_content/foliage/cretan_oak/cretan_oak_02_branch_rma.dds
+
+
+[uniforms]
+u_emissive_multiplier = 0.000000
+u_albedo_color = 1.000000,1.000000,1.000000
+u_sprite_offset_next = 0.000000,0.000000
+u_emission_color = 0.000000,0.000000,0.000000
+u_albedo_brightness = 1.000000
+u_normal_map_strength = 1.500000
+u_map_tiling = 1.000000,1.000000
+u_sprite_scale = 1.000000,1.000000
+u_use_albedo_map = true
+u_mask_threshold = 0.350000
+u_albedo_tints_reflection = true
+u_masked = true
+u_wind_multiplier = 1.000000
+u_use_emission_map = false
+u_sprite_offset = 0.000000,0.000000
+u_sprite_blend = 0.000000
+u_use_ssao = true
+u_rma_value = 0.750000,0.000000,0.350000,0.350000
+u_ssao_strength = 1.000000
+u_ssr_strength = 1.000000
+u_ssgi_receive = true
+u_ssgi_emissive_contribute = false
+u_ssr_excluded = false
+u_use_ssr = false
+u_reflection_fallback_strength = 1.000000
+u_use_normal_map = true
+u_color_variation = 0.750000
+u_use_rma_map = true
+u_subsurface_color = 0.508570,0.565041,0.420335
+u_back_face_normal_mode = 2.000000

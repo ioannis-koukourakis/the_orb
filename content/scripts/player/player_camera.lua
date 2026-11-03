@@ -302,7 +302,7 @@ function PlayerCamera.process_position(t_delta_time)
     )
 
     -- Calculate the body position and camera height.
-    local body_position = transform_get_world_position(m_body_entity_id)
+    local body_position = transform_get_render_world_position(m_body_entity_id)--transform_get_world_position(m_body_entity_id)
     local camera_height = m_camera_base_height * m_camera_height_multiplier
 
     -- Calculate the shake offset from the camera effects module.
